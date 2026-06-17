@@ -99,3 +99,37 @@ document.addEventListener('submit', function(e){
     submitLead(form, form.getAttribute('data-msg'));
   }
 });
+
+// ===== Карусель на главной =====
+(function(){
+  var root = document.getElementById('heroCarousel');
+  if(!root) return;
+  var track = root.querySelector('.slides');
+  var slides = root.querySelectorAll('.slide');
+  var dotsWrap = root.querySelector('.dots');
+  var i = 0, n = slides.length, timer = null;
+  // точки
+  for(var d=0; d<n; d++){
+    var b = document.createElement('button');
+    b.setAttribute('aria-label','Слайд '+(d+1));
+    (function(idx){ b.addEventListener('click', function(){ go(idx); restart(); }); })(d);
+    dotsWrap.appendChild(b);
+  }
+  var dots = dotsWrap.querySelectorAll('button');
+  function go(idx){
+    i = (idx + n) % n;
+    track.style.transform = 'translateX(' + (-i*100) + '%)';
+    for(var k=0;k<dots.length;k++){ dots[k].classList.toggle('active', k===i); }
+  }
+  function next(){ go(i+1); }
+  function prev(){ go(i-1); }
+  function start(){ timer = setInterval(next, 6000); }
+  function stop(){ if(timer){ clearInterval(timer); timer=null; } }
+  function restart(){ stop(); start(); }
+  var nx = root.querySelector('.arrow.next'), pv = root.querySelector('.arrow.prev');
+  if(nx) nx.addEventListener('click', function(){ next(); restart(); });
+  if(pv) pv.addEventListener('click', function(){ prev(); restart(); });
+  root.addEventListener('mouseenter', stop);
+  root.addEventListener('mouseleave', start);
+  go(0); start();
+})();
