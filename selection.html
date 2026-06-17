@@ -64,7 +64,7 @@
   <div class="wrap">
     <div class="crumbs"><a href="index.html">Главная</a> &nbsp;/&nbsp; Подбор оборудования</div>
     <h1>Подбор оборудования</h1>
-    <p>Подбор пластинчатого теплообменника: скачайте опросный лист или воспользуйтесь калькулятором мощности и напишите нам на почту — подберём оборудование.</p>
+    <p>Подбор пластинчатого теплообменника: калькулятор тепловой мощности и опросный лист. Пришлите параметры на почту — подберём оборудование.</p>
   </div>
 </section>
 <section>
@@ -80,13 +80,13 @@
         <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>
         <h3>Опросный лист</h3>
         <p>Скачайте бланк, заполните в удобном темпе и пришлите нам на почту.</p>
-        <a class="btn block ghost" href="files/Опросный-лист-Cooling-Consult.docx" download>Скачать опросный лист (Word)</a>
+        <a class="btn block" href="files/Опросный-лист-Cooling-Consult.docx" download>Скачать опросный лист (Word)</a>
       </div>
       <div class="opt">
         <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h2M12 10h2M16 10h0M8 14h2M12 14h2M16 14h0M8 18h6"/></svg></div>
         <h3>Калькулятор мощности</h3>
         <p>Прикиньте тепловую мощность по параметрам контура — и пришлите её нам.</p>
-        <a class="btn block ghost" href="#calc">Открыть калькулятор</a>
+        <a class="btn block" href="#calc">Открыть калькулятор</a>
       </div>
     </div>
   </div>
@@ -95,11 +95,11 @@
 <section class="soft" id="calc">
   <div class="wrap" style="max-width:880px">
     <h2>Калькулятор тепловой мощности</h2>
-    <p class="muted">Введите параметры горячего контура — мощность Q рассчитается автоматически. Это ориентировочный расчёт; точную поверхность определим по полному тепловому расчёту. <b>Готовый результат пришлите нам на почту</b> — подберём аппарат.</p>
+    <p class="muted">Введите параметры контуров — мощность Q рассчитается автоматически по горячему контуру. Это ориентировочный расчёт; точную поверхность определим по полному тепловому расчёту. <b>Готовый результат пришлите нам на почту</b> — подберём аппарат.</p>
 
     <div id="selectForm">
       <fieldset>
-        <legend>Горячий контур</legend>
+        <legend>Горячий контур (греющая среда)</legend>
         <div class="form-grid">
           <div class="field">
             <label>Среда</label>
@@ -116,6 +116,22 @@
           <div class="field"><label>Расход, м³/ч</label><input type="number" step="0.1" min="0" id="flow" placeholder="напр. 25"></div>
           <div class="field"><label>Температура на входе, °C</label><input type="number" step="0.1" id="tHotIn" placeholder="напр. 95"></div>
           <div class="field"><label>Температура на выходе, °C</label><input type="number" step="0.1" id="tHotOut" placeholder="напр. 70"></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Холодный контур (нагреваемая среда)</legend>
+        <div class="form-grid">
+          <div class="field">
+            <label>Среда</label>
+            <select id="coldFluid">
+              <option>Вода</option><option>Этиленгликоль 30%</option><option>Этиленгликоль 40%</option>
+              <option>Пропиленгликоль 30%</option><option>Рассол</option><option>Другое</option>
+            </select>
+          </div>
+          <div class="field"><label>Расход, м³/ч <span class="hint">(если известен)</span></label><input type="number" step="0.1" min="0" id="coldFlow" placeholder="напр. 25"></div>
+          <div class="field"><label>Температура на входе, °C</label><input type="number" step="0.1" id="tColdIn" placeholder="напр. 60"></div>
+          <div class="field"><label>Температура на выходе, °C</label><input type="number" step="0.1" id="tColdOut" placeholder="напр. 80"></div>
         </div>
       </fieldset>
 
