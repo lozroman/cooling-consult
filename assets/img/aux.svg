@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" fill="none">
+  <rect width="520" height="360" fill="#f3f7fb"/>
+  <!-- бак -->
+  <g>
+    <rect x="60" y="90" width="150" height="190" rx="18" fill="#ffffff" stroke="#0e7fd1" stroke-width="3"/>
+    <ellipse cx="135" cy="90" rx="75" ry="20" fill="#e8f2fc" stroke="#0e7fd1" stroke-width="3"/>
+    <rect x="120" y="56" width="30" height="40" rx="4" fill="#cfe0f2" stroke="#0e7fd1" stroke-width="2"/>
+    <rect x="60" y="200" width="150" height="80" rx="0" fill="#e8f2fc" opacity="0.7"/>
+    <path d="M60 200 h150" stroke="#0e7fd1" stroke-width="2" stroke-dasharray="6 6" opacity="0.6"/>
+    <text x="135" y="320" text-anchor="middle" font-family="Inter,Arial" font-size="16" font-weight="700" fill="#39495a">Баки и ёмкости</text>
+    <rect x="46" y="278" width="178" height="10" rx="3" fill="#9fb4c6"/>
+  </g>
+  <!-- насос -->
+  <g transform="translate(300,150)">
+    <rect x="-10" y="60" width="190" height="14" rx="3" fill="#9fb4c6"/>
+    <circle cx="70" cy="20" r="55" fill="#ffffff" stroke="#0e7fd1" stroke-width="3"/>
+    <circle cx="70" cy="20" r="22" fill="#e8f2fc" stroke="#0e7fd1" stroke-width="3"/>
+    <circle cx="70" cy="20" r="6" fill="#0e7fd1"/>
+    <g stroke="#0e7fd1" stroke-width="3" stroke-linecap="round">
+      <path d="M70 20 L70 2"/><path d="M70 20 L86 11"/><path d="M70 20 L86 29"/><path d="M70 20 L54 29"/><path d="M70 20 L54 11"/>
+    </g>
+    <rect x="120" y="2" width="70" height="42" rx="6" fill="#11202e"/>
+    <rect x="120" y="44" width="70" height="8" fill="#0a5fa0"/>
+    <rect x="14" y="-22" width="22" height="34" rx="4" fill="#cfe0f2" stroke="#0e7fd1" stroke-width="2"/>
+    <text x="80" y="106" text-anchor="middle" font-family="Inter,Arial" font-size="16" font-weight="700" fill="#39495a">Насосы и насосные группы</text>
+  </g>
+</svg>
