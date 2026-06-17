@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 48" fill="none">
+  <rect x="2" y="6" width="36" height="36" rx="9" fill="#0e7fd1"/>
+  <g stroke="#fff" stroke-width="2" stroke-linecap="round">
+    <path d="M11 14V34"/><path d="M16 14V34"/><path d="M21 14V34"/><path d="M26 14V34"/>
+  </g>
+  <path d="M8 19 L32 19" stroke="#bfe1f8" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M8 30 L32 30" stroke="#bfe1f8" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="50" y="26" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="800" fill="#11161d">Cooling</text>
+  <text x="50" y="42" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" letter-spacing="3" fill="#0e7fd1">CONSULT</text>
+</svg>
