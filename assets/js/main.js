@@ -123,7 +123,7 @@ document.addEventListener('submit', function(e){
   }
   function next(){ go(i+1); }
   function prev(){ go(i-1); }
-  function start(){ timer = setInterval(next, 6000); }
+  function start(){ timer = setInterval(next, 12000); }
   function stop(){ if(timer){ clearInterval(timer); timer=null; } }
   function restart(){ stop(); start(); }
   var nx = root.querySelector('.arrow.next'), pv = root.querySelector('.arrow.prev');
