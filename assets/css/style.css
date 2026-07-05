@@ -19,7 +19,7 @@
   --font:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden}
 body{margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:var(--accent);text-decoration:none}
@@ -216,6 +216,7 @@ legend{font-weight:700;padding:0 10px;color:var(--accent-d)}
 
 @media(max-width:900px){
   .grid.cols-3,.grid.cols-4{grid-template-columns:1fr 1fr}
+  .grid>[style*="span 3"]{grid-column:auto!important}
   .split{grid-template-columns:1fr;gap:30px}
   .choose{grid-template-columns:1fr}
   .stats{grid-template-columns:1fr 1fr;gap:24px}
@@ -238,6 +239,11 @@ legend{font-weight:700;padding:0 10px;color:var(--accent-d)}
 @media(max-width:560px){
   .grid.cols-2,.grid.cols-3,.grid.cols-4,.form-grid,.stats{grid-template-columns:1fr}
   section{padding:42px 0}
+  .slide-text h2{font-size:1.42rem}
+  .slide-text p{font-size:1rem}
+  .btn.lg{padding:14px 22px;font-size:1rem}
+  .wrap{padding:0 16px}
+  h1{font-size:1.6rem}
   .cta-band{padding:30px 22px}
   .modal .box{padding:24px}
   .slide-text .tags{gap:6px}
