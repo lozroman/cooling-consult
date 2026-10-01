@@ -1,0 +1,13 @@
+# В репозиторий попадают только файлы сайта.
+# Рабочие материалы, бэкапы и инструкции остаются только на диске.
+Редизайн_24-09-26/
+backup_html_*/
+firs site GitHub/
+Бизнес с 0/
+/*.docx
+index_backup_*.html
+assets/js/main_backup_*.js
+vse_nasosy.png
+.claude/
+desktop.ini
+Thumbs.db
