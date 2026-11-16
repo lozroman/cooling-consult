@@ -11,7 +11,7 @@
 <meta property="og:description" content="Подбираем чиллеры с воздушным и водяным охлаждением конденсатора и со встроенным фрикулингом под холодопроизводительность и режим работы. Сравниваем по цене и энергопотреблению.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.cooling-consalt.ru/equipment-chillery.html">
-<meta property="og:image" content="https://www.cooling-consalt.ru/assets/img/custom-to.jpg">
+<meta property="og:image" content="https://www.cooling-consalt.ru/assets/img/equipment/chiller.webp">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="Cooling Consult">
 <meta name="twitter:card" content="summary_large_image">
@@ -26,6 +26,7 @@
 
 
 
+<link rel="stylesheet" href="assets/css/equipment-model.css?v=20261116b">
 </head>
 <body>
 <a class="skip" href="#main">Перейти к содержанию</a>
@@ -48,6 +49,7 @@
           <a href="equipment-zip.html">ЗИП</a>
           <a href="equipment-gradirni.html">Градирни</a>
           <a href="equipment-chillery.html">Чиллеры</a>
+          <a href="equipment-emkosti.html">Емкости</a>
         </div>
       </div>
       <a href="contacts.html">Контакты</a>
@@ -69,6 +71,7 @@
       <a class="mnav__sublink" href="equipment-zip.html">ЗИП</a>
       <a class="mnav__sublink" href="equipment-gradirni.html">Градирни</a>
       <a class="mnav__sublink" href="equipment-chillery.html">Чиллеры</a>
+      <a class="mnav__sublink" href="equipment-emkosti.html">Емкости</a>
     </div>
     <a class="mnav__link" href="contacts.html">Контакты <span aria-hidden="true">→</span></a>
     <div class="mnav__foot">
@@ -80,7 +83,7 @@
 </header>
 
 <main id="main">
-<section class="page-hero gridbg sec" aria-labelledby="h1">
+<section class="page-hero equipment-hero gridbg sec" aria-labelledby="h1">
   <div class="wrap">
     <div class="page-hero__main">
       <nav class="crumbs" aria-label="Хлебные крошки"><ol><li><a href="index.html">Главная</a></li><li><a href="equipment.html">Оборудование</a></li><li><span aria-current="page">Чиллеры</span></li></ol></nav>
@@ -92,7 +95,19 @@
         <a class="btn btn--outline" href="equipment.html">Всё оборудование <span class="arr" aria-hidden="true">→</span></a>
       </div>
     </div>
-    <div class="eq-figure"><img src="assets/img/placeholder-chillery.svg" width="800" height="600" alt=""></div>
+    <div class="equipment-model" data-equipment-model="chiller" aria-label="Просмотр 3D-модели оборудования">
+      <div class="equipment-model__stage">
+        <img class="equipment-model__poster" src="assets/img/equipment/chiller.webp" width="1600" height="1200" alt="Чиллер с воздушным охлаждением и модулем фрикулинга">
+      </div>
+      <button class="btn btn--outline equipment-model__start" type="button" data-model-start hidden>Вращать 3D-модель <span aria-hidden="true">↗</span></button>
+      <div class="equipment-model__toolbar" aria-label="Управление моделью" hidden>
+        <button type="button" data-model-zoom-in aria-label="Приблизить модель">+</button>
+        <button type="button" data-model-zoom-out aria-label="Отдалить модель">−</button>
+        <button type="button" data-model-reset>Общий вид</button>
+        <button type="button" data-model-fullscreen>На весь экран</button>
+      </div>
+      <p class="equipment-model__status" data-model-status aria-live="polite">Пример компоновки оборудования</p>
+    </div>
   </div>
 </section>
 
@@ -170,6 +185,7 @@
         <a href="equipment-zip.html">ЗИП</a>
         <a href="equipment-gradirni.html">Градирни</a>
         <a href="equipment-chillery.html">Чиллеры</a>
+        <a href="equipment-emkosti.html">Емкости</a>
       </nav>
       <div class="foot-col foot-col--mono">
         <h2>Контакты</h2>
@@ -194,6 +210,7 @@
 
 
 
+<script src="assets/js/equipment-model.js?v=20261116b" defer></script>
 <script src="assets/js/main.js?v=20261116-contact-only" defer></script>
 </body>
 </html>
