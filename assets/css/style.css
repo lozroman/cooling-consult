@@ -277,6 +277,7 @@ button{cursor:pointer}
 
 /* ---------- 15. Кейсы ---------- */
 .cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.cases--four{grid-template-columns:repeat(2,minmax(0,1fr))}
 .case{background:var(--surface);border-top:2px solid var(--ink);padding:28px 28px 32px;display:flex;flex-direction:column;gap:16px;min-height:540px;color:var(--ink);transition:transform .3s var(--ease)}
 a.case:hover{transform:translateY(-6px);color:var(--ink)}
 .case__meta{font-size:14px;font-weight:600;color:var(--muted)}
