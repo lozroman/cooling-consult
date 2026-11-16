@@ -210,7 +210,7 @@ function makeFoundation(){
 initMaterials();
 makeBody(); makeFan(); makeFill(); makeDistribution(); makeEliminator();
 makeBasin(); makePlatform(); makeCabinet(); makeFoundation();
-// All casing panels remain present and opaque. No cutaway or opacity control.
+// Opaque exterior by default; removable panels expose the original internals.
 for (const panel of panels) {
   panel.g.visible=true;
   panel.g.traverse(o=>{
@@ -219,5 +219,8 @@ for (const panel of panels) {
 }
 for (const id of Object.keys(groups)) optimize(groups[id]);
 root.name='cooling-tower';
+root.userData.setCutaway=function(enabled){
+  panels.forEach(panel=>{panel.g.visible=!(enabled&&panel.cut);});
+};
 return root;
 };

@@ -20,10 +20,24 @@
     var toolbar = container.querySelector('.equipment-model__toolbar');
     var status = container.querySelector('[data-model-status]');
     var type = container.getAttribute('data-equipment-model');
-    var files = {tower: 'cooling-tower.js', chiller: 'chiller.js', plasticTank: 'plastic-tank.js', steelTank: 'steel-tank.js'};
-    var labels = {tower: 'Градирня', chiller: 'Чиллер', plasticTank: 'Вертикальная пластиковая емкость', steelTank: 'Горизонтальная металлическая емкость'};
+    var files = {tower: 'cooling-tower.js', chiller: 'chiller.js', plasticTank: 'plastic-tank.js', steelTank: 'steel-tank.js', hybridTower: 'hybrid-tower.js', axialTower: 'axial-tower.js', directTower: 'direct-tower.js'};
+    var labels = {tower: 'Компактная градирня', chiller: 'Чиллер', plasticTank: 'Вертикальная пластиковая емкость', steelTank: 'Горизонтальная металлическая емкость', hybridTower: 'Гибридная градирня', axialTower: 'Градирня с торцевым вентилятором', directTower: 'Градирня с прямым приводом'};
     if (!files[type]) return;
     start.hidden = false;
+    var cutButton = container.querySelector('[data-model-cutaway]');
+    var cutaway = false, loadedRoot = null, redraw = function () {};
+    var exteriorPoster = poster.getAttribute('src');
+    if (cutButton) {
+      cutButton.hidden = false;
+      cutButton.addEventListener('click', function () {
+        cutaway = !cutaway;
+        cutButton.setAttribute('aria-pressed', String(cutaway));
+        cutButton.textContent = cutaway ? 'Показать корпус' : 'Показать разрез';
+        poster.setAttribute('src', cutaway ? container.getAttribute('data-cutaway-poster') : exteriorPoster);
+        poster.setAttribute('alt', labels[type] + (cutaway ? ': разрез, внутренние узлы' : ': внешний вид'));
+        if (loadedRoot) { loadedRoot.userData.setCutaway(cutaway); redraw(); }
+      });
+    }
 
     start.addEventListener('click', async function () {
       start.disabled = true;
@@ -31,7 +45,8 @@
       var renderer;
       try {
         await loadScript('assets/vendor/three-r128.min.js');
-        await loadScript('assets/models/' + files[type]);
+        if (['hybridTower', 'axialTower', 'directTower'].indexOf(type) !== -1) await loadScript('assets/js/tower-model-data.js?v=20261116c');
+        await loadScript('assets/models/' + files[type] + '?v=20261116c');
         var THREE = window.THREE;
         renderer = new THREE.WebGLRenderer({antialias: true, alpha: false, powerPreference: 'default'});
         renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
@@ -40,19 +55,21 @@
         renderer.toneMappingExposure = 1;
         var scene = new THREE.Scene();
         scene.background = new THREE.Color(0xffffff);
-        var root = window.CCEquipmentFactories[type](THREE);
+        var root = await window.CCEquipmentFactories[type](THREE);
+        if (cutButton) root.userData.setCutaway(cutaway);
+        loadedRoot = root;
         scene.add(root);
         scene.add(new THREE.HemisphereLight(0xffffff, 0x8b99a7, 1.1));
         [[-4, 8, 6, 1.25], [6, 4, 2, .7], [0, 6, -6, .9]].forEach(function (l) {
           var light = new THREE.DirectionalLight(0xffffff, l[3]);
           light.position.set(l[0], l[1], l[2]); scene.add(light);
         });
-        var bounds = new THREE.Box3().setFromObject(root);
+        var bounds = root.userData.bounds || new THREE.Box3().setFromObject(root);
         var center = bounds.getCenter(new THREE.Vector3());
         var size = bounds.getSize(new THREE.Vector3());
         var radius = size.length() / 2;
         var camera = new THREE.PerspectiveCamera(36, 1, .01, radius * 100);
-        var initialTheta = type === 'tower' ? .59 : type === 'steelTank' ? 2.5 : .65;
+        var initialTheta = type === 'tower' ? .59 : type === 'steelTank' ? 2.5 : type === 'axialTower' ? -.63 : type === 'hybridTower' || type === 'directTower' ? -.8 : .65;
         var theta = initialTheta, phi = 1.12, zoom = 1, distance = 1;
         var canvas = renderer.domElement;
         canvas.tabIndex = 0;
@@ -71,6 +88,7 @@
           });
         }
         function resize() {
+          if (!stage.clientWidth || !stage.clientHeight) return;
           var width = Math.max(1, stage.clientWidth), height = Math.max(1, stage.clientHeight);
           camera.aspect = width / height;
           camera.updateProjectionMatrix();
@@ -79,6 +97,7 @@
           renderer.setSize(width, height, false);
           render();
         }
+        redraw = render;
         function scale(factor) { zoom = THREE.MathUtils.clamp(zoom * factor, .65, 3.5); render(); }
         function reset() { theta = initialTheta; phi = 1.12; zoom = 1; render(); }
         var pointers = new Map(), pinch = 0;
@@ -140,13 +159,16 @@
           event.preventDefault();
           observer.disconnect();
           if (frame) cancelAnimationFrame(frame);
+          loadedRoot = null; redraw = function () {};
+          renderer.dispose();
           canvas.remove(); poster.hidden = false; toolbar.hidden = true;
           status.textContent = 'Просмотр 3D прерван. Обновите страницу, чтобы открыть модель снова.';
         });
         poster.hidden = true; start.hidden = true; toolbar.hidden = false;
         status.textContent = 'Потяните для вращения · колесо или два пальца для масштаба';
-        resize(); canvas.focus({preventScroll: true});
+        resize(); if (stage.clientWidth) canvas.focus({preventScroll: true});
       } catch (_) {
+        loadedRoot = null; redraw = function () {};
         if (renderer) { renderer.dispose(); renderer.domElement.remove(); }
         poster.hidden = false;
         start.disabled = false;
