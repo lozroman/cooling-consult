@@ -17,28 +17,15 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#F5F6F7">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/fonts/inter.css">
 <link rel="stylesheet" href="assets/css/style.css?v=20261001b">
 <link rel="stylesheet" href="assets/css/legacy.css?v=20261001b">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Cooling Consult","url":"https://www.cooling-consalt.ru/","email":"info@cooling-consalt.ru","logo":"https://www.cooling-consalt.ru/assets/img/mark.svg","description":"Подбор и поставка пластинчатых разборных, паяных и сварных теплообменников, комплектующих и вспомогательного оборудования.","areaServed":"RU"}</script>
 
-<!-- Яндекс Метрика: загружается только после согласия на аналитические cookie -->
-<script>
-window.ccMetrika=function(){
-  if(window.ccMetrikaOn) return; window.ccMetrikaOn=true;
-  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-  m[i].l=1*new Date();
-  for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-  k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-  ym(110487168, "init", {clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
-};
-try{ if(localStorage.getItem('cc_cookies')==='all') window.ccMetrika(); }catch(e){}
-</script>
-<!-- /Яндекс Метрика -->
+
+
+
 </head>
 <body>
 <a class="skip" href="#main">Перейти к содержанию</a>
@@ -66,8 +53,8 @@ try{ if(localStorage.getItem('cc_cookies')==='all') window.ccMetrika(); }catch(e
       <a href="contacts.html">Контакты</a>
     </nav>
     <div class="hdr-actions">
-      <a class="hdr-phone" href="tel:+78126407947">8 812 640 79 47</a>
-      <a class="btn btn--primary btn--sm" href="index.html#zayavka" data-goal="cta_discuss">Обсудить задачу <span class="arr" aria-hidden="true">→</span></a>
+
+      <a class="btn btn--primary btn--sm" href="contacts.html">Контакты <span class="arr" aria-hidden="true">→</span></a>
       <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mnav"><span></span><span></span></button>
     </div>
   </div>
@@ -85,9 +72,9 @@ try{ if(localStorage.getItem('cc_cookies')==='all') window.ccMetrika(); }catch(e
     </div>
     <a class="mnav__link" href="contacts.html">Контакты <span aria-hidden="true">→</span></a>
     <div class="mnav__foot">
-      <a class="btn btn--primary btn--block" href="index.html#zayavka" data-goal="cta_discuss">Обсудить задачу <span class="arr" aria-hidden="true">→</span></a>
-      <a class="hdr-phone" href="tel:+78126407947">8 812 640 79 47</a>
-      <a class="hdr-phone" href="https://t.me/Cooling_C" target="_blank" rel="noopener">Telegram @Cooling_C</a>
+      <a class="btn btn--primary btn--block" href="contacts.html">Контакты <span class="arr" aria-hidden="true">→</span></a>
+
+
     </div>
   </nav>
 </header>
@@ -105,9 +92,9 @@ try{ if(localStorage.getItem('cc_cookies')==='all') window.ccMetrika(); }catch(e
     <div class="choose">
       <div class="opt">
         <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
-        <h3>Написать на почту</h3>
+        <h3>Связаться с нами</h3>
         <p>Опишите задачу и пришлите параметры — ответим и подберём оборудование.</p>
-        <a class="btn block" href="mailto:info@cooling-consalt.ru?subject=Подбор%20теплообменника">info@cooling-consalt.ru</a>
+        <a class="btn block" href="contacts.html">Контакты</a>
       </div>
       <div class="opt">
         <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>
@@ -128,6 +115,7 @@ try{ if(localStorage.getItem('cc_cookies')==='all') window.ccMetrika(); }catch(e
 <section class="soft" id="calc">
   <div class="wrap" style="max-width:880px">
     <h2>Калькулятор тепловой мощности</h2>
+    <p class="hint">Расчёт выполняется в браузере. Введённые параметры не отправляются на сервер.</p>
     <p class="muted">Введите параметры контуров — мощность Q рассчитается автоматически по горячему контуру. Это ориентировочный расчёт; точную поверхность определим по полному тепловому расчёту. <b>Готовый результат пришлите нам на почту</b> — подберём аппарат.</p>
 
     <div id="selectForm">
@@ -177,22 +165,14 @@ try{ if(localStorage.getItem('cc_cookies')==='all') window.ccMetrika(); }catch(e
       <div class="card" style="background:#fff;text-align:center">
         <h3 style="margin-bottom:8px">Подберём оборудование под ваш расчёт</h3>
         <p class="muted">Пришлите параметры и полученную мощность нам на почту — предложим аппарат с расчётом и ценой.</p>
-        <a class="btn lg" href="mailto:info@cooling-consalt.ru?subject=Подбор%20теплообменника" style="margin-top:6px">Написать на info@cooling-consalt.ru</a>
+        <a class="btn lg" href="contacts.html" style="margin-top:6px">Контакты</a>
         <p class="hint" style="margin-top:10px">Или скачайте <a href="files/Опросный-лист-Cooling-Consult.docx" download>опросный лист</a> и пришлите заполненным.</p>
       </div>
     </div>
   </div>
 </section>
 
-<div class="modal" id="contactModal">
-  <div class="box">
-    <button class="x" onclick="closeModal(this)">&times;</button>
-    <h3 style="margin-bottom:6px">Связаться с нами</h3>
-    <p class="muted" style="font-size:.95rem">Напишите нам на почту — ответим и поможем с подбором.</p>
-    <div class="contact-line"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div><div><b>E-mail</b><a href="mailto:info@cooling-consalt.ru">info@cooling-consalt.ru</a></div></div>
-    <a class="btn block" href="mailto:info@cooling-consalt.ru?subject=Запрос%20по%20теплообменному%20оборудованию" style="margin-top:18px">Написать письмо</a>
-  </div>
-</div>
+
 </main>
 
 <footer class="site-footer">
@@ -200,7 +180,7 @@ try{ if(localStorage.getItem('cc_cookies')==='all') window.ccMetrika(); }catch(e
     <div class="foot-grid">
       <div class="foot-about">
         <a class="foot-brand" href="index.html"><img src="assets/img/mark.svg" width="32" height="32" alt=""><span><b>Cooling</b> Consult</span></a>
-        <p>Инженерный консалтинг в промышленном холоде и теплоснабжении. Санкт-Петербург, работаем по всей России.</p>
+        <p>Инженерный консалтинг: холодоснабжение и водооборотные циклы. Санкт-Петербург, работаем по всей России.</p>
       </div>
       <nav class="foot-col" aria-label="Услуги">
         <h2>Услуги</h2>
@@ -229,26 +209,20 @@ try{ if(localStorage.getItem('cc_cookies')==='all') window.ccMetrika(); }catch(e
     <div class="foot-bottom">
       <span>© 2026 Cooling Consult · ИП Лозинский Р. М.</span>
       <nav class="foot-legal" aria-label="Документы">
-        <a href="privacy.html">Политика обработки персональных данных</a>
-        <a href="consent.html">Согласие на обработку ПДн</a>
+        <a href="privacy.html">О данных на сайте</a>
+
         <a href="terms.html">Пользовательское соглашение</a>
-        <a href="cookies.html">Политика cookie</a>
-        <button class="foot-link" type="button" onclick="ccCookieSettings()">Настройки cookie</button>
+
+
       </nav>
     </div>
   </div>
 </footer>
 
-<div class="cookie" id="cookieBanner" role="region" aria-label="Настройки cookie">
-  <p>Мы используем cookie. Необходимые нужны для работы сайта. Аналитические (Яндекс Метрика) помогают понять, какие страницы полезны, и включаются только с вашего согласия. Подробнее — в <a href="cookies.html">Политике cookie</a> и <a href="privacy.html">Политике обработки персональных данных</a>.</p>
-  <div class="acts">
-    <button class="btn btn--outline" type="button" onclick="declineCookies()">Только необходимые</button>
-    <button class="btn btn--primary" type="button" onclick="acceptCookies()">Принять все</button>
-  </div>
-</div>
 
 
-<script src="assets/js/main.js?v=20261001b" defer></script>
+
+<script src="assets/js/main.js?v=20261116-contact-only" defer></script>
 </body>
 </html>
 

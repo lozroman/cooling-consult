@@ -3,21 +3,6 @@
 // ===== Настройки =====
 var REDUCED = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// ===== Яндекс.Метрика: цели =====
-(function(){
-  var CID=110487168;
-  window.ccGoal=function(name){ if(typeof ym==='function'){ try{ ym(CID,'reachGoal',name); }catch(e){} } };
-  document.addEventListener('click', function(e){
-    var el=e.target.closest ? e.target.closest('a,button') : null; if(!el) return;
-    var g=el.getAttribute('data-goal'); if(g) window.ccGoal(g);
-    if(el.classList.contains('row') && el.closest('.svc-col,.related')) window.ccGoal('service_row_click');
-    var h=el.getAttribute('href')||'';
-    if(h.indexOf('tel:')===0) window.ccGoal('phone_click');
-    else if(h.indexOf('mailto:')===0) window.ccGoal('email_click');
-    else if(h.indexOf('t.me/')>-1) window.ccGoal('telegram_click');
-  }, true);
-})();
-
 // ===== Мобильное меню =====
 (function(){
   var hdr=document.querySelector('.site-header'); if(!hdr) return;
@@ -31,46 +16,6 @@ var REDUCED = window.matchMedia && window.matchMedia('(prefers-reduced-motion: r
   b.addEventListener('click', function(){ set(!hdr.classList.contains('open')); });
   hdr.addEventListener('click', function(e){ if(e.target.closest('.mnav a')) set(false); });
   document.addEventListener('keydown', function(e){ if(e.key==='Escape' && hdr.classList.contains('open')){ set(false); b.focus(); } });
-})();
-
-// ===== Кнопка «Обсудить задачу» ведёт к форме на этой же странице, если она есть =====
-(function(){
-  if(!document.getElementById('zayavka')) return;
-  document.querySelectorAll('a[href="index.html#zayavka"]').forEach(function(a){ a.setAttribute('href','#zayavka'); });
-})();
-
-// ===== Модальные окна (старые страницы) =====
-function openModal(id){ var m=document.getElementById(id); if(m){m.classList.add('open');} }
-function closeModal(el){ var m=el.closest('.modal'); if(m){m.classList.remove('open');} }
-document.addEventListener('click', function(e){
-  if(e.target.classList && e.target.classList.contains('modal')){ e.target.classList.remove('open'); }
-  var t = e.target.closest('[data-modal]');
-  if(t){ e.preventDefault(); openModal(t.getAttribute('data-modal')); }
-});
-document.addEventListener('keydown', function(e){
-  if(e.key==='Escape'){ document.querySelectorAll('.modal.open').forEach(function(m){m.classList.remove('open');}); }
-});
-
-// ===== Cookie: необходимые всегда, аналитика (Метрика) — только после согласия =====
-// cc_cookies: «all» — принял все, «necessary» — только необходимые. Нет значения — показываем баннер.
-function ccCookieChoice(){ try{ return localStorage.getItem('cc_cookies'); }catch(e){ return null; } }
-function ccSetCookieChoice(v){
-  try{ localStorage.setItem('cc_cookies', v); }catch(e){}
-  var c=document.getElementById('cookieBanner'); if(c){ c.classList.remove('show'); }
-}
-function acceptCookies(){ ccSetCookieChoice('all'); if(typeof window.ccMetrika==='function') window.ccMetrika(); }
-function declineCookies(){
-  var wasOn = !!window.ccMetrikaOn;
-  ccSetCookieChoice('necessary');
-  if(wasOn) location.reload();
-}
-function ccCookieSettings(){
-  try{ localStorage.removeItem('cc_cookies'); }catch(e){}
-  var c=document.getElementById('cookieBanner'); if(c){ c.classList.add('show'); var b=c.querySelector('button'); if(b) b.focus(); }
-}
-(function(){
-  var c=document.getElementById('cookieBanner'); if(!c) return;
-  if(!ccCookieChoice()) c.classList.add('show');
 })();
 
 // ===== Ротация последней строки заголовка =====
