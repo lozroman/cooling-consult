@@ -26,6 +26,7 @@
 
 
 
+<link rel="stylesheet" href="assets/css/case-gallery.css?v=20261116">
 </head>
 <body>
 <a class="skip" href="#main">Перейти к содержанию</a>
@@ -92,23 +93,90 @@
 </section>
 
 <section class="sec gridbg" id="chiller-nn" aria-labelledby="h-chiller-nn">
-  <div class="wrap split">
-    <div class="split__side split__side--wide">
+  <div class="wrap case-story">
+    <div class="case-story__intro">
       <span class="eyebrow">Проверка документации · Нижний Новгород</span>
-      <h2 class="h3" id="h-chiller-nn">Обвязка чиллера на промышленном объекте</h2>
-      <p class="small"><b>Задача.</b> Заказчик получил рабочую документацию от стороннего проектировщика и собирался закупать оборудование. Нас попросили проверить раздел до закупки.</p>
-      <a class="link-arrow" href="uslugi-proverka-rd.html">Услуга «Проверка документации» <span class="arr" aria-hidden="true">→</span></a>
+      <h2 id="h-chiller-nn">Обвязка чиллера на промышленном объекте</h2>
+      <p>Проверили рабочую документацию перед закупкой оборудования: от принципиальной схемы и гидравлики до спецификации и компоновки. Ниже — реальные фрагменты проекта и отдельная проработка размещения агрегата.</p>
     </div>
-    <div class="split__main sheet ex-card">
-      <figure class="case-photo"><img src="assets/img/cases/chiller-nn.jpg" width="1200" height="800" loading="lazy" alt="Обвязка чиллера на промышленном объекте"></figure>
-      <span class="label">Что сделали</span>
-      <p class="body">Сверили спецификацию с листами, пересчитали гидравлику контура и проверили схему обвязки по нормам и требованиям завода. Выпустили две редакции замечаний.</p>
-      <span class="label" style="margin-top:8px">Что нашли</span>
-      <ul class="case__list"><li>спецификация взята от другого объекта</li><li>скорость 3,34 м/с в магистрали</li><li>контур не увязан, «запас» 43 %</li><li>насос потребителя избыточен в 5 раз</li><li>нет предохранительного клапана</li></ul>
-      <span class="case__result"><span class="case__num">5×</span><span class="case__cap">запас по насосу потребителя. За лишнюю мощность заплатили бы дважды: при закупке и в счетах за электричество</span></span>
+    <div class="case-gallery" data-case-gallery data-dialog="chiller-lightbox" role="region" aria-roledescription="карусель" aria-label="Чертежи и компоновка обвязки чиллера">
+      <div class="case-gallery__track" id="chiller-gallery-track" tabindex="0" aria-label="Изображения проекта. Листайте или используйте стрелки клавиатуры">
+        <figure class="case-gallery__slide" role="group" aria-roledescription="слайд" aria-label="1 из 5">
+          <a class="case-gallery__image" href="assets/img/cases/chiller-nn/01-axon.webp" aria-label="Увеличить: Обвязка чиллера в объёме">
+            <img src="assets/img/cases/chiller-nn/01-axon.webp" width="2000" height="1250" loading="lazy" decoding="async" alt="Аксонометрия обвязки чиллера с пластинчатым теплообменником и двумя циркуляционными насосами">
+            <span class="case-gallery__zoom" aria-hidden="true">Увеличить ↗</span>
+          </a>
+          <figcaption><b>Обвязка чиллера в объёме</b>Аксонометрия системы: насосы, теплообменник, арматура и трубопроводы. Фрагмент листа 1.4 раздела ХС.</figcaption>
+        </figure>
+        <figure class="case-gallery__slide" role="group" aria-roledescription="слайд" aria-label="2 из 5">
+          <a class="case-gallery__image" href="assets/img/cases/chiller-nn/02-scheme.webp" aria-label="Увеличить: Принципиальная схема">
+            <img src="assets/img/cases/chiller-nn/02-scheme.webp" width="2000" height="1250" loading="lazy" decoding="async" alt="Принципиальная схема двух контуров холодоснабжения, подпитки и измерительных приборов">
+            <span class="case-gallery__zoom" aria-hidden="true">Увеличить ↗</span>
+          </a>
+          <figcaption><b>Принципиальная схема</b>Взаимосвязь контура чиллера, теплообменника и потребителя. Фрагмент листа 1.2 раздела ХС.</figcaption>
+        </figure>
+        <figure class="case-gallery__slide" role="group" aria-roledescription="слайд" aria-label="3 из 5">
+          <a class="case-gallery__image" href="assets/img/cases/chiller-nn/03-layout.webp" aria-label="Увеличить: План и монтажные привязки">
+            <img src="assets/img/cases/chiller-nn/03-layout.webp" width="2000" height="1250" loading="lazy" decoding="async" alt="План размещения оборудования и разрез насосного узла">
+            <span class="case-gallery__zoom" aria-hidden="true">Увеличить ↗</span>
+          </a>
+          <figcaption><b>План и монтажные привязки</b>Размещение оборудования и разрез узла обвязки. Фрагменты листа 1.3 раздела ХС.</figcaption>
+        </figure>
+        <figure class="case-gallery__slide" role="group" aria-roledescription="слайд" aria-label="4 из 5">
+          <a class="case-gallery__image" href="assets/img/cases/chiller-nn/04-controls.webp" aria-label="Увеличить: Автоматика и управление">
+            <img src="assets/img/cases/chiller-nn/04-controls.webp" width="2000" height="1250" loading="lazy" decoding="async" alt="Схема управления насосами и расположение аппаратов в шкафу управления">
+            <span class="case-gallery__zoom" aria-hidden="true">Увеличить ↗</span>
+          </a>
+          <figcaption><b>Автоматика и управление</b>Электрическая схема и компоновка шкафа управления. Фрагменты листа 2.1 раздела АХС.</figcaption>
+        </figure>
+        <figure class="case-gallery__slide" role="group" aria-roledescription="слайд" aria-label="5 из 5">
+          <a class="case-gallery__image" href="assets/img/cases/chiller-nn/05-room.webp" aria-label="Увеличить: Проработка размещения">
+            <img src="assets/img/cases/chiller-nn/05-room.webp" width="2000" height="1250" loading="lazy" decoding="async" alt="План помещения с наклонной стеной и размещением чиллера габаритами 1970 на 2610 мм">
+            <span class="case-gallery__zoom" aria-hidden="true">Увеличить ↗</span>
+          </a>
+          <figcaption><b>Проработка размещения</b>Отдельная проработка размещения чиллера. Габариты агрегата отличаются от варианта в рабочей документации.</figcaption>
+        </figure>
+      </div>
+      <div class="case-gallery__controls">
+        <div class="case-gallery__arrows">
+          <button class="case-gallery__button" type="button" data-prev aria-controls="chiller-gallery-track" aria-label="Предыдущее изображение">←</button>
+          <button class="case-gallery__button" type="button" data-next aria-controls="chiller-gallery-track" aria-label="Следующее изображение">→</button>
+        </div>
+        <span class="case-gallery__count" data-count aria-live="polite" aria-atomic="true">1 / 5</span>
+        <div class="case-gallery__dots" aria-label="Выбор изображения"><button class="case-gallery__dot" type="button" data-slide="0" aria-label="Показать изображение 1: Обвязка чиллера в объёме" aria-current="true">01</button>
+<button class="case-gallery__dot" type="button" data-slide="1" aria-label="Показать изображение 2: Принципиальная схема" aria-current="false">02</button>
+<button class="case-gallery__dot" type="button" data-slide="2" aria-label="Показать изображение 3: План и монтажные привязки" aria-current="false">03</button>
+<button class="case-gallery__dot" type="button" data-slide="3" aria-label="Показать изображение 4: Автоматика и управление" aria-current="false">04</button>
+<button class="case-gallery__dot" type="button" data-slide="4" aria-label="Показать изображение 5: Проработка размещения" aria-current="false">05</button></div>
+      </div>
+    </div>
+    <p class="case-story__note">Замечания составлены 14.09.2026; иллюстрации подготовлены по комплектам ХС и АХС от 21.09.2026. Чертежи более поздней редакции не означают, что все замечания на них сохраняются или уже устранены. На изображениях показаны фрагменты без реквизитов и подписей.</p>
+    <div class="case-story__details">
+      <div class="case-story__detail">
+        <span class="eyebrow">01 · Работа</span><h3>Сверили решения между собой</h3>
+        <p>Сопоставили схемы, пояснения и спецификацию. Проверили расходы, диаметры труб, напоры насосов, состав защитной арматуры и измерительных приборов.</p>
+      </div>
+      <div class="case-story__detail">
+        <span class="eyebrow">02 · Замечания</span><h3>Выделили вопросы до закупки</h3>
+        <ul><li>соответствие спецификации объекту;</li><li>гидравлическая увязка двух контуров;</li><li>комплектность защиты, подпитки и КИП;</li><li>согласованность схем и ведомостей.</li></ul>
+      </div>
+      <div class="case-story__detail">
+        <span class="eyebrow">03 · Результат</span><span class="case-story__result">21</span><h3>замечание в реестре</h3>
+        <p>С привязкой к документации, обоснованиями и перечнем необходимых уточнений. Реестр стал основой для дальнейшей проработки проекта.</p>
+        <a class="link-arrow" href="uslugi-proverka-rd.html">Проверка документации <span aria-hidden="true">→</span></a>
+      </div>
     </div>
   </div>
 </section>
+<dialog class="case-lightbox" id="chiller-lightbox" aria-labelledby="chiller-lightbox-title">
+  <div class="case-lightbox__bar"><span class="case-lightbox__title" id="chiller-lightbox-title">Обвязка чиллера · материалы проекта</span>
+    <button class="case-gallery__button" type="button" data-prev aria-label="Предыдущее изображение">←</button>
+    <button class="case-gallery__button" type="button" data-next aria-label="Следующее изображение">→</button>
+    <button class="case-lightbox__close" type="button" data-close aria-label="Закрыть изображение">×</button>
+  </div>
+  <img class="case-lightbox__image" src="assets/img/cases/chiller-nn/01-axon.webp" width="2000" height="1250" loading="lazy" alt="Аксонометрия обвязки чиллера">
+  <p class="case-lightbox__caption" aria-live="polite"></p>
+</dialog>
 
 <section class="sec sec--surface" id="kompressory-orenburg" aria-labelledby="h-kompressory-orenburg">
   <div class="wrap split">
@@ -224,6 +292,7 @@
 
 
 <script src="assets/js/main.js?v=20261116-contact-only" defer></script>
+<script src="assets/js/case-gallery.js?v=20261116" defer></script>
 </body>
 </html>
 
