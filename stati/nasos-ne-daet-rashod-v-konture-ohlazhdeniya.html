@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; style-src-elem 'self'; style-src-attr 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src 'self'; object-src 'none'; media-src 'none'; worker-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Почему насос не даёт расход в контуре охлаждения | Cooling Consult</title>
+<meta name="description" content="Как проверить рабочую точку насоса, сопротивление контура, распределение по ветвям и достоверность измерения расхода.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.cooling-consalt.ru/stati/nasos-ne-daet-rashod-v-konture-ohlazhdeniya.html">
+<meta property="og:title" content="Почему насос не даёт расход в контуре охлаждения | Cooling Consult">
+<meta property="og:description" content="Как проверить рабочую точку насоса, сопротивление контура, распределение по ветвям и достоверность измерения расхода.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.cooling-consalt.ru/stati/nasos-ne-daet-rashod-v-konture-ohlazhdeniya.html">
+<meta property="og:image" content="https://www.cooling-consalt.ru/assets/img/cooling-consult-cover-20261116.jpg">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Cooling Consult">
+<meta property="article:published_time" content="2026-11-18">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F5F6F7">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/fonts/inter.css">
+<link rel="stylesheet" href="/assets/css/style.css?v=20261001b">
+<script src="/assets/js/page-init.js?v=20261116-security"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://www.cooling-consalt.ru/stati/nasos-ne-daet-rashod-v-konture-ohlazhdeniya.html","url":"https://www.cooling-consalt.ru/stati/nasos-ne-daet-rashod-v-konture-ohlazhdeniya.html","inLanguage":"ru-RU","description":"Как проверить рабочую точку насоса, сопротивление контура, распределение по ветвям и достоверность измерения расхода.","headline":"Почему насосы в контуре охлаждения не дают нужный расход","mainEntityOfPage":"https://www.cooling-consalt.ru/stati/nasos-ne-daet-rashod-v-konture-ohlazhdeniya.html","datePublished":"2026-11-18","image":"https://www.cooling-consalt.ru/assets/img/cooling-consult-cover-20261116.jpg","author":{"@type":"Organization","name":"Cooling Consult","url":"https://www.cooling-consalt.ru/"},"publisher":{"@type":"Organization","name":"Cooling Consult","url":"https://www.cooling-consalt.ru/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://www.cooling-consalt.ru/"},{"@type":"ListItem","position":2,"name":"Новости","item":"https://www.cooling-consalt.ru/novosti.html"},{"@type":"ListItem","position":3,"name":"Почему насосы в контуре охлаждения не дают нужный расход","item":"https://www.cooling-consalt.ru/stati/nasos-ne-daet-rashod-v-konture-ohlazhdeniya.html"}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Cooling Consult — на главную">
+      <img src="/assets/img/mark.svg" width="36" height="36" alt="">
+      <span class="brand__text"><span class="brand__name"><b>Cooling</b> Consult</span><span class="brand__sub">Инженерный консалтинг</span></span>
+    </a>
+    <nav class="nav" aria-label="Основное меню">
+      <a href="/uslugi.html">Услуги</a>
+      <a href="/proekty.html">Кейсы</a>
+      <a class="is-active" href="/novosti.html">Новости</a>
+      <a href="/#kak-rabotaem">Как работаем</a>
+      <div class="nav__dd">
+        <a href="/equipment.html">Оборудование</a>
+        <div class="nav__sub">
+          <a href="/equipment-teploobmenniki.html">Теплообменники</a>
+          <a href="/equipment-nasosy.html">Насосное оборудование</a>
+          <a href="/equipment-zip.html">ЗИП</a>
+          <a href="/equipment-gradirni.html">Градирни</a>
+          <a href="/equipment-chillery.html">Чиллеры</a>
+          <a href="/equipment-emkosti.html">Емкости</a>
+        </div>
+      </div>
+      <a href="/contacts.html">Контакты</a>
+    </nav>
+    <div class="hdr-actions">
+
+      <a class="btn btn--primary btn--sm" href="/contacts.html">Контакты <span class="arr" aria-hidden="true">→</span></a>
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mnav"><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Мобильное меню">
+    <a class="mnav__link" href="/uslugi.html">Услуги <span aria-hidden="true">→</span></a>
+    <a class="mnav__link" href="/proekty.html">Кейсы <span aria-hidden="true">→</span></a>
+    <a class="mnav__link" href="/novosti.html">Новости <span aria-hidden="true">→</span></a>
+    <a class="mnav__link" href="/#kak-rabotaem">Как работаем <span aria-hidden="true">→</span></a>
+    <a class="mnav__link" href="/equipment.html">Оборудование <span aria-hidden="true">→</span></a>
+    <div class="mnav__sub">
+      <a class="mnav__sublink" href="/equipment-teploobmenniki.html">Теплообменники</a>
+      <a class="mnav__sublink" href="/equipment-nasosy.html">Насосное оборудование</a>
+      <a class="mnav__sublink" href="/equipment-zip.html">ЗИП</a>
+      <a class="mnav__sublink" href="/equipment-gradirni.html">Градирни</a>
+      <a class="mnav__sublink" href="/equipment-chillery.html">Чиллеры</a>
+      <a class="mnav__sublink" href="/equipment-emkosti.html">Емкости</a>
+    </div>
+    <a class="mnav__link" href="/contacts.html">Контакты <span aria-hidden="true">→</span></a>
+    <div class="mnav__foot">
+      <a class="btn btn--primary btn--block" href="/contacts.html">Контакты <span class="arr" aria-hidden="true">→</span></a>
+
+
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<article aria-labelledby="h1">
+  <header class="page-hero gridbg sec">
+    <div class="wrap">
+      <div class="page-hero__main">
+        <nav class="crumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/novosti.html">Новости</a></li></ol></nav>
+        <time datetime="2026-11-18">18 ноября 2026</time>
+        <h1 class="h1--long" id="h1">Почему насосы в контуре охлаждения не дают нужный расход</h1>
+        <p class="lead">Если насосная станция не выдаёт требуемый расход, сначала сопоставьте фактическую рабочую точку с характеристикой насоса и расчётом сети. Расход зависит от сопротивления контура и режима насоса. Поэтому замена агрегата на более мощный имеет смысл только после проверки, куда уходит напор и как распределяется вода по потребителям.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="sec">
+    <div class="wrap">
+      <div class="prose">
+      <h2>Убедитесь, что измеряете тот расход</h2>
+      <p>Сверьте единицы измерения, действующие диапазоны приборов, место установки расходомера и условия замера. Общий расход на коллекторе и расход через отдельный аппарат могут отличаться из-за перепуска или распределения по ветвям. Запишите частоту привода, число работающих насосов и перепад давления на станции. Для сравнения с паспортом учитывайте конкретное колесо, частоту и свойства теплоносителя.</p>
+      <h2>Проверьте, где теряется напор</h2>
+      <p>Сравните перепады давления на фильтрах, теплообменниках и регулирующей арматуре с проектными данными при сопоставимых расходах. Посмотрите, не изменились ли после ремонта диаметры участков, положение клапанов и состав обвязки. Проверьте условия на всасывании, доступный перепад в удалённых ветвях и наличие воздуха в системе. Если общий расход близок к норме, а отдельный потребитель недополучает воду, проверьте балансировку.</p>
+      <h2>Проверьте алгоритм управления</h2>
+      <p>Посмотрите, в какой точке установлен датчик перепада и по какому сигналу привод меняет частоту. Проверьте, при каких условиях включается второй насос и как меняется рабочая точка. При параллельной работе двух насосов итоговый расход определяется характеристикой сети. Его нельзя получить простым сложением паспортных расходов при произвольно выбранном напоре.</p>
+      <h2>Что покажет сравнение замеров</h2>
+      <p>Если после включения второго насоса напор растёт, а общий расход меняется слабо, это повод проверить сопротивление сети, положение арматуры и наличие ограничений в общей магистрали. Если показания на коллекторе и по ветвям сильно расходятся, проверьте, есть ли перепуск и относятся ли замеры к одному режиму. Эти два сценария ведут к разным решениям и помогают спланировать обследование.</p>
+      <h2>Что передать инженеру на проверку</h2>
+      <p>Соберите схему, паспорта насосов, настройки частотников и показания давления и расхода по каждому режиму. Полезно приложить данные до последней переделки системы. На этой основе можно оценить, достаточно ли очистки, настройки или балансировки, либо придётся менять гидравлическую схему и оборудование.</p>
+      <p>Cooling Consult проводит <a href="/uslugi-obsledovanie.html">обследование действующего контура</a> и выполняет <a href="/equipment-nasosy.html">подбор насосного оборудования</a> по расчётной рабочей точке и схеме подключения.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<section class="sec gridbg" aria-labelledby="h-related">
+  <div class="wrap sec-body">
+    <h2 class="h2" id="h-related">По теме</h2>
+    <div class="sheet svc-list">
+      <a class="row" href="/stati/obsledovanie-sistemy-ohlazhdeniya-ne-derzhit-temperaturu.html"><span><span class="row__name">Почему система охлаждения перестала держать температуру</span><span class="row__sub">Как проверить расход, нагрузку, погоду и автоматику при росте температуры оборотной воды. Что собрать до обследования холодоснабжения.</span></span><span class="arr" aria-hidden="true">→</span></a>
+      <a class="row" href="/stati/proverka-proekta-kholodosnabzheniya-pered-zakupkoy.html"><span><span class="row__name">Что проверить в проекте холодоснабжения до закупки оборудования</span><span class="row__sub">Что сверить в проекте ХС перед заказом оборудования: режимы, насосы, арматуру, спецификацию, компоновку и задание на автоматику.</span></span><span class="arr" aria-hidden="true">→</span></a>
+    </div>
+    <div><a class="link-arrow" href="/novosti.html">Все новости <span class="arr" aria-hidden="true">→</span></a></div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-about">
+        <a class="foot-brand" href="/"><img src="/assets/img/mark.svg" width="32" height="32" alt=""><span><b>Cooling</b> Consult</span></a>
+        <p>Инженерный консалтинг: холодоснабжение и водооборотные циклы. Санкт-Петербург, работаем по всей России.</p>
+      </div>
+      <nav class="foot-col" aria-label="Услуги">
+        <h2>Услуги</h2>
+        <a href="/uslugi-teo.html">ТЭО</a>
+        <a href="/uslugi-obsledovanie.html">Обследование систем</a>
+        <a href="/uslugi-ekspertiza-tkp.html">Анализ предложений</a>
+        <a href="/uslugi-proverka-rd.html">Проверка документации</a>
+        <a href="/uslugi-tendery-otbor.html">Тендеры и квалификация</a>
+        <a href="/uslugi.html">Все услуги</a>
+      </nav>
+      <nav class="foot-col" aria-label="Оборудование">
+        <h2>Оборудование</h2>
+        <a href="/equipment-teploobmenniki.html">Теплообменники</a>
+        <a href="/equipment-nasosy.html">Насосное оборудование</a>
+        <a href="/equipment-zip.html">ЗИП</a>
+        <a href="/equipment-gradirni.html">Градирни</a>
+        <a href="/equipment-chillery.html">Чиллеры</a>
+        <a href="/equipment-emkosti.html">Емкости</a>
+      </nav>
+      <div class="foot-col foot-col--mono">
+        <h2>Контакты</h2>
+        <a href="mailto:info@cooling-consalt.ru">info@cooling-consalt.ru</a>
+        <a href="tel:+78126407947">8 812 640 79 47</a>
+        <a href="https://t.me/Cooling_C" target="_blank" rel="noopener">Telegram @Cooling_C</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Cooling Consult · ИП Лозинский Р. М.</span>
+      <nav class="foot-legal" aria-label="Документы">
+        <a href="/privacy.html">О данных на сайте</a>
+
+        <a href="/terms.html">Пользовательское соглашение</a>
+
+
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js?v=20261116-contact-only" defer></script>
+</body>
+</html>
