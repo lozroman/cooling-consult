@@ -112,7 +112,7 @@
         <button type="button" role="tab" id="tower-tab-1" aria-controls="tower-slide-1" aria-selected="true" tabindex="0"><span>01</span>Гибридная</button>
         <button type="button" role="tab" id="tower-tab-2" aria-controls="tower-slide-2" aria-selected="false" tabindex="-1"><span>02</span>Торцевой вентилятор</button>
         <button type="button" role="tab" id="tower-tab-3" aria-controls="tower-slide-3" aria-selected="false" tabindex="-1"><span>03</span>Компактная</button>
-        <button type="button" role="tab" id="tower-tab-4" aria-controls="tower-slide-4" aria-selected="false" tabindex="-1"><span>04</span>Прямой привод</button>
+        <button type="button" role="tab" id="tower-tab-4" aria-controls="tower-slide-4" aria-selected="false" tabindex="-1" aria-label="Слайд 04, пустая страница"><span>04</span></button>
       </div>
       <div class="tower-carousel__slide" data-carousel-slide id="tower-slide-1" role="tabpanel" aria-labelledby="tower-tab-1">
         <div class="equipment-model" data-equipment-model="hybridTower" data-cutaway-poster="assets/img/equipment/tower-hybridTower-cut.webp" aria-label="Гибридная градирня: просмотр модели">
@@ -190,29 +190,7 @@
         </div>
       </div>
       <div class="tower-carousel__slide" data-carousel-slide id="tower-slide-4" role="tabpanel" aria-labelledby="tower-tab-4">
-        <div class="equipment-model" data-equipment-model="directTower" data-cutaway-poster="assets/img/equipment/tower-directTower-cut.webp" aria-label="Градирня с прямым приводом: просмотр модели">
-          <div class="equipment-model__stage">
-            <img class="equipment-model__poster" src="assets/img/equipment/tower-directTower.webp" width="1600" height="1200" alt="Градирня с прямым приводом: внешний вид" loading="lazy">
-          </div>
-          <div class="equipment-model__actions">
-            <button class="btn btn--primary" type="button" data-model-cutaway aria-pressed="false" hidden>Показать разрез</button>
-            <button class="btn btn--outline equipment-model__start" type="button" data-model-start hidden>Вращать 3D-модель <span aria-hidden="true">↗</span></button>
-          </div>
-          <div class="equipment-model__toolbar" aria-label="Управление моделью" hidden>
-            <button type="button" data-model-zoom-in aria-label="Приблизить модель">+</button>
-            <button type="button" data-model-zoom-out aria-label="Отдалить модель">−</button>
-            <button type="button" data-model-reset>Общий вид</button>
-            <button type="button" data-model-fullscreen>На весь экран</button>
-          </div>
-          <p class="equipment-model__status" data-model-status aria-live="polite">Откройте разрез или включите вращение модели</p>
-        </div>
-        <div class="tower-carousel__description">
-          <span class="tower-carousel__number" aria-hidden="true">04</span>
-          <h3>Градирня с прямым приводом</h3>
-          <p>Осевой вентилятор расположен сверху, а двигатель установлен соосно с рабочим колесом. Разрез открывает водяной тракт и внутреннюю конструкцию корпуса.</p>
-          <p class="tower-carousel__detail-label">Внутри модели</p>
-          <ul><li>Верхний вентилятор и двигатель</li><li>Водораспределение и ороситель</li><li>Каплеуловитель и поддон</li></ul>
-        </div>
+        <div class="equipment-model__stage equipment-model__poster" style="grid-column: 1 / -1;"></div>
       </div>
       <p class="equipment-model-note tower-carousel__note">В режиме разреза часть корпуса снята, чтобы показать внутреннее устройство. Модели иллюстрируют варианты компоновки; исполнение подбираем под задачу объекта.</p>
     </section>
