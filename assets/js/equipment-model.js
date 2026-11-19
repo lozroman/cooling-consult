@@ -20,8 +20,8 @@
     var toolbar = container.querySelector('.equipment-model__toolbar');
     var status = container.querySelector('[data-model-status]');
     var type = container.getAttribute('data-equipment-model');
-    var files = {tower: 'cooling-tower.js', chiller: 'chiller.js', plasticTank: 'plastic-tank.js', steelTank: 'steel-tank.js', hybridTower: 'hybrid-tower.js', axialTower: 'axial-tower.js', directTower: 'direct-tower.js'};
-    var labels = {tower: 'Компактная градирня', chiller: 'Чиллер', plasticTank: 'Вертикальная пластиковая емкость', steelTank: 'Горизонтальная металлическая емкость', hybridTower: 'Гибридная градирня', axialTower: 'Градирня с торцевым вентилятором', directTower: 'Градирня с прямым приводом'};
+    var files = {tower: 'cooling-tower.js', chiller: 'chiller.js', plasticTank: 'plastic-tank.js', steelTank: 'steel-tank.js', hybridTower: 'hybrid-tower.js', axialTower: 'axial-tower.js', directTower: 'direct-tower.js', topFanTower: 'top-fan-tower.js'};
+    var labels = {tower: 'Компактная градирня', chiller: 'Чиллер', plasticTank: 'Вертикальная пластиковая емкость', steelTank: 'Горизонтальная металлическая емкость', hybridTower: 'Гибридная градирня', axialTower: 'Градирня с торцевым вентилятором', directTower: 'Градирня с прямым приводом', topFanTower: 'Градирня с верхним вентилятором'};
     if (!files[type]) return;
     start.hidden = false;
     var cutButton = container.querySelector('[data-model-cutaway]');
