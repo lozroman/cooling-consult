@@ -795,6 +795,16 @@ a.case:hover{transform:translateY(-6px);color:var(--ink)}
 .eq-figure svg{width:200px;height:200px}
 @media (max-width:1023px){.eq-figure{min-height:220px}.eq-figure img{max-height:220px}}
 
+/* Убираем прозрачные поля фото насосов по бокам. */
+.eq-figure--pumps img{
+  width:100%;
+  max-width:396px;
+  max-height:none;
+  aspect-ratio:9 / 5;
+  object-fit:cover;
+  object-position:55% center;
+}
+
 /* шапка без переносов на средних экранах */
 .nav a,.nav__dd>a,.hdr-actions .btn{white-space:nowrap}
 .nav__dd>a{display:inline-flex;align-items:center}
