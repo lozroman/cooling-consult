@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; style-src-elem 'self'; style-src-attr 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src 'self'; object-src 'none'; media-src 'none'; worker-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Расход воздуха, мощность вентилятора и испарение воды в градирне | Cooling Consult</title>
+<meta name="description" content="Как по расходу воздуха и давлению оценить электрическую мощность вентилятора градирни, чем площадь корпуса отличается от поверхности оросителя и как посчитать подпитку.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.cooling-consalt.ru/stati/gradirnya-rashod-vozduha-moshchnost-isparenie.html">
+<meta property="og:title" content="Расход воздуха, мощность вентилятора и испарение воды в градирне | Cooling Consult">
+<meta property="og:description" content="Как по расходу воздуха и давлению оценить электрическую мощность вентилятора градирни, чем площадь корпуса отличается от поверхности оросителя и как посчитать подпитку.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.cooling-consalt.ru/stati/gradirnya-rashod-vozduha-moshchnost-isparenie.html">
+<meta property="og:image" content="https://www.cooling-consalt.ru/assets/img/cooling-consult-cover-20261116.jpg">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Cooling Consult">
+<meta property="article:published_time" content="2026-11-26">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F5F6F7">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/fonts/inter.css">
+<link rel="stylesheet" href="/assets/css/style.css?v=20261001b">
+<script src="/assets/js/page-init.js?v=20261116-security"></script>
+<link rel="stylesheet" href="/assets/css/engineering.css?v=20261126">
+<script defer src="/assets/js/engineering.js?v=20261126"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://www.cooling-consalt.ru/stati/gradirnya-rashod-vozduha-moshchnost-isparenie.html#article","url":"https://www.cooling-consalt.ru/stati/gradirnya-rashod-vozduha-moshchnost-isparenie.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.cooling-consalt.ru/stati/gradirnya-rashod-vozduha-moshchnost-isparenie.html"},"inLanguage":"ru-RU","headline":"Как связаны расход воздуха, мощность вентилятора и испарение в градирне","description":"Как по расходу воздуха и давлению оценить электрическую мощность вентилятора градирни, чем площадь корпуса отличается от поверхности оросителя и как посчитать подпитку.","articleSection":"Градирни","datePublished":"2026-11-26","dateModified":"2026-11-26","image":["https://www.cooling-consalt.ru/assets/img/cooling-consult-cover-20261116.jpg"],"author":{"@type":"Organization","name":"Cooling Consult","url":"https://www.cooling-consalt.ru/"},"publisher":{"@type":"Organization","name":"Cooling Consult","url":"https://www.cooling-consalt.ru/"},"citation":["https://handbook.ashrae.org/Handbooks/S16/SI/s16_ch21/s16_ch21_si.aspx","https://www.energy.gov/cmei/femp/best-management-practice-10-cooling-tower-management","https://spxcooling.com/wp-content/uploads/AE-AS-24-1.pdf"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://www.cooling-consalt.ru/"},{"@type":"ListItem","position":2,"name":"Новости","item":"https://www.cooling-consalt.ru/novosti.html"},{"@type":"ListItem","position":3,"name":"Как связаны расход воздуха, мощность вентилятора и испарение в градирне","item":"https://www.cooling-consalt.ru/stati/gradirnya-rashod-vozduha-moshchnost-isparenie.html"}]}]}</script>
+<link rel="stylesheet" href="/assets/css/gradirni-articles.css?v=20261126">
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Cooling Consult — на главную">
+      <img src="/assets/img/mark.svg" width="36" height="36" alt="">
+      <span class="brand__text"><span class="brand__name"><b>Cooling</b> Consult</span><span class="brand__sub">Инженерный консалтинг</span></span>
+    </a>
+    <nav class="nav" aria-label="Основное меню">
+      <a href="/uslugi.html">Услуги</a>
+      <a href="/proekty.html">Кейсы</a>
+      <a class="is-active" href="/novosti.html">Новости</a>
+      <a href="/#kak-rabotaem">Как работаем</a>
+      <div class="nav__dd">
+        <a href="/equipment.html">Оборудование</a>
+        <div class="nav__sub">
+          <a href="/equipment-teploobmenniki.html">Теплообменники</a>
+          <a href="/equipment-nasosy.html">Насосное оборудование</a>
+          <a href="/equipment-zip.html">ЗИП</a>
+          <a href="/equipment-gradirni.html">Градирни</a>
+          <a href="/equipment-chillery.html">Чиллеры</a>
+          <a href="/equipment-emkosti.html">Емкости</a>
+        </div>
+      </div>
+<details class="eng-menu eng-menu--desk"><summary>Инженерный центр</summary>
+<div class="eng-menu__panel">
+<details name="eng-group-desk"><summary>Принципиальные схемы</summary><a href="/tipovye-skhemy.html">Типовые</a><a href="/konstruktor-skhem.html">Конструктор</a></details>
+<details name="eng-group-desk"><summary>Расчёты онлайн</summary><a href="/kalkulyatory.html">Калькуляторы</a><a href="/spravochniki.html">Справочники</a></details>
+<details name="eng-group-desk"><summary>Проектирование</summary><a href="/engineering/design/">Раздел проектирования</a><a href="/engineering/design/cooling-tower-layout.html">Модель размещения градирни</a></details>
+<a href="/konstruktor-tz.html">Конструктор технических заданий</a>
+</div></details>
+      <a href="/contacts.html">Контакты</a>
+    </nav>
+    <div class="hdr-actions">
+
+      <a class="btn btn--primary btn--sm" href="/contacts.html">Контакты <span class="arr" aria-hidden="true">→</span></a>
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mnav"><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Мобильное меню">
+    <a class="mnav__link" href="/uslugi.html">Услуги <span aria-hidden="true">→</span></a>
+    <a class="mnav__link" href="/proekty.html">Кейсы <span aria-hidden="true">→</span></a>
+    <a class="mnav__link" href="/novosti.html">Новости <span aria-hidden="true">→</span></a>
+    <a class="mnav__link" href="/#kak-rabotaem">Как работаем <span aria-hidden="true">→</span></a>
+    <a class="mnav__link" href="/equipment.html">Оборудование <span aria-hidden="true">→</span></a>
+    <div class="mnav__sub">
+      <a class="mnav__sublink" href="/equipment-teploobmenniki.html">Теплообменники</a>
+      <a class="mnav__sublink" href="/equipment-nasosy.html">Насосное оборудование</a>
+      <a class="mnav__sublink" href="/equipment-zip.html">ЗИП</a>
+      <a class="mnav__sublink" href="/equipment-gradirni.html">Градирни</a>
+      <a class="mnav__sublink" href="/equipment-chillery.html">Чиллеры</a>
+      <a class="mnav__sublink" href="/equipment-emkosti.html">Емкости</a>
+    </div>
+<details class="eng-menu eng-menu--mobile"><summary>Инженерный центр</summary>
+<div class="eng-menu__panel">
+<details name="eng-group-mobile"><summary>Принципиальные схемы</summary><a href="/tipovye-skhemy.html">Типовые</a><a href="/konstruktor-skhem.html">Конструктор</a></details>
+<details name="eng-group-mobile"><summary>Расчёты онлайн</summary><a href="/kalkulyatory.html">Калькуляторы</a><a href="/spravochniki.html">Справочники</a></details>
+<details name="eng-group-mobile"><summary>Проектирование</summary><a href="/engineering/design/">Раздел проектирования</a><a href="/engineering/design/cooling-tower-layout.html">Модель размещения градирни</a></details>
+<a href="/konstruktor-tz.html">Конструктор технических заданий</a>
+</div></details>
+    <a class="mnav__link" href="/contacts.html">Контакты <span aria-hidden="true">→</span></a>
+    <div class="mnav__foot">
+      <a class="btn btn--primary btn--block" href="/contacts.html">Контакты <span class="arr" aria-hidden="true">→</span></a>
+
+
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<article aria-labelledby="h1" class="tower-article">
+<header class="page-hero gridbg sec tower-hero"><div class="wrap"><div class="page-hero__main">
+<nav class="crumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/novosti.html">Новости</a></li><li><span aria-current="page">Как связаны расход воздуха, мощность вентилятора и испарение в градирне</span></li></ol></nav>
+<h1 id="h1" class="h1--long">Как связаны расход воздуха, мощность вентилятора и испарение в градирне</h1>
+<p class="lead">Две градирни, рассчитанные на одни и те же 580 кВт тепла, могут различаться по габаритам, потреблению электричества и расходу подпиточной воды. Посмотрим, за какие киловатты платит предприятие, сколько места займёт установка и откуда берётся цифра в строке «подпитка».</p>
+<p class="tower-byline">Cooling Consult <span aria-hidden="true">·</span> <time datetime="2026-11-26">26 ноября 2026</time></p>
+</div></div></header>
+<div class="sec tower-reading"><div class="wrap tower-grid">
+<nav class="tower-toc" aria-label="Содержание статьи"><p>В статье</p><ul><li><a href="#section-1">Сколько воздуха проходит через градирню</a></li><li><a href="#section-2">Какая мощность попадёт в счёт за электричество</a></li><li><a href="#section-3">Сколько места требуется для охлаждения</a></li><li><a href="#section-4">Сколько воды уйдёт на подпитку</a></li></ul></nav>
+<div class="prose tower-copy"><h2 id="section-1">Сколько воздуха проходит через градирню</h2>
+<p>Чтобы вентилятор дал нужный расход, он должен преодолеть сопротивление воздушного тракта. На пути воздуха находятся входные решётки, орошаемая насадка, каплеуловитель, а иногда ещё шумоглушитель и воздуховод. Попросите расход воздуха в м³/ч и давление вентилятора в Па для одной и той же рабочей точки. Если аппарат подключён к воздуховоду, отдельно укажите его расчётное сопротивление. Варианты исполнения разобраны в <a href="/stati/osevoy-ili-tsentrobezhnyy-ventilyator-gradirni.html">сравнении осевых и центробежных вентиляторов</a>.</p>
+<p>Увеличение расхода воздуха обычно улучшает охлаждение воды при той же нагрузке. Насколько именно снизится температура на выходе, зависит также от <a href="/stati/temperatura-mokrogo-termometra.html">температуры по мокрому термометру</a>, расхода воды и оросителя. Цифра в м³/ч полезна для проверки подбора. Температуру оборотной воды завод должен получить в расчётном листе всей градирни.</p>
+<h2 id="section-2">Какая мощность попадёт в счёт за электричество</h2>
+<p>Номинальные киловатты на шильдике двигателя показывают его расчётную механическую мощность на валу. Для бюджета важна активная электрическая мощность, которую установка берёт из сети в заданном режиме. Её можно оценить по расходу воздуха, полному давлению вентилятора и суммарному КПД вентилятора, передачи, двигателя и частотного преобразователя.</p>
+<p><strong>Пример.</strong> Вентилятор подаёт 72 000 м³/ч, то есть 20 м³/с. При полном давлении 180 Па полезная мощность воздушного потока составит 20 × 180 = 3 600 Вт. Если суммарный КПД по полному давлению равен 60 %, потребление из сети составит 3,6 / 0,60 = <strong>6 кВт</strong>. За 1 000 часов в этой точке вентилятор израсходует 6 000 кВт·ч. Электропотребление насосов считают отдельно. Если поставщик указывает статическое давление, в расчёте нужен соответствующий ему статический КПД.</p>
+<p>Для того же рабочего колеса при неизменной плотности воздуха и прежней характеристике сети действуют законы подобия. Если снизить частоту вращения до 80 %, расход составит примерно 80 % прежнего, давление — 64 %, а мощность на валу — 51 %. Эти соотношения относятся к подобным рабочим точкам. Загрязнение насадки меняет сопротивление, а КПД двигателя и преобразователя зависит от нагрузки. Для оценки сезонных затрат запросите потребление из сети при нескольких нагрузках и умножьте каждое значение на число часов работы в этом режиме.</p>
+<h2 id="section-3">Сколько места требуется для охлаждения</h2>
+<p>Габаритная площадь в плане показывает, поместится ли корпус на фундаменте. Добавьте место для притока воздуха, проходов и извлечения обслуживаемых узлов. Внутри аппарата важна другая величина — поверхность контакта воды с воздухом. В плёночном оросителе она зависит от объёма и геометрии пакетов и от того, насколько равномерно вода смачивает насадку. По длине и ширине корпуса её определить нельзя. При ограниченной площадке запросите план с <a href="/stati/razmeshchenie-gradiren-na-ploshchadke.html">зонами забора воздуха и обслуживания</a>, а также мощность и шум аппарата в требуемом летнем режиме.</p>
+<p>Для входных решёток важна свободная площадь, через которую действительно проходит воздух. При 72 000 м³/ч через 10 м² свободного сечения средняя скорость составит 2 м/с. Если экран уменьшит сечение до 5 м², для того же расхода понадобятся уже 4 м/с. Сопротивление вырастет, и на прежней частоте вентилятор может подать меньше воздуха. Поэтому сравните у разных градирен площадь входа, аэродинамическое сопротивление и потребление вентилятора в одной точке. Один размер корпуса такой проверки не заменяет.</p>
+<h2 id="section-4">Сколько воды уйдёт на подпитку</h2>
+<p>Часть тепла градирня отдаёт за счёт испарения, часть — за счёт теплообмена с воздухом без испарения. Доли меняются с погодой и нагрузкой. По киловаттам двигателя расход испарившейся воды посчитать нельзя. Для расчёта подпитки сложите испарение, продувку и капельный унос. Продувка ограничивает накопление солей, а каплеуловитель задерживает выносимые воздушным потоком капли.</p>
+<p>Предположим, для выбранного режима поставщик указал испарение 0,70 м³/ч. При допустимом коэффициенте концентрирования 4 в установившемся режиме на продувку и капельный унос вместе приходится 0,70 / (4 − 1) ≈ 0,23 м³/ч. Подпитка составит около <strong>0,93 м³/ч</strong>. Такой баланс предполагает отсутствие утечек и переливов. Допустимый коэффициент определяют по составу подпиточной воды и режиму водоподготовки. Для сравнения КП запросите у обоих поставщиков тепловой расчёт на одинаковые температуры, а также отдельные значения для электрической мощности, испарения, продувки и уноса.</p>
+<p>Зависимости расхода, давления и мощности приведены в <a href="https://handbook.ashrae.org/Handbooks/S16/SI/s16_ch21/s16_ch21_si.aspx">справочнике ASHRAE по вентиляторам</a>. Баланс подпитки описан в <a href="https://www.energy.gov/cmei/femp/best-management-practice-10-cooling-tower-management">рекомендациях Минэнерго США</a> и <a href="https://spxcooling.com/wp-content/uploads/AE-AS-24-1.pdf">техническом разборе испарения и продувки SPX</a>.</p>
+<nav class="tower-series" aria-labelledby="tower-related"><h2 id="tower-related">Ещё о выборе и эксплуатации градирен</h2><ul><li><a href="/stati/temperatura-mokrogo-termometra.html">Температура мокрого термометра</a></li><li><a href="/stati/kak-vybrat-gradirnyu.html">Как выбрать градирню</a></li><li><a href="/stati/osnovnye-parametry-gradirni-pasport.html">Как читать паспорт и расчётный лист</a></li><li><a href="/stati/osevoy-ili-tsentrobezhnyy-ventilyator-gradirni.html">Осевой или центробежный вентилятор</a></li><li><a href="/stati/razmeshchenie-gradiren-na-ploshchadke.html">Размещение градирен на площадке</a></li></ul></nav></div>
+</div></div>
+</article></main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-about">
+        <a class="foot-brand" href="/"><img src="/assets/img/mark.svg" width="32" height="32" alt=""><span><b>Cooling</b> Consult</span></a>
+        <p>Инженерный консалтинг: холодоснабжение и водооборотные циклы. Санкт-Петербург, работаем по всей России.</p>
+      </div>
+      <nav class="foot-col" aria-label="Услуги">
+        <h2>Услуги</h2>
+        <a href="/uslugi-teo.html">ТЭО</a>
+        <a href="/uslugi-obsledovanie.html">Обследование систем</a>
+        <a href="/uslugi-ekspertiza-tkp.html">Анализ предложений</a>
+        <a href="/uslugi-proverka-rd.html">Проверка документации</a>
+        <a href="/uslugi-tendery-otbor.html">Тендеры и квалификация</a>
+        <a href="/uslugi.html">Все услуги</a>
+      <a href="/inzhenernyy-tsentr.html">Инженерный центр</a>
+      </nav>
+      <nav class="foot-col" aria-label="Оборудование">
+        <h2>Оборудование</h2>
+        <a href="/equipment-teploobmenniki.html">Теплообменники</a>
+        <a href="/equipment-nasosy.html">Насосное оборудование</a>
+        <a href="/equipment-zip.html">ЗИП</a>
+        <a href="/equipment-gradirni.html">Градирни</a>
+        <a href="/equipment-chillery.html">Чиллеры</a>
+        <a href="/equipment-emkosti.html">Емкости</a>
+      </nav>
+      <div class="foot-col foot-col--mono">
+        <h2>Контакты</h2>
+        <a href="mailto:info@cooling-consalt.ru">info@cooling-consalt.ru</a>
+        <a href="tel:+78126407947">8 812 640 79 47</a>
+        <a href="https://t.me/Cooling_C" target="_blank" rel="noopener">Telegram @Cooling_C</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Cooling Consult · ИП Лозинский Р. М.</span>
+      <nav class="foot-legal" aria-label="Документы">
+        <a href="/privacy.html">О данных на сайте</a>
+
+        <a href="/terms.html">Пользовательское соглашение</a>
+
+
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js?v=20261116-contact-only" defer></script>
+</body>
+</html>
