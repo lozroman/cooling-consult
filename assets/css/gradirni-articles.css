@@ -45,4 +45,7 @@
 .tower-copy .layout-figure picture { display: block; }
 .tower-copy details { padding: .75rem 1rem; border: 1px solid var(--line); background: var(--surface); }
 .tower-copy details summary { font-weight: 600; cursor: pointer; color: var(--blueprint); }
-
+.tower-copy .layout-clearances table { width: 100%; min-width: 0; }
+.tower-copy .layout-clearances th, .tower-copy .layout-clearances td { text-align: left; vertical-align: top; white-space: normal; }
+.tower-copy .layout-clearances td { font-variant-numeric: tabular-nums; }
+.tower-copy h3[id] { scroll-margin-top: 6rem; }
