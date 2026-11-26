@@ -21,6 +21,14 @@
 @media(min-width:1024px) and (max-width:1199px){.hdr-actions>.btn{display:none}.hdr-actions:empty{display:none}}
 .eng-hero .page-hero__main{grid-column:1/-1;max-width:56rem}
 .eng-hero .wrap{padding-bottom:clamp(1.75rem,4vw,3.5rem)}
+
+.eng-catalog > .wrap { row-gap: 28px; }
+.eng-catalog .svc-list { grid-column: 1 / -1; padding: 0; }
+.eng-catalog .row { margin: 0; padding: 24px 28px; }
+@media (max-width: 767px) {
+  .eng-catalog .row { padding-inline: 16px; }
+}
+
 .eng-content{border-top:1px solid var(--line);background:var(--surface)}
 .eng-content>.wrap{padding-block:clamp(1.75rem,4vw,4rem)}
 .eng-content h2{font-size:clamp(1.25rem,2vw,1.65rem);line-height:1.2;margin:0 0 1rem}
