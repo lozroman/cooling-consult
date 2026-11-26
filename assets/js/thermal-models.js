@@ -8,11 +8,11 @@ const evaporationHeat = 2450;
 const kWPerGcalHour = 1163;
 const kWPerRefrigerationTon = 3.516852842;
 
-function metric(label, value, unit, digits = 2) {
+export function metric(label, value, unit, digits = 2) {
   return { label, value, unit, digits };
 }
 
-function invalid(field, message) {
+export function invalid(field, message) {
   return { error: { field, message } };
 }
 
@@ -36,7 +36,7 @@ function velocity(flow, diameterMm) {
 }
 
 // ASHRAE Fundamentals, chapter 1. Saturation pressure over ice or liquid, in kPa.
-function saturationPressure(temperature) {
+export function saturationPressure(temperature) {
   const k = temperature + 273.15;
   const logPa = temperature <= 0.01
     ? -5674.5359 / k + 6.3925247 - 0.009677843 * k + 6.2215701e-7 * k ** 2
@@ -88,6 +88,14 @@ const powerUnits = {
   gcal: { label: 'Гкал/ч', factor: kWPerGcalHour },
   tr: { label: 'TR', factor: kWPerRefrigerationTon }
 };
+
+export function towerWaterBalance(flow, drop, cycles, driftPercent, latentPercent) {
+  const evaporation = flow * waterHeatCapacity * drop * latentPercent / (100 * evaporationHeat);
+  const drift = flow * driftPercent / 100;
+  const targetLiquidLoss = evaporation / (cycles - 1);
+  const blowdown = Math.max(0, targetLiquidLoss - drift);
+  return { evaporation, drift, targetLiquidLoss, blowdown, makeup: evaporation + drift + blowdown };
+}
 
 export const calculators = {
   'teplovaya-moshchnost'(values) {
@@ -154,11 +162,7 @@ export const calculators = {
 
   'podpitka-gradirni'({ flow, hot, cold, cycles, driftPercent, latentPercent }) {
     if (hot < cold) return invalid('cold', 'При охлаждении температура воды на выходе не может быть выше температуры воды на входе.');
-    const evaporation = flow * waterHeatCapacity * (hot - cold) * latentPercent / (100 * evaporationHeat);
-    const drift = flow * driftPercent / 100;
-    const targetLiquidLoss = evaporation / (cycles - 1);
-    const blowdown = Math.max(0, targetLiquidLoss - drift);
-    const makeup = evaporation + drift + blowdown;
+    const { evaporation, drift, targetLiquidLoss, blowdown, makeup } = towerWaterBalance(flow, hot - cold, cycles, driftPercent, latentPercent);
     const rows = [
       metric('Расход подпиточной воды', makeup, 'м³/ч', 3),
       metric('Испарение', evaporation, 'м³/ч', 3),

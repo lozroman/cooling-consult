@@ -1,4 +1,7 @@
-import { calculators } from './thermal-models.js?v=20261126b';
+import { calculators as thermalCalculators } from './thermal-models.js?v=20261126c';
+import { plantCalculators } from './plant-calculators.js?v=20261126c';
+
+const calculators = { ...thermalCalculators, ...plantCalculators };
 
 const app = document.querySelector('.tc-app');
 const menu = app.querySelector('.tc-index');
@@ -60,7 +63,35 @@ function displayResult(area, result) {
   });
   content.push(list);
   if (result.notice) content.push(element('p', 'tc-notice', result.notice));
+  if (result.source) {
+    const link = element('a', 'tc-source', result.source.label);
+    link.href = result.source.url;
+    content.push(link);
+  }
   area.replaceChildren(...content);
+}
+
+function displayTable(holder, data) {
+  if (!holder) return;
+  holder.hidden = !data;
+  if (!data) { holder.replaceChildren(); return; }
+  const table = element('table', 'tc-result-table');
+  table.createCaption().textContent = data.caption;
+  const headings = table.createTHead().insertRow();
+  for (const column of data.columns) {
+    const cell = element('th', '', column);
+    cell.scope = 'col';
+    headings.append(cell);
+  }
+  const body = table.createTBody();
+  for (const [label, ...numbers] of data.rows) {
+    const row = body.insertRow();
+    const title = element('th', '', label);
+    title.scope = 'row';
+    row.append(title);
+    for (const number of numbers) row.insertCell().textContent = formatNumber(number, data.digits);
+  }
+  holder.replaceChildren(table);
 }
 
 function parseEntry(field) {
@@ -108,6 +139,14 @@ function recalculate(article) {
   const form = article.querySelector('form');
   const area = article.querySelector('.tc-result');
   updateMediumFields(article, form);
+  for (const wrapper of form.querySelectorAll('[data-show-when]')) {
+    const show = wrapper.dataset.showWhen.split(';').every(rule => {
+      const [name, alternatives] = rule.split('=');
+      return alternatives.split('|').includes(form.elements.namedItem(name).value);
+    });
+    wrapper.hidden = !show;
+    wrapper.querySelector('[name]').disabled = !show;
+  }
   const values = {};
   let issue;
   for (const field of form.querySelectorAll('[name]')) {
@@ -127,6 +166,7 @@ function recalculate(article) {
   }
   if (result.error?.field) form.elements.namedItem(result.error.field)?.setAttribute('aria-invalid', 'true');
   displayResult(area, result);
+  displayTable(article.querySelector('.tc-breakdown'), result.table);
   return result;
 }
 

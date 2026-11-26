@@ -6,11 +6,11 @@
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Калькуляторы для градирен, воды и теплоэнергетики | Cooling Consult</title>
-<meta name="description" content="13 онлайн-калькуляторов для тепловых и водооборотных систем. Рассчитайте тепловую мощность, расход воды, подпитку градирни, напор насоса и энергозатраты.">
+<meta name="description" content="22 инженерных калькулятора для градирен, чиллеров и насосов. Рассчитайте токи двигателя, часы фрикулинга, объём баков, подпитку, изоляцию и окупаемость.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.cooling-consalt.ru/kalkulyatory.html">
 <meta property="og:title" content="Калькуляторы для градирен, воды и теплоэнергетики | Cooling Consult">
-<meta property="og:description" content="13 онлайн-калькуляторов для тепловых и водооборотных систем. Рассчитайте тепловую мощность, расход воды, подпитку градирни, напор насоса и энергозатраты.">
+<meta property="og:description" content="22 инженерных калькулятора для градирен, чиллеров и насосов. Рассчитайте токи двигателя, часы фрикулинга, объём баков, подпитку, изоляцию и окупаемость.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.cooling-consalt.ru/kalkulyatory.html">
 <meta property="og:image" content="https://www.cooling-consalt.ru/assets/img/cooling-consult-cover-20261116.jpg">
@@ -25,8 +25,8 @@
 
 <link rel="stylesheet" href="/assets/css/engineering.css?v=20261126">
 <script defer src="/assets/js/engineering.js?v=20261126"></script>
-<link rel="stylesheet" href="/assets/css/thermal-calculators.css?v=20261126b">
-<script type="module" src="/assets/js/thermal-calculators.js?v=20261126b"></script>
+<link rel="stylesheet" href="/assets/css/thermal-calculators.css?v=20261126c">
+<script type="module" src="/assets/js/thermal-calculators.js?v=20261126c"></script>
 </head>
 <body>
 <a class="skip" href="#main">Перейти к содержанию</a>
@@ -102,7 +102,7 @@
 <section class="page-hero eng-hero tc-hero gridbg sec" aria-labelledby="h1"><div class="wrap"><div class="page-hero__main">
 <nav class="crumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/inzhenernyy-tsentr.html">Инженерный центр</a></li><li><a href="/inzhenernyy-tsentr.html#raschety">Расчёты онлайн</a></li><li><span aria-current="page">Калькуляторы</span></li></ol></nav>
 <h1 id="h1">Инженерные калькуляторы</h1>
-<p class="lead">Тепловая нагрузка, подпитка градирни, гидравлика трубопроводов и стоимость работы оборудования.</p>
+<p class="lead">Тепловая мощность, водный баланс градирни, фрикулинг, насосы, токи электродвигателей и экономика охлаждения.</p>
 </div></div></section>
 <div class="tc-app">
 <div class="wrap tc-layout">
@@ -112,28 +112,40 @@
 <li><a href="#rashod-teplonositelya">Расход теплоносителя</a></li>
 <li><a href="#vremya-nagreva">Время нагрева или охлаждения бака</a></li>
 <li><a href="#smeshenie-vody">Смешение потоков воды</a></li>
+<li><a href="#rasshiritelnyy-bak">Расширительный бак закрытого контура</a></li>
+<li><a href="#doliv-glikolya">Сколько гликоля слить и долить</a></li>
 </ul></details>
 <details name="tc-group"><summary>Градирни</summary><ul>
 <li><a href="#mokryy-termometr">Температура мокрого термометра</a></li>
 <li><a href="#podpitka-gradirni">Испарение, продувка и подпитка</a></li>
+<li><a href="#pereliv-baka-gradirni">Перелив бака при остановке градирни</a></li>
+</ul></details>
+<details name="tc-group"><summary>Чиллеры и фрикулинг</summary><ul>
+<li><a href="#chiller-i-kondensator">Чиллер и нагрузка на конденсатор</a></li>
+<li><a href="#bufer-chillera">Буферный бак чиллера</a></li>
+<li><a href="#chasy-frikulinga">Часы фрикулинга по городу</a></li>
 </ul></details>
 <details name="tc-group"><summary>Трубы и насосы</summary><ul>
 <li><a href="#diametr-truby">Внутренний диаметр трубы</a></li>
 <li><a href="#skorost-v-trube">Скорость воды в трубе</a></li>
 <li><a href="#poteri-davleniya">Потери давления в трубопроводе</a></li>
 <li><a href="#napor-i-moshchnost-nasosa">Напор и мощность насоса</a></li>
+<li><a href="#kavitatsionnyy-zapas-npsh">Кавитационный запас насоса (NPSH)</a></li>
+<li><a href="#izolyatsiya-ot-kondensata">Изоляция трубы от конденсата</a></li>
 </ul></details>
 <details name="tc-group"><summary>Энергия и затраты</summary><ul>
-<li><a href="#chiller-i-kondensator">Чиллер и нагрузка на конденсатор</a></li>
+<li><a href="#toki-elektrodvigatelya">Токи электродвигателя</a></li>
 <li><a href="#zatraty-na-resursy">Затраты на воду и электроэнергию</a></li>
 <li><a href="#perevod-moshchnosti">Перевод единиц мощности</a></li>
+<li><a href="#okupaemost-gradirni">Окупаемость перехода с прямотока на градирню</a></li>
 </ul></details>
 </nav>
 <div class="tc-picker"><label for="tc-picker">Выберите калькулятор</label><span><select id="tc-picker">
-<optgroup label="Тепло и вода"><option value="teplovaya-moshchnost">Тепловая мощность</option><option value="rashod-teplonositelya">Расход теплоносителя</option><option value="vremya-nagreva">Время нагрева или охлаждения бака</option><option value="smeshenie-vody">Смешение потоков воды</option></optgroup>
-<optgroup label="Градирни"><option value="mokryy-termometr">Температура мокрого термометра</option><option value="podpitka-gradirni">Испарение, продувка и подпитка</option></optgroup>
-<optgroup label="Трубы и насосы"><option value="diametr-truby">Внутренний диаметр трубы</option><option value="skorost-v-trube">Скорость воды в трубе</option><option value="poteri-davleniya">Потери давления в трубопроводе</option><option value="napor-i-moshchnost-nasosa">Напор и мощность насоса</option></optgroup>
-<optgroup label="Энергия и затраты"><option value="chiller-i-kondensator">Чиллер и нагрузка на конденсатор</option><option value="zatraty-na-resursy">Затраты на воду и электроэнергию</option><option value="perevod-moshchnosti">Перевод единиц мощности</option></optgroup>
+<optgroup label="Тепло и вода"><option value="teplovaya-moshchnost">Тепловая мощность</option><option value="rashod-teplonositelya">Расход теплоносителя</option><option value="vremya-nagreva">Время нагрева или охлаждения бака</option><option value="smeshenie-vody">Смешение потоков воды</option><option value="rasshiritelnyy-bak">Расширительный бак закрытого контура</option><option value="doliv-glikolya">Сколько гликоля слить и долить</option></optgroup>
+<optgroup label="Градирни"><option value="mokryy-termometr">Температура мокрого термометра</option><option value="podpitka-gradirni">Испарение, продувка и подпитка</option><option value="pereliv-baka-gradirni">Перелив бака при остановке градирни</option></optgroup>
+<optgroup label="Чиллеры и фрикулинг"><option value="chiller-i-kondensator">Чиллер и нагрузка на конденсатор</option><option value="bufer-chillera">Буферный бак чиллера</option><option value="chasy-frikulinga">Часы фрикулинга по городу</option></optgroup>
+<optgroup label="Трубы и насосы"><option value="diametr-truby">Внутренний диаметр трубы</option><option value="skorost-v-trube">Скорость воды в трубе</option><option value="poteri-davleniya">Потери давления в трубопроводе</option><option value="napor-i-moshchnost-nasosa">Напор и мощность насоса</option><option value="kavitatsionnyy-zapas-npsh">Кавитационный запас насоса (NPSH)</option><option value="izolyatsiya-ot-kondensata">Изоляция трубы от конденсата</option></optgroup>
+<optgroup label="Энергия и затраты"><option value="toki-elektrodvigatelya">Токи электродвигателя</option><option value="zatraty-na-resursy">Затраты на воду и электроэнергию</option><option value="perevod-moshchnosti">Перевод единиц мощности</option><option value="okupaemost-gradirni">Окупаемость перехода с прямотока на градирню</option></optgroup>
 </select></span></div>
 <div class="tc-workspace">
 <noscript><p class="tc-noscript">Ниже приведены примеры с исходными данными и формулами. Включите JavaScript, чтобы пересчитать их для своего объекта.</p></noscript>
@@ -310,7 +322,7 @@
 <details class="tc-disclosure tc-method"><summary>Как считается</summary>
 <p class="tc-expression">E = Q · 3600 · f / (ρ · r)     B = max(0, E / (K − 1) − D)     M = E + B + D</p><p>E — испарение, B — продувка, D — капельный унос, M — подпитка в м³/ч. Q — отводимое тепло в кВт, f — доля тепла на испарение, r ≈ 2450 кДж/кг, ρ ≈ 1000 кг/м³. K — отношение концентрации солей в оборотной воде к концентрации в подпитке. Баланс рассчитан для установившегося режима без утечек и переливов.</p>
 <p><a href="https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P100TFYV.TXT">Баланс воды градирни по руководству EPA</a></p></details>
-<nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#zatraty-na-resursy">Затраты на воду и электроэнергию</a></nav>
+<nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#zatraty-na-resursy">Затраты на воду и электроэнергию</a><a href="#okupaemost-gradirni">Окупаемость перехода с прямотока на градирню</a></nav>
 </article>
 <article class="tc-tool" id="diametr-truby" aria-labelledby="diametr-truby-title">
 <h2 id="diametr-truby-title" tabindex="-1">Внутренний диаметр трубы</h2>
@@ -400,7 +412,7 @@
 <details class="tc-disclosure tc-method"><summary>Как считается</summary>
 <p class="tc-expression">H = Δz + (Δpпот + Δpёмк) / (ρ · g)     Pэл = ρ · g · (G / 3600) · H / (1000 · η)</p><p>В формуле давления выражены в Па, η — общий КПД в долях единицы. Включите потери по трубам, арматуре и оборудованию расчётного пути. Для открытых ёмкостей Δz — разность отметок свободных поверхностей. Изменение скоростного напора на границах принято равным нулю.</p>
 <p><a href="https://www.pumps.org/wp-content/uploads/2025/02/PSC-Exam-Formula-Reference-Sheet.pdf">Формулы мощности насосов Hydraulic Institute</a></p></details>
-<nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#poteri-davleniya">Потери давления в трубопроводе</a><a href="#zatraty-na-resursy">Затраты на воду и электроэнергию</a></nav>
+<nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#poteri-davleniya">Потери давления в трубопроводе</a><a href="#zatraty-na-resursy">Затраты на воду и электроэнергию</a><a href="#kavitatsionnyy-zapas-npsh">Кавитационный запас насоса (NPSH)</a></nav>
 </article>
 <article class="tc-tool" id="chiller-i-kondensator" aria-labelledby="chiller-i-kondensator-title">
 <h2 id="chiller-i-kondensator-title" tabindex="-1">Чиллер и нагрузка на конденсатор</h2>
@@ -420,7 +432,7 @@
 <details class="tc-disclosure tc-method"><summary>Как считается</summary>
 <p class="tc-expression">Pкомпр = Qхол / COP     Qконд = Qхол + Pкомпр</p><p>Введите COP в кВт/кВт в одной рабочей точке, отнесённый к потреблению компрессора. Принято, что вся работа компрессора переходит в хладагент. Вспомогательные насосы и вентиляторы учитываются отдельно.</p>
 <p><a href="https://bigladdersoftware.com/epx/docs/24-2/engineering-reference/chillers.html">Тепловой баланс чиллера в EnergyPlus</a></p></details>
-<nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#rashod-teplonositelya">Расход теплоносителя</a><a href="#zatraty-na-resursy">Затраты на воду и электроэнергию</a></nav>
+<nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#rashod-teplonositelya">Расход теплоносителя</a><a href="#zatraty-na-resursy">Затраты на воду и электроэнергию</a><a href="#bufer-chillera">Буферный бак чиллера</a></nav>
 </article>
 <article class="tc-tool" id="zatraty-na-resursy" aria-labelledby="zatraty-na-resursy-title">
 <h2 id="zatraty-na-resursy-title" tabindex="-1">Затраты на воду и электроэнергию</h2>
@@ -444,7 +456,7 @@
 </div>
 <details class="tc-disclosure tc-method"><summary>Как считается</summary>
 <p class="tc-expression">t = n · h     W = P · k · t     V = G · t     C = W · Цэ + V · Цв</p><p>k — доля электрической нагрузки. Указанный расход воды постоянен на протяжении рабочих часов. Для оборотной системы введите расход подпитки. Тарифы приведены для примера, замените их своими на единой основе по НДС. Учтены только указанные вода и электроэнергия.</p></details>
-<nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#podpitka-gradirni">Испарение, продувка и подпитка</a><a href="#napor-i-moshchnost-nasosa">Напор и мощность насоса</a></nav>
+<nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#podpitka-gradirni">Испарение, продувка и подпитка</a><a href="#napor-i-moshchnost-nasosa">Напор и мощность насоса</a><a href="#toki-elektrodvigatelya">Токи электродвигателя</a></nav>
 </article>
 <article class="tc-tool" id="perevod-moshchnosti" aria-labelledby="perevod-moshchnosti-title">
 <h2 id="perevod-moshchnosti-title" tabindex="-1">Перевод единиц мощности</h2>
@@ -465,6 +477,316 @@
 <p class="tc-expression">1 Гкал/ч = 1163 кВт     1 TR ≈ 3,51685 кВт</p><p>Использована международная табличная калория, равная 4,1868 Дж. Одна американская холодильная тонна соответствует 12 000 BTU (IT) в час.</p>
 <p><a href="https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8">Таблицы перевода единиц NIST</a></p></details>
 <nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#teplovaya-moshchnost">Тепловая мощность</a></nav>
+</article>
+<article class="tc-tool" id="bufer-chillera" aria-labelledby="bufer-chillera-title">
+<h2 id="bufer-chillera-title" tabindex="-1">Буферный бак чиллера</h2>
+<p class="tc-tool-intro">Проверьте, хватит ли действующего объёма при минимальной нагрузке. Расчёт учитывает время непрерывной работы компрессора и паспортный минимум чиллера.</p>
+<div class="tc-body">
+<form class="tc-form" aria-label="Буферный бак чиллера" novalidate><fieldset disabled><legend class="sr-only">Исходные данные</legend>
+<div class="tc-fields">
+<div class="tc-field"><label for="bufer-chillera-stage">Холодопроизводительность минимальной ступени</label><span class="tc-input"><input type="text" inputmode="decimal" id="bufer-chillera-stage" name="stage" required aria-describedby="bufer-chillera-stage-unit bufer-chillera-stage-hint" value="100" maxlength="32" autocomplete="off" data-gt="0"><span id="bufer-chillera-stage-unit">кВт</span></span><span class="tc-hint" id="bufer-chillera-stage-hint">У инверторного чиллера используйте минимальную устойчивую производительность.</span></div>
+<div class="tc-field"><label for="bufer-chillera-demand">Минимальная одновременная нагрузка</label><span class="tc-input"><input type="text" inputmode="decimal" id="bufer-chillera-demand" name="demand" required aria-describedby="bufer-chillera-demand-unit" value="40" maxlength="32" autocomplete="off" data-min="0"><span id="bufer-chillera-demand-unit">кВт</span></span></div>
+<div class="tc-field"><label for="bufer-chillera-minutes">Минимальное время работы компрессора</label><span class="tc-input"><input type="text" inputmode="decimal" id="bufer-chillera-minutes" name="minutes" required aria-describedby="bufer-chillera-minutes-unit" value="5" maxlength="32" autocomplete="off" data-gt="0"><span id="bufer-chillera-minutes-unit">мин</span></span></div>
+<div class="tc-field"><label for="bufer-chillera-band">Допустимое изменение температуры за цикл</label><span class="tc-input"><input type="text" inputmode="decimal" id="bufer-chillera-band" name="band" required aria-describedby="bufer-chillera-band-unit bufer-chillera-band-hint" value="2" maxlength="32" autocomplete="off" data-gt="0"><span id="bufer-chillera-band-unit">К</span></span><span class="tc-hint" id="bufer-chillera-band-hint">Разница между порогами включения и выключения регулятора.</span></div>
+<div class="tc-field"><label for="bufer-chillera-existing">Активный объём существующего контура</label><span class="tc-input"><input type="text" inputmode="decimal" id="bufer-chillera-existing" name="existing" required aria-describedby="bufer-chillera-existing-unit bufer-chillera-existing-hint" value="1000" maxlength="32" autocomplete="off" data-min="0"><span id="bufer-chillera-existing-unit">л</span></span><span class="tc-hint" id="bufer-chillera-existing-hint">Объём, который остаётся в циркуляции при минимальной нагрузке.</span></div>
+<div class="tc-field"><label for="bufer-chillera-makerMinimum">Минимальный объём контура по паспорту</label><span class="tc-input"><input type="text" inputmode="decimal" id="bufer-chillera-makerMinimum" name="makerMinimum" required aria-describedby="bufer-chillera-makerMinimum-unit bufer-chillera-makerMinimum-hint" value="0" maxlength="32" autocomplete="off" data-min="0"><span id="bufer-chillera-makerMinimum-unit">л</span></span><span class="tc-hint" id="bufer-chillera-makerMinimum-hint">Если значение неизвестно, оставьте 0 и проверьте условие производителя отдельно.</span></div>
+<div class="tc-field"><label for="bufer-chillera-fluid">Теплоноситель</label><span class="tc-select-box"><select id="bufer-chillera-fluid" name="fluid" required><option value="water" selected>Вода</option><option value="eg">Водный раствор ЭГ</option><option value="pg">Водный раствор ПГ</option></select></span></div>
+<div class="tc-field" data-show-when="fluid=eg|pg" hidden><label for="bufer-chillera-fraction">Концентрация гликоля по массе</label><span class="tc-input"><input type="text" inputmode="decimal" id="bufer-chillera-fraction" name="fraction" required aria-describedby="bufer-chillera-fraction-unit" disabled value="30" maxlength="32" autocomplete="off" data-min="0" data-max="60"><span id="bufer-chillera-fraction-unit">%</span></span></div>
+<div class="tc-field"><label for="bufer-chillera-mean">Средняя температура за цикл</label><span class="tc-input"><input type="text" inputmode="decimal" id="bufer-chillera-mean" name="mean" required aria-describedby="bufer-chillera-mean-unit" value="9,5" maxlength="32" autocomplete="off" data-min="-60" data-max="100"><span id="bufer-chillera-mean-unit">°C</span></span></div>
+</div>
+<div class="tc-actions"><button type="submit" class="btn btn--primary">Рассчитать</button><button type="reset" class="tc-reset">Вернуть пример</button></div>
+</fieldset></form>
+<div class="tc-result" role="region" aria-label="Результат расчёта" aria-live="polite" aria-atomic="true" tabindex="-1">
+<h3 class="tc-result-label">Дополнительный объём буфера</h3><p class="tc-number"><strong>1 145,4</strong><span class="tc-main-unit">л</span></p>
+<dl class="tc-metrics"><div><dt>Минимальный активный объём контура</dt><dd>2 145,4 л</dd></div><div><dt>По времени работы компрессора</dt><dd>2 145,4 л</dd></div><div><dt>Минимум по паспорту чиллера</dt><dd>0 л</dd></div><div><dt>Активный объём действующего контура</dt><dd>1 000 л</dd></div><div><dt>Избыток холодопроизводительности ступени</dt><dd>60 кВт</dd></div></dl>
+<p class="tc-notice">Указан полезный объём, который должен участвовать в циркуляции через испаритель.</p>
+</div>
+</div>
+
+<details class="tc-disclosure tc-method"><summary>Как считается</summary>
+<p class="tc-expression">Vцикл = 60 000 × max(0, Qступени − Qнагрузки) × t / (ρ × cₚ × ΔT)</p>
+<p>Vцикл в литрах, t в минутах, Q в кВт. Из большего из Vцикл и паспортного минимума вычитается активный объём системы. Расчёт предполагает хорошо перемешанный теплоноситель и постоянную нагрузку в течение цикла.</p>
+<p><a href="https://www.caleffi.com/en-us/blog/appendix-3">Caleffi, расчёт буферной ёмкости</a> · <a href="https://coolprop.org/fluid_properties/Incompressibles.html">Свойства растворов по данным CoolProp</a></p>
+</details>
+<nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#chiller-i-kondensator">Чиллер и нагрузка на конденсатор</a><a href="#rasshiritelnyy-bak">Расширительный бак закрытого контура</a></nav>
+</article>
+<article class="tc-tool" id="pereliv-baka-gradirni" aria-labelledby="pereliv-baka-gradirni-title">
+<h2 id="pereliv-baka-gradirni-title" tabindex="-1">Перелив бака при остановке градирни</h2>
+<p class="tc-tool-intro">Сколько воды вернётся из градирни и труб после остановки насосов и сколько сантиметров останется до перелива.</p>
+<div class="tc-body">
+<form class="tc-form" aria-label="Перелив бака при остановке градирни" novalidate><fieldset disabled><legend class="sr-only">Исходные данные</legend>
+<div class="tc-fields">
+<div class="tc-field"><label for="pereliv-baka-gradirni-shape">Форма бака</label><span class="tc-select-box"><select id="pereliv-baka-gradirni-shape" name="shape" required><option value="rect" selected>Прямоугольный</option><option value="round">Вертикальный цилиндрический</option></select></span></div>
+<div class="tc-field" data-show-when="shape=rect"><label for="pereliv-baka-gradirni-length">Внутренняя длина</label><span class="tc-input"><input type="text" inputmode="decimal" id="pereliv-baka-gradirni-length" name="length" required aria-describedby="pereliv-baka-gradirni-length-unit" value="3" maxlength="32" autocomplete="off" data-gt="0"><span id="pereliv-baka-gradirni-length-unit">м</span></span></div>
+<div class="tc-field" data-show-when="shape=rect"><label for="pereliv-baka-gradirni-width">Внутренняя ширина</label><span class="tc-input"><input type="text" inputmode="decimal" id="pereliv-baka-gradirni-width" name="width" required aria-describedby="pereliv-baka-gradirni-width-unit" value="2" maxlength="32" autocomplete="off" data-gt="0"><span id="pereliv-baka-gradirni-width-unit">м</span></span></div>
+<div class="tc-field" data-show-when="shape=round" hidden><label for="pereliv-baka-gradirni-tankDiameter">Внутренний диаметр бака</label><span class="tc-input"><input type="text" inputmode="decimal" id="pereliv-baka-gradirni-tankDiameter" name="tankDiameter" required aria-describedby="pereliv-baka-gradirni-tankDiameter-unit" disabled value="2,5" maxlength="32" autocomplete="off" data-gt="0"><span id="pereliv-baka-gradirni-tankDiameter-unit">м</span></span></div>
+<div class="tc-field"><label for="pereliv-baka-gradirni-level">Рабочий уровень от дна</label><span class="tc-input"><input type="text" inputmode="decimal" id="pereliv-baka-gradirni-level" name="level" required aria-describedby="pereliv-baka-gradirni-level-unit" value="1,2" maxlength="32" autocomplete="off" data-min="0"><span id="pereliv-baka-gradirni-level-unit">м</span></span></div>
+<div class="tc-field"><label for="pereliv-baka-gradirni-overflow">Высота кромки перелива от дна</label><span class="tc-input"><input type="text" inputmode="decimal" id="pereliv-baka-gradirni-overflow" name="overflow" required aria-describedby="pereliv-baka-gradirni-overflow-unit" value="1,8" maxlength="32" autocomplete="off" data-gt="0"><span id="pereliv-baka-gradirni-overflow-unit">м</span></span></div>
+</div>
+<h3 class="tc-form-section">Что стекает после остановки</h3>
+<div class="tc-fields">
+<div class="tc-field"><label for="pereliv-baka-gradirni-towerDrain">Объём слива из градирни</label><span class="tc-input"><input type="text" inputmode="decimal" id="pereliv-baka-gradirni-towerDrain" name="towerDrain" required aria-describedby="pereliv-baka-gradirni-towerDrain-unit pereliv-baka-gradirni-towerDrain-hint" value="2" maxlength="32" autocomplete="off" data-min="0"><span id="pereliv-baka-gradirni-towerDrain-unit">м³</span></span><span class="tc-hint" id="pereliv-baka-gradirni-towerDrain-hint">По данным производителя или замеру. Включите воду из распределителя и оросителя.</span></div>
+<div class="tc-field"><label for="pereliv-baka-gradirni-bore">Внутренний диаметр опорожняемой трубы</label><span class="tc-input"><input type="text" inputmode="decimal" id="pereliv-baka-gradirni-bore" name="bore" required aria-describedby="pereliv-baka-gradirni-bore-unit" value="150" maxlength="32" autocomplete="off" data-gt="0"><span id="pereliv-baka-gradirni-bore-unit">мм</span></span></div>
+<div class="tc-field"><label for="pereliv-baka-gradirni-pipeLength">Опорожняемая длина этой трубы</label><span class="tc-input"><input type="text" inputmode="decimal" id="pereliv-baka-gradirni-pipeLength" name="pipeLength" required aria-describedby="pereliv-baka-gradirni-pipeLength-unit" value="40" maxlength="32" autocomplete="off" data-min="0"><span id="pereliv-baka-gradirni-pipeLength-unit">м</span></span></div>
+<div class="tc-field"><label for="pereliv-baka-gradirni-otherDrain">Слив из прочих труб и аппаратов</label><span class="tc-input"><input type="text" inputmode="decimal" id="pereliv-baka-gradirni-otherDrain" name="otherDrain" required aria-describedby="pereliv-baka-gradirni-otherDrain-unit" value="0,2" maxlength="32" autocomplete="off" data-min="0"><span id="pereliv-baka-gradirni-otherDrain-unit">м³</span></span></div>
+</div>
+<div class="tc-actions"><button type="submit" class="btn btn--primary">Рассчитать</button><button type="reset" class="tc-reset">Вернуть пример</button></div>
+</fieldset></form>
+<div class="tc-result" role="region" aria-label="Результат расчёта" aria-live="polite" aria-atomic="true" tabindex="-1">
+<h3 class="tc-result-label">Запас до перелива после остановки</h3><p class="tc-number"><strong>11,6</strong><span class="tc-main-unit">см</span></p>
+<dl class="tc-metrics"><div><dt>Уровень воды после слива</dt><dd>1,684 м</dd></div><div><dt>Свободный объём до остановки</dt><dd>3,6 м³</dd></div><div><dt>Всего стечёт в бак</dt><dd>2,907 м³</dd></div><div><dt>В том числе из участка трубы</dt><dd>0,707 м³</dd></div></dl>
+<p class="tc-notice">Результат относится к установившемуся уровню после остановки насосов.</p>
+</div>
+</div>
+
+<details class="tc-disclosure tc-method"><summary>Как считается</summary>
+<p class="tc-expression">Vслив = Vградирни + πD²L/4 + Vпрочее. Свободный объём = Sбака × (hперелива − hраб).</p>
+<p>Включайте только объёмы, которые самотёком попадают в этот бак. При свободном переливе установившийся уровень ограничен его кромкой. Расчёт предполагает постоянную площадь сечения бака и не определяет пиковый расход через патрубок перелива.</p>
+<p><a href="https://baltimoreaircoil.com/download_api_endpoint/6705/J163_PAHBvi_TR_RemoteSumpCT_202601.pdf">Baltimore Aircoil, расчёт выносного бака градирни</a></p>
+</details>
+<nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#podpitka-gradirni">Испарение, продувка и подпитка</a><a href="#kavitatsionnyy-zapas-npsh">Кавитационный запас насоса (NPSH)</a></nav>
+</article>
+<article class="tc-tool" id="kavitatsionnyy-zapas-npsh" aria-labelledby="kavitatsionnyy-zapas-npsh-title">
+<h2 id="kavitatsionnyy-zapas-npsh-title" tabindex="-1">Кавитационный запас насоса (NPSH)</h2>
+<p class="tc-tool-intro">Проверьте всасывание из открытого бака с водой при минимальном уровне. Сравните доступный NPSH с паспортной кривой насоса в рабочей точке.</p>
+<div class="tc-body">
+<form class="tc-form" aria-label="Кавитационный запас насоса (NPSH)" novalidate><fieldset disabled><legend class="sr-only">Исходные данные</legend>
+<div class="tc-fields">
+<div class="tc-field"><label for="kavitatsionnyy-zapas-npsh-waterTemp">Температура воды</label><span class="tc-input"><input type="text" inputmode="decimal" id="kavitatsionnyy-zapas-npsh-waterTemp" name="waterTemp" required aria-describedby="kavitatsionnyy-zapas-npsh-waterTemp-unit" value="30" maxlength="32" autocomplete="off" data-min="0" data-max="100"><span id="kavitatsionnyy-zapas-npsh-waterTemp-unit">°C</span></span></div>
+<div class="tc-field"><label for="kavitatsionnyy-zapas-npsh-atmosphere">Местное атмосферное давление</label><span class="tc-input"><input type="text" inputmode="decimal" id="kavitatsionnyy-zapas-npsh-atmosphere" name="atmosphere" required aria-describedby="kavitatsionnyy-zapas-npsh-atmosphere-unit kavitatsionnyy-zapas-npsh-atmosphere-hint" value="101,325" maxlength="32" autocomplete="off" data-gt="0"><span id="kavitatsionnyy-zapas-npsh-atmosphere-unit">кПа абс.</span></span><span class="tc-hint" id="kavitatsionnyy-zapas-npsh-atmosphere-hint">Абсолютное давление на площадке на высоте установки.</span></div>
+<div class="tc-field"><label for="kavitatsionnyy-zapas-npsh-level">Отметка минимального уровня воды</label><span class="tc-input"><input type="text" inputmode="decimal" id="kavitatsionnyy-zapas-npsh-level" name="level" required aria-describedby="kavitatsionnyy-zapas-npsh-level-unit kavitatsionnyy-zapas-npsh-level-hint" value="1,2" maxlength="32" autocomplete="off"><span id="kavitatsionnyy-zapas-npsh-level-unit">м</span></span><span class="tc-hint" id="kavitatsionnyy-zapas-npsh-level-hint">Обе отметки задайте от одного уровня отсчёта.</span></div>
+<div class="tc-field"><label for="kavitatsionnyy-zapas-npsh-pump">Отметка оси насоса</label><span class="tc-input"><input type="text" inputmode="decimal" id="kavitatsionnyy-zapas-npsh-pump" name="pump" required aria-describedby="kavitatsionnyy-zapas-npsh-pump-unit" value="0" maxlength="32" autocomplete="off"><span id="kavitatsionnyy-zapas-npsh-pump-unit">м</span></span></div>
+<div class="tc-field"><label for="kavitatsionnyy-zapas-npsh-loss">Потери во всасывающей линии</label><span class="tc-input"><input type="text" inputmode="decimal" id="kavitatsionnyy-zapas-npsh-loss" name="loss" required aria-describedby="kavitatsionnyy-zapas-npsh-loss-unit kavitatsionnyy-zapas-npsh-loss-hint" value="0,8" maxlength="32" autocomplete="off" data-min="0"><span id="kavitatsionnyy-zapas-npsh-loss-unit">м</span></span><span class="tc-hint" id="kavitatsionnyy-zapas-npsh-loss-hint">Включите вход, трубы, фильтр и арматуру при расчётном расходе.</span></div>
+<div class="tc-field"><label for="kavitatsionnyy-zapas-npsh-required">Требуемый NPSHᵣ насоса</label><span class="tc-input"><input type="text" inputmode="decimal" id="kavitatsionnyy-zapas-npsh-required" name="required" required aria-describedby="kavitatsionnyy-zapas-npsh-required-unit kavitatsionnyy-zapas-npsh-required-hint" value="3" maxlength="32" autocomplete="off" data-min="0"><span id="kavitatsionnyy-zapas-npsh-required-unit">м</span></span><span class="tc-hint" id="kavitatsionnyy-zapas-npsh-required-hint">По кривой производителя при данном расходе и частоте вращения.</span></div>
+<div class="tc-field"><label for="kavitatsionnyy-zapas-npsh-margin">Требуемое превышение над NPSHᵣ</label><span class="tc-input"><input type="text" inputmode="decimal" id="kavitatsionnyy-zapas-npsh-margin" name="margin" required aria-describedby="kavitatsionnyy-zapas-npsh-margin-unit kavitatsionnyy-zapas-npsh-margin-hint" value="1" maxlength="32" autocomplete="off" data-min="0"><span id="kavitatsionnyy-zapas-npsh-margin-unit">м</span></span><span class="tc-hint" id="kavitatsionnyy-zapas-npsh-margin-hint">Задайте по требованиям проекта или производителя насоса.</span></div>
+</div>
+<div class="tc-actions"><button type="submit" class="btn btn--primary">Рассчитать</button><button type="reset" class="tc-reset">Вернуть пример</button></div>
+</fieldset></form>
+<div class="tc-result" role="region" aria-label="Результат расчёта" aria-live="polite" aria-atomic="true" tabindex="-1">
+<h3 class="tc-result-label">Доступный кавитационный запас NPSHₐ</h3><p class="tc-number"><strong>10,34</strong><span class="tc-main-unit">м</span></p>
+<dl class="tc-metrics"><div><dt>Требуемый NPSHᵣ по кривой насоса</dt><dd>3 м</dd></div><div><dt>Превышение NPSHₐ над NPSHᵣ</dt><dd>7,34 м</dd></div><div><dt>Запас сверх заданного требования</dt><dd>6,34 м</dd></div><div><dt>Уровень относительно оси насоса</dt><dd>1,2 м</dd></div><div><dt>Давление насыщенного пара</dt><dd>4,246 кПа абс.</dd></div></dl>
+<p class="tc-notice">В этой рабочей точке заданный запас обеспечен.</p>
+</div>
+</div>
+
+<details class="tc-disclosure tc-method"><summary>Как считается</summary>
+<p class="tc-expression">NPSHₐ = 1000 × (pатм − pнасыщ) / (ρg) + zуровня − zнасоса − hпотерь</p>
+<p>Давления в кПа, потери в метрах водяного столба. Чистая вода, открытый бак, скорость свободной поверхности пренебрежимо мала. Давление пара и плотность рассчитываются при введённой температуре.</p>
+<p><a href="https://www.ksb.com/en-global/centrifugal-pump-lexicon/article/npsh-1116954">KSB, доступный и требуемый NPSH</a></p>
+</details>
+<nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#poteri-davleniya">Потери давления в трубопроводе</a><a href="#napor-i-moshchnost-nasosa">Напор и мощность насоса</a></nav>
+</article>
+<article class="tc-tool" id="rasshiritelnyy-bak" aria-labelledby="rasshiritelnyy-bak-title">
+<h2 id="rasshiritelnyy-bak-title" tabindex="-1">Расширительный бак закрытого контура</h2>
+<p class="tc-tool-intro">Рассчитайте изменение объёма воды или гликоля во всём диапазоне температур и минимальную номинальную ёмкость мембранного бака.</p>
+<div class="tc-body">
+<form class="tc-form" aria-label="Расширительный бак закрытого контура" novalidate><fieldset disabled><legend class="sr-only">Исходные данные</legend>
+<div class="tc-fields">
+<div class="tc-field"><label for="rasshiritelnyy-bak-system">Объём контура при минимальном объёме жидкости</label><span class="tc-input"><input type="text" inputmode="decimal" id="rasshiritelnyy-bak-system" name="system" required aria-describedby="rasshiritelnyy-bak-system-unit" value="5000" maxlength="32" autocomplete="off" data-gt="0"><span id="rasshiritelnyy-bak-system-unit">л</span></span></div>
+<div class="tc-field"><label for="rasshiritelnyy-bak-fluid">Теплоноситель</label><span class="tc-select-box"><select id="rasshiritelnyy-bak-fluid" name="fluid" required><option value="water" selected>Вода</option><option value="eg">Водный раствор ЭГ</option><option value="pg">Водный раствор ПГ</option></select></span></div>
+<div class="tc-field" data-show-when="fluid=eg|pg" hidden><label for="rasshiritelnyy-bak-fraction">Концентрация гликоля по массе</label><span class="tc-input"><input type="text" inputmode="decimal" id="rasshiritelnyy-bak-fraction" name="fraction" required aria-describedby="rasshiritelnyy-bak-fraction-unit" disabled value="30" maxlength="32" autocomplete="off" data-min="0" data-max="60"><span id="rasshiritelnyy-bak-fraction-unit">%</span></span></div>
+<div class="tc-field"><label for="rasshiritelnyy-bak-low">Минимальная температура</label><span class="tc-input"><input type="text" inputmode="decimal" id="rasshiritelnyy-bak-low" name="low" required aria-describedby="rasshiritelnyy-bak-low-unit" value="7" maxlength="32" autocomplete="off" data-min="-60" data-max="100"><span id="rasshiritelnyy-bak-low-unit">°C</span></span></div>
+<div class="tc-field"><label for="rasshiritelnyy-bak-high">Максимальная температура</label><span class="tc-input"><input type="text" inputmode="decimal" id="rasshiritelnyy-bak-high" name="high" required aria-describedby="rasshiritelnyy-bak-high-unit" value="40" maxlength="32" autocomplete="off" data-min="-60" data-max="100"><span id="rasshiritelnyy-bak-high-unit">°C</span></span></div>
+</div>
+<h3 class="tc-form-section">Давления в точке подключения</h3>
+<div class="tc-fields">
+<div class="tc-field"><label for="rasshiritelnyy-bak-charge">Предзаряд газа пустого бака</label><span class="tc-input"><input type="text" inputmode="decimal" id="rasshiritelnyy-bak-charge" name="charge" required aria-describedby="rasshiritelnyy-bak-charge-unit" value="1,5" maxlength="32" autocomplete="off" data-min="0"><span id="rasshiritelnyy-bak-charge-unit">бар изб.</span></span></div>
+<div class="tc-field"><label for="rasshiritelnyy-bak-fill">Давление жидкости при её минимальном объёме</label><span class="tc-input"><input type="text" inputmode="decimal" id="rasshiritelnyy-bak-fill" name="fill" required aria-describedby="rasshiritelnyy-bak-fill-unit" value="1,8" maxlength="32" autocomplete="off" data-min="0"><span id="rasshiritelnyy-bak-fill-unit">бар изб.</span></span></div>
+<div class="tc-field"><label for="rasshiritelnyy-bak-limit">Максимальное рабочее давление у бака</label><span class="tc-input"><input type="text" inputmode="decimal" id="rasshiritelnyy-bak-limit" name="limit" required aria-describedby="rasshiritelnyy-bak-limit-unit rasshiritelnyy-bak-limit-hint" value="3" maxlength="32" autocomplete="off" data-gt="0"><span id="rasshiritelnyy-bak-limit-unit">бар изб.</span></span><span class="tc-hint" id="rasshiritelnyy-bak-limit-hint">Используйте допустимое рабочее давление с учётом уставки предохранительного клапана.</span></div>
+<div class="tc-field"><label for="rasshiritelnyy-bak-reserve">Требуемый начальный запас жидкости</label><span class="tc-input"><input type="text" inputmode="decimal" id="rasshiritelnyy-bak-reserve" name="reserve" required aria-describedby="rasshiritelnyy-bak-reserve-unit" value="3" maxlength="32" autocomplete="off" data-min="0"><span id="rasshiritelnyy-bak-reserve-unit">л</span></span></div>
+</div>
+<div class="tc-actions"><button type="submit" class="btn btn--primary">Рассчитать</button><button type="reset" class="tc-reset">Вернуть пример</button></div>
+</fieldset></form>
+<div class="tc-result" role="region" aria-label="Результат расчёта" aria-live="polite" aria-atomic="true" tabindex="-1">
+<h3 class="tc-result-label">Минимальный номинальный объём бака</h3><p class="tc-number"><strong>143,8</strong><span class="tc-main-unit">л</span></p>
+<dl class="tc-metrics"><div><dt>Изменение объёма теплоносителя</dt><dd>38,52 л</dd></div><div><dt>Расширение в заданном диапазоне</dt><dd>0,77 %</dd></div><div><dt>Доля бака для компенсации расширения</dt><dd>26,8 %</dd></div><div><dt>Начальный запас жидкости в таком баке</dt><dd>15,41 л</dd></div></dl>
+<p class="tc-notice">При подборе серийного бака округлите объём вверх и сверьте допустимую приёмную ёмкость мембраны с паспортом.</p>
+</div>
+</div>
+
+<details class="tc-disclosure tc-method"><summary>Как считается</summary>
+<p class="tc-expression">ΔV = V × (ρмакс / ρмин − 1). Доля бака для расширения = p₀ × (1/pнач − 1/pкон).</p>
+<p>В формулах применяются абсолютные давления, к введённым значениям прибавляется 1 бар. Учитываются расширение жидкости и начальный резерв. Модель предполагает изотермическое сжатие газа и жёсткий контур. У воды учитывается максимум плотности вблизи 4 °C.</p>
+<p><a href="https://handbook.ashrae.org/handbooks/S20/SI/S20_Ch13/S20_ch13_si.aspx">ASHRAE, закрытые гидравлические системы</a> · <a href="https://coolprop.org/fluid_properties/Incompressibles.html">Свойства растворов по данным CoolProp</a></p>
+</details>
+<nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#bufer-chillera">Буферный бак чиллера</a><a href="#doliv-glikolya">Сколько гликоля слить и долить</a></nav>
+</article>
+<article class="tc-tool" id="doliv-glikolya" aria-labelledby="doliv-glikolya-title">
+<h2 id="doliv-glikolya-title" tabindex="-1">Сколько гликоля слить и долить</h2>
+<p class="tc-tool-intro">Рассчитайте замену части раствора при сохранении объёма системы. Все концентрации задаются по массе, объёмы приведены к 20 °C.</p>
+<div class="tc-body">
+<form class="tc-form" aria-label="Сколько гликоля слить и долить" novalidate><fieldset disabled><legend class="sr-only">Исходные данные</legend>
+<div class="tc-fields">
+<div class="tc-field"><label for="doliv-glikolya-fluid">Гликоль в системе</label><span class="tc-select-box"><select id="doliv-glikolya-fluid" name="fluid" required><option value="pg" selected>Пропиленгликоль (ПГ)</option><option value="eg">Этиленгликоль (ЭГ)</option></select></span></div>
+<div class="tc-field"><label for="doliv-glikolya-volume">Заправочный объём при 20 °C</label><span class="tc-input"><input type="text" inputmode="decimal" id="doliv-glikolya-volume" name="volume" required aria-describedby="doliv-glikolya-volume-unit" value="8" maxlength="32" autocomplete="off" data-gt="0"><span id="doliv-glikolya-volume-unit">м³</span></span></div>
+<div class="tc-field"><label for="doliv-glikolya-initial">Исходная концентрация</label><span class="tc-input"><input type="text" inputmode="decimal" id="doliv-glikolya-initial" name="initial" required aria-describedby="doliv-glikolya-initial-unit" value="25" maxlength="32" autocomplete="off" data-min="0" data-max="60"><span id="doliv-glikolya-initial-unit">%</span></span></div>
+<div class="tc-field"><label for="doliv-glikolya-target">Требуемая концентрация</label><span class="tc-input"><input type="text" inputmode="decimal" id="doliv-glikolya-target" name="target" required aria-describedby="doliv-glikolya-target-unit" value="35" maxlength="32" autocomplete="off" data-min="0" data-max="60"><span id="doliv-glikolya-target-unit">%</span></span></div>
+<div class="tc-field tc-field--wide"><label for="doliv-glikolya-reagent">Что добавляем</label><span class="tc-select-box"><select id="doliv-glikolya-reagent" name="reagent" required><option value="pure" selected>Чистый гликоль (100 %)</option><option value="product">Раствор по паспорту</option><option value="water">Вода для разбавления</option></select></span></div>
+<div class="tc-field" data-show-when="reagent=product" hidden><label for="doliv-glikolya-productFraction">Гликоль в добавляемом продукте</label><span class="tc-input"><input type="text" inputmode="decimal" id="doliv-glikolya-productFraction" name="productFraction" required aria-describedby="doliv-glikolya-productFraction-unit" disabled value="95" maxlength="32" autocomplete="off" data-min="0" data-max="100"><span id="doliv-glikolya-productFraction-unit">%</span></span></div>
+<div class="tc-field" data-show-when="reagent=product" hidden><label for="doliv-glikolya-productDensity">Плотность продукта при 20 °C</label><span class="tc-input"><input type="text" inputmode="decimal" id="doliv-glikolya-productDensity" name="productDensity" required aria-describedby="doliv-glikolya-productDensity-unit" disabled value="1040" maxlength="32" autocomplete="off" data-gt="0"><span id="doliv-glikolya-productDensity-unit">кг/м³</span></span></div>
+</div>
+<div class="tc-actions"><button type="submit" class="btn btn--primary">Рассчитать</button><button type="reset" class="tc-reset">Вернуть пример</button></div>
+</fieldset></form>
+<div class="tc-result" role="region" aria-label="Результат расчёта" aria-live="polite" aria-atomic="true" tabindex="-1">
+<h3 class="tc-result-label">Слить исходный раствор</h3><p class="tc-number"><strong>1 006,2</strong><span class="tc-main-unit">л</span></p>
+<dl class="tc-metrics"><div><dt>Добавить выбранную жидкость</dt><dd>1 058,6 л</dd></div><div><dt>Масса добавки</dt><dd>1 096,7 кг</dd></div><div><dt>Целевая массовая доля гликоля</dt><dd>35 %</dd></div><div><dt>Итоговый объём при 20 °C</dt><dd>8 м³</dd></div></dl>
+<p class="tc-notice">Сначала слейте рассчитанный объём исходной однородной смеси, затем добавьте рассчитанную массу. Объёмы слива и заливки могут различаться.</p>
+</div>
+</div>
+
+<details class="tc-disclosure tc-method"><summary>Как считается</summary>
+<p class="tc-expression">mдобавки = mитог × (wцель − wисх) / (wдобавки − wисх). mслить = mисх − (mитог − mдобавки).</p>
+<p>Масса каждого раствора определяется по его плотности. Эквивалентные литры слива и доливки учитывают изменение плотности смеси. Для ингибированного концентрата укажите массовую долю гликоля и плотность из паспорта. Для расчёта свойств начальной и конечной смесей используется модель водного раствора без присадок.</p>
+<p><a href="https://handbook.ashrae.org/handbooks/F25/SI/F25_Ch31/F25_Ch31_si.aspx">ASHRAE, плотности чистых гликолей</a> · <a href="https://coolprop.org/fluid_properties/Incompressibles.html">Свойства растворов по данным CoolProp</a></p>
+</details>
+<nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#rasshiritelnyy-bak">Расширительный бак закрытого контура</a><a href="#rashod-teplonositelya">Расход теплоносителя</a></nav>
+</article>
+<article class="tc-tool" id="chasy-frikulinga" aria-labelledby="chasy-frikulinga-title">
+<h2 id="chasy-frikulinga-title" tabindex="-1">Часы фрикулинга по городу</h2>
+<p class="tc-tool-intro">Оцените, сколько часов сухой охладитель покрывает всю нагрузку, сколько работает вместе с чиллером и как эти часы распределены по месяцам.</p>
+<div class="tc-body">
+<form class="tc-form" aria-label="Часы фрикулинга по городу" novalidate><fieldset disabled><legend class="sr-only">Исходные данные</legend>
+<div class="tc-fields">
+<div class="tc-field tc-field--wide"><label for="chasy-frikulinga-city">Город</label><span class="tc-select-box"><select id="chasy-frikulinga-city" name="city" required><option value="spb" selected>Санкт-Петербург</option><option value="moscow">Москва</option><option value="ekb">Екатеринбург</option><option value="novosibirsk">Новосибирск</option><option value="krasnodar">Краснодар</option></select></span></div>
+<div class="tc-field"><label for="chasy-frikulinga-supply">Температура подачи</label><span class="tc-input"><input type="text" inputmode="decimal" id="chasy-frikulinga-supply" name="supply" required aria-describedby="chasy-frikulinga-supply-unit" value="7" maxlength="32" autocomplete="off" data-min="-60" data-max="100"><span id="chasy-frikulinga-supply-unit">°C</span></span></div>
+<div class="tc-field"><label for="chasy-frikulinga-returnTemp">Температура обратной линии</label><span class="tc-input"><input type="text" inputmode="decimal" id="chasy-frikulinga-returnTemp" name="returnTemp" required aria-describedby="chasy-frikulinga-returnTemp-unit" value="12" maxlength="32" autocomplete="off" data-min="-60" data-max="100"><span id="chasy-frikulinga-returnTemp-unit">°C</span></span></div>
+<div class="tc-field"><label for="chasy-frikulinga-approach">Приближение драйкулера при полной нагрузке</label><span class="tc-input"><input type="text" inputmode="decimal" id="chasy-frikulinga-approach" name="approach" required aria-describedby="chasy-frikulinga-approach-unit chasy-frikulinga-approach-hint" value="5" maxlength="32" autocomplete="off" data-gt="0"><span id="chasy-frikulinga-approach-unit">К</span></span><span class="tc-hint" id="chasy-frikulinga-approach-hint">Из подбора оборудования: температура жидкости на выходе минус наружная температура при расчётной нагрузке.</span></div>
+<div class="tc-field"><label for="chasy-frikulinga-minShare">Минимальная полезная доля нагрузки</label><span class="tc-input"><input type="text" inputmode="decimal" id="chasy-frikulinga-minShare" name="minShare" required aria-describedby="chasy-frikulinga-minShare-unit chasy-frikulinga-minShare-hint" value="15" maxlength="32" autocomplete="off" data-min="0" data-max="100"><span id="chasy-frikulinga-minShare-unit">%</span></span><span class="tc-hint" id="chasy-frikulinga-minShare-hint">Ниже этой доли система отключает фрикулинг. 0 % учитывает любой положительный вклад.</span></div>
+</div>
+<div class="tc-actions"><button type="submit" class="btn btn--primary">Рассчитать</button><button type="reset" class="tc-reset">Вернуть пример</button></div>
+</fieldset></form>
+<div class="tc-result" role="region" aria-label="Результат расчёта" aria-live="polite" aria-atomic="true" tabindex="-1">
+<h3 class="tc-result-label">Полный фрикулинг за год</h3><p class="tc-number"><strong>2 991</strong><span class="tc-main-unit">ч</span></p>
+<dl class="tc-metrics"><div><dt>Частичный фрикулинг</dt><dd>2 400 ч</dd></div><div><dt>Только машинное охлаждение</dt><dd>3 369 ч</dd></div><div><dt>Эквивалент часов полной холодопроизводительности драйкулера</dt><dd>4 446 ч</dd></div><div><dt>Наружная температура для полного режима, до</dt><dd>2 °C</dd></div><div><dt>Верхний порог частичного режима</dt><dd>10,5 °C</dd></div></dl>
+<p class="tc-notice">Санкт-Петербург, ВМО 26063. Средний год по наблюдениям РП5 за 2006–2014 годы. Трёхчасовые измерения интерполированы до одного часа, частоты нормированы по месяцам. Шаг температуры 0,5 °C. Режим работы — круглосуточный.</p>
+<a class="tc-source" href="https://github.com/iliasauer/weka-weather-spb-analysis/tree/ca0ffca08c0fb307293b603937005dd3d365bd1a">Климатические данные выбранной станции</a>
+</div>
+</div>
+<div class="tc-breakdown"><table class="tc-result-table"><caption>Режимы охлаждения по месяцам</caption><thead><tr><th scope="col">Месяц</th><th scope="col">Полный, ч</th><th scope="col">Частичный, ч</th><th scope="col">Только чиллер, ч</th></tr></thead><tbody><tr><th scope="row">Январь</th><td>676</td><td>68</td><td>0</td></tr><tr><th scope="row">Февраль</th><td>629</td><td>43</td><td>0</td></tr><tr><th scope="row">Март</th><td>566</td><td>172</td><td>6</td></tr><tr><th scope="row">Апрель</th><td>144</td><td>474</td><td>102</td></tr><tr><th scope="row">Май</th><td>6</td><td>275</td><td>463</td></tr><tr><th scope="row">Июнь</th><td>0</td><td>53</td><td>667</td></tr><tr><th scope="row">Июль</th><td>0</td><td>4</td><td>740</td></tr><tr><th scope="row">Август</th><td>0</td><td>18</td><td>726</td></tr><tr><th scope="row">Сентябрь</th><td>0</td><td>183</td><td>537</td></tr><tr><th scope="row">Октябрь</th><td>89</td><td>529</td><td>126</td></tr><tr><th scope="row">Ноябрь</th><td>342</td><td>376</td><td>2</td></tr><tr><th scope="row">Декабрь</th><td>539</td><td>205</td><td>0</td></tr></tbody></table></div>
+<details class="tc-disclosure tc-method"><summary>Как считается</summary>
+<p class="tc-expression">Полный режим при Tвозд ≤ Tподачи − A. Доля холода драйкулера ≈ (Tобратки − Tвозд) / (Tобратки − Tподачи + A).</p>
+<p>Доля ограничена интервалом 0…100 %. Модель принимает постоянные расход, нагрузку и эффективность сухого охладителя. Для схемы с промежуточным теплообменником включите его температурный напор в общее приближение. Внутри каждого интервала температур часы распределены равномерно. Эквивалентные часы учитывают долю нагрузки в частичном режиме.</p>
+<p><a href="https://www.trane.com/content/dam/Trane/Commercial/global/markets/data-centers/Trane-ReferenceDesign-1GW-Duplex.pdf">Trane, сухое охлаждение и температура наружного воздуха</a></p>
+</details>
+<nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#chiller-i-kondensator">Чиллер и нагрузка на конденсатор</a><a href="#zatraty-na-resursy">Затраты на воду и электроэнергию</a></nav>
+</article>
+<article class="tc-tool" id="izolyatsiya-ot-kondensata" aria-labelledby="izolyatsiya-ot-kondensata-title">
+<h2 id="izolyatsiya-ot-kondensata-title" tabindex="-1">Изоляция трубы от конденсата</h2>
+<p class="tc-tool-intro">Найдите точку росы и минимальную толщину изоляции, при которой её наружная поверхность остаётся выше заданного температурного порога.</p>
+<div class="tc-body">
+<form class="tc-form" aria-label="Изоляция трубы от конденсата" novalidate><fieldset disabled><legend class="sr-only">Исходные данные</legend>
+<div class="tc-fields">
+<div class="tc-field"><label for="izolyatsiya-ot-kondensata-diameter">Наружный диаметр трубы</label><span class="tc-input"><input type="text" inputmode="decimal" id="izolyatsiya-ot-kondensata-diameter" name="diameter" required aria-describedby="izolyatsiya-ot-kondensata-diameter-unit" value="114" maxlength="32" autocomplete="off" data-gt="0"><span id="izolyatsiya-ot-kondensata-diameter-unit">мм</span></span></div>
+<div class="tc-field"><label for="izolyatsiya-ot-kondensata-pipe">Температура наружной стенки трубы</label><span class="tc-input"><input type="text" inputmode="decimal" id="izolyatsiya-ot-kondensata-pipe" name="pipe" required aria-describedby="izolyatsiya-ot-kondensata-pipe-unit izolyatsiya-ot-kondensata-pipe-hint" value="7" maxlength="32" autocomplete="off" data-min="-80" data-max="100"><span id="izolyatsiya-ot-kondensata-pipe-unit">°C</span></span><span class="tc-hint" id="izolyatsiya-ot-kondensata-pipe-hint">Для предварительной оценки можно взять температуру жидкости.</span></div>
+<div class="tc-field"><label for="izolyatsiya-ot-kondensata-air">Температура воздуха</label><span class="tc-input"><input type="text" inputmode="decimal" id="izolyatsiya-ot-kondensata-air" name="air" required aria-describedby="izolyatsiya-ot-kondensata-air-unit" value="25" maxlength="32" autocomplete="off" data-min="0" data-max="60"><span id="izolyatsiya-ot-kondensata-air-unit">°C</span></span></div>
+<div class="tc-field"><label for="izolyatsiya-ot-kondensata-humidity">Относительная влажность воздуха</label><span class="tc-input"><input type="text" inputmode="decimal" id="izolyatsiya-ot-kondensata-humidity" name="humidity" required aria-describedby="izolyatsiya-ot-kondensata-humidity-unit" value="70" maxlength="32" autocomplete="off" data-min="1" data-max="100"><span id="izolyatsiya-ot-kondensata-humidity-unit">%</span></span></div>
+<div class="tc-field tc-field--wide"><label for="izolyatsiya-ot-kondensata-material">Изоляция и расчётная теплопроводность</label><span class="tc-select-box"><select id="izolyatsiya-ot-kondensata-material" name="material" required aria-describedby="izolyatsiya-ot-kondensata-material-hint"><option value="0.036" selected>Вспененный каучук · 0,036 Вт/(м·К)</option><option value="0.039">Вспененный полиэтилен · 0,039 Вт/(м·К)</option><option value="custom">Своё значение по паспорту</option></select></span><span class="tc-hint" id="izolyatsiya-ot-kondensata-material-hint">Значения примеров ориентировочные. Для конкретного материала используйте паспорт.</span></div>
+<div class="tc-field" data-show-when="material=custom" hidden><label for="izolyatsiya-ot-kondensata-lambda">Теплопроводность изоляции</label><span class="tc-input"><input type="text" inputmode="decimal" id="izolyatsiya-ot-kondensata-lambda" name="lambda" required aria-describedby="izolyatsiya-ot-kondensata-lambda-unit" disabled value="0,036" maxlength="32" autocomplete="off" data-gt="0"><span id="izolyatsiya-ot-kondensata-lambda-unit">Вт/(м·К)</span></span></div>
+<div class="tc-field"><label for="izolyatsiya-ot-kondensata-alpha">Наружный коэффициент теплоотдачи</label><span class="tc-input"><input type="text" inputmode="decimal" id="izolyatsiya-ot-kondensata-alpha" name="alpha" required aria-describedby="izolyatsiya-ot-kondensata-alpha-unit izolyatsiya-ot-kondensata-alpha-hint" value="8" maxlength="32" autocomplete="off" data-gt="0"><span id="izolyatsiya-ot-kondensata-alpha-unit">Вт/(м²·К)</span></span><span class="tc-hint" id="izolyatsiya-ot-kondensata-alpha-hint">Суммарная конвекция и излучение. Зависит от движения воздуха и покрытия.</span></div>
+<div class="tc-field"><label for="izolyatsiya-ot-kondensata-margin">Запас температуры поверхности</label><span class="tc-input"><input type="text" inputmode="decimal" id="izolyatsiya-ot-kondensata-margin" name="margin" required aria-describedby="izolyatsiya-ot-kondensata-margin-unit" value="1" maxlength="32" autocomplete="off" data-min="0"><span id="izolyatsiya-ot-kondensata-margin-unit">К</span></span></div>
+</div>
+<div class="tc-actions"><button type="submit" class="btn btn--primary">Рассчитать</button><button type="reset" class="tc-reset">Вернуть пример</button></div>
+</fieldset></form>
+<div class="tc-result" role="region" aria-label="Результат расчёта" aria-live="polite" aria-atomic="true" tabindex="-1">
+<h3 class="tc-result-label">Минимальная толщина изоляции</h3><p class="tc-number"><strong>11,17</strong><span class="tc-main-unit">мм</span></p>
+<dl class="tc-metrics"><div><dt>Толщина с округлением вверх</dt><dd>12 мм</dd></div><div><dt>Температура точки росы</dt><dd>19,15 °C</dd></div><div><dt>Требуемая температура поверхности</dt><dd>20,15 °C</dd></div><div><dt>Поверхность при округлённой толщине</dt><dd>20,42 °C</dd></div></dl>
+<p class="tc-notice">Выберите ближайшую большую серийную толщину и обеспечьте непрерывность пароизоляции на стыках и опорах.</p>
+</div>
+</div>
+
+<details class="tc-disclosure tc-method"><summary>Как считается</summary>
+<p class="tc-expression">Tцель = Tросы + запас. r₂ ln(r₂/r₁) = (λ/α) × (Tцель − Tстенки)/(Tвозд − Tцель).</p>
+<p>Стационарный расчёт однослойной цилиндрической изоляции. Ниже 0 °C граница образования влаги определена по насыщению над льдом. В местах разрывов изоляции и тепловых мостов температура поверхности может быть ниже расчётной.</p>
+<p><a href="https://www.isover.ch/de/documents/technische-dokumentation-documentazione-tecnica-documentation-technique/ti-manual-16-01-2026.pdf">ISOVER, техническое руководство по изоляции</a></p>
+</details>
+<nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#mokryy-termometr">Температура мокрого термометра</a><a href="#diametr-truby">Внутренний диаметр трубы</a></nav>
+</article>
+<article class="tc-tool" id="okupaemost-gradirni" aria-labelledby="okupaemost-gradirni-title">
+<h2 id="okupaemost-gradirni-title" tabindex="-1">Окупаемость перехода с прямотока на градирню</h2>
+<p class="tc-tool-intro">Сравните две схемы за один рабочий сезон. В расчёт входят покупная вода, платный сброс, электроэнергия, обслуживание и реагенты.</p>
+<div class="tc-body">
+<form class="tc-form" aria-label="Окупаемость перехода с прямотока на градирню" novalidate><fieldset disabled><legend class="sr-only">Исходные данные</legend>
+<h3 class="tc-form-section">Расходы и режим работы</h3>
+<div class="tc-fields">
+<div class="tc-field"><label for="okupaemost-gradirni-direct">Покупная вода при прямотоке</label><span class="tc-input"><input type="text" inputmode="decimal" id="okupaemost-gradirni-direct" name="direct" required aria-describedby="okupaemost-gradirni-direct-unit" value="100" maxlength="32" autocomplete="off" data-min="0"><span id="okupaemost-gradirni-direct-unit">м³/ч</span></span></div>
+<div class="tc-field"><label for="okupaemost-gradirni-circulation">Оборотный расход через градирню</label><span class="tc-input"><input type="text" inputmode="decimal" id="okupaemost-gradirni-circulation" name="circulation" required aria-describedby="okupaemost-gradirni-circulation-unit" value="100" maxlength="32" autocomplete="off" data-gt="0"><span id="okupaemost-gradirni-circulation-unit">м³/ч</span></span></div>
+<div class="tc-field"><label for="okupaemost-gradirni-drop">Средний перепад температуры воды</label><span class="tc-input"><input type="text" inputmode="decimal" id="okupaemost-gradirni-drop" name="drop" required aria-describedby="okupaemost-gradirni-drop-unit okupaemost-gradirni-drop-hint" value="4" maxlength="32" autocomplete="off" data-min="0"><span id="okupaemost-gradirni-drop-unit">К</span></span><span class="tc-hint" id="okupaemost-gradirni-drop-hint">При постоянном расходе берите фактический перепад за рабочие часы.</span></div>
+<div class="tc-field"><label for="okupaemost-gradirni-hours">Рабочих часов в сутки</label><span class="tc-input"><input type="text" inputmode="decimal" id="okupaemost-gradirni-hours" name="hours" required aria-describedby="okupaemost-gradirni-hours-unit" value="24" maxlength="32" autocomplete="off" data-gt="0" data-max="24"><span id="okupaemost-gradirni-hours-unit">ч</span></span></div>
+<div class="tc-field"><label for="okupaemost-gradirni-days">Рабочих суток за сезон</label><span class="tc-input"><input type="text" inputmode="decimal" id="okupaemost-gradirni-days" name="days" required aria-describedby="okupaemost-gradirni-days-unit" value="180" maxlength="32" autocomplete="off" data-gt="0" data-max="366"><span id="okupaemost-gradirni-days-unit">сут</span></span></div>
+</div>
+<h3 class="tc-form-section">Водный баланс и водоотведение</h3>
+<div class="tc-fields">
+<div class="tc-field"><label for="okupaemost-gradirni-cycles">Коэффициент упаривания</label><span class="tc-input"><input type="text" inputmode="decimal" id="okupaemost-gradirni-cycles" name="cycles" required value="3" maxlength="32" autocomplete="off" data-gt="1"></span></div>
+<div class="tc-field"><label for="okupaemost-gradirni-drift">Капельный унос от оборотного расхода</label><span class="tc-input"><input type="text" inputmode="decimal" id="okupaemost-gradirni-drift" name="drift" required aria-describedby="okupaemost-gradirni-drift-unit" value="0,01" maxlength="32" autocomplete="off" data-min="0" data-max="100"><span id="okupaemost-gradirni-drift-unit">%</span></span></div>
+<div class="tc-field"><label for="okupaemost-gradirni-latent">Доля тепла, отводимая испарением</label><span class="tc-input"><input type="text" inputmode="decimal" id="okupaemost-gradirni-latent" name="latent" required aria-describedby="okupaemost-gradirni-latent-unit" value="80" maxlength="32" autocomplete="off" data-min="0" data-max="100"><span id="okupaemost-gradirni-latent-unit">%</span></span></div>
+<div class="tc-field"><label for="okupaemost-gradirni-sewerShare">Доля платного сброса прямотока</label><span class="tc-input"><input type="text" inputmode="decimal" id="okupaemost-gradirni-sewerShare" name="sewerShare" required aria-describedby="okupaemost-gradirni-sewerShare-unit" value="100" maxlength="32" autocomplete="off" data-min="0" data-max="100"><span id="okupaemost-gradirni-sewerShare-unit">%</span></span></div>
+<div class="tc-field"><label for="okupaemost-gradirni-blowdownShare">Доля оплачиваемой продувки</label><span class="tc-input"><input type="text" inputmode="decimal" id="okupaemost-gradirni-blowdownShare" name="blowdownShare" required aria-describedby="okupaemost-gradirni-blowdownShare-unit" value="100" maxlength="32" autocomplete="off" data-min="0" data-max="100"><span id="okupaemost-gradirni-blowdownShare-unit">%</span></span></div>
+</div>
+<h3 class="tc-form-section">Эксплуатационные расходы и инвестиции</h3>
+<div class="tc-fields">
+<div class="tc-field"><label for="okupaemost-gradirni-waterPrice">Тариф на воду</label><span class="tc-input"><input type="text" inputmode="decimal" id="okupaemost-gradirni-waterPrice" name="waterPrice" required aria-describedby="okupaemost-gradirni-waterPrice-unit" value="71" maxlength="32" autocomplete="off" data-min="0"><span id="okupaemost-gradirni-waterPrice-unit">₽/м³</span></span></div>
+<div class="tc-field"><label for="okupaemost-gradirni-sewerPrice">Тариф на водоотведение</label><span class="tc-input"><input type="text" inputmode="decimal" id="okupaemost-gradirni-sewerPrice" name="sewerPrice" required aria-describedby="okupaemost-gradirni-sewerPrice-unit" value="0" maxlength="32" autocomplete="off" data-min="0"><span id="okupaemost-gradirni-sewerPrice-unit">₽/м³</span></span></div>
+<div class="tc-field"><label for="okupaemost-gradirni-powerPrice">Тариф на электроэнергию</label><span class="tc-input"><input type="text" inputmode="decimal" id="okupaemost-gradirni-powerPrice" name="powerPrice" required aria-describedby="okupaemost-gradirni-powerPrice-unit" value="10,2" maxlength="32" autocomplete="off" data-min="0"><span id="okupaemost-gradirni-powerPrice-unit">₽/(кВт·ч)</span></span></div>
+<div class="tc-field"><label for="okupaemost-gradirni-oldKW">Средняя мощность схемы прямотока</label><span class="tc-input"><input type="text" inputmode="decimal" id="okupaemost-gradirni-oldKW" name="oldKW" required aria-describedby="okupaemost-gradirni-oldKW-unit" value="0" maxlength="32" autocomplete="off" data-min="0"><span id="okupaemost-gradirni-oldKW-unit">кВт</span></span></div>
+<div class="tc-field"><label for="okupaemost-gradirni-newKW">Средняя мощность насосов и вентиляторов ВОЦ</label><span class="tc-input"><input type="text" inputmode="decimal" id="okupaemost-gradirni-newKW" name="newKW" required aria-describedby="okupaemost-gradirni-newKW-unit" value="30" maxlength="32" autocomplete="off" data-min="0"><span id="okupaemost-gradirni-newKW-unit">кВт</span></span></div>
+<div class="tc-field"><label for="okupaemost-gradirni-investment">Вложения в переход на градирню</label><span class="tc-input"><input type="text" inputmode="decimal" id="okupaemost-gradirni-investment" name="investment" required aria-describedby="okupaemost-gradirni-investment-unit" value="8000000" maxlength="32" autocomplete="off" data-gt="0"><span id="okupaemost-gradirni-investment-unit">₽</span></span></div>
+<div class="tc-field"><label for="okupaemost-gradirni-service">Дополнительное обслуживание за год</label><span class="tc-input"><input type="text" inputmode="decimal" id="okupaemost-gradirni-service" name="service" required aria-describedby="okupaemost-gradirni-service-unit" value="3" maxlength="32" autocomplete="off" data-min="0"><span id="okupaemost-gradirni-service-unit">% вложений</span></span></div>
+<div class="tc-field"><label for="okupaemost-gradirni-chemicals">Реагенты и прочие допзатраты за сезон</label><span class="tc-input"><input type="text" inputmode="decimal" id="okupaemost-gradirni-chemicals" name="chemicals" required aria-describedby="okupaemost-gradirni-chemicals-unit" value="0" maxlength="32" autocomplete="off" data-min="0"><span id="okupaemost-gradirni-chemicals-unit">₽</span></span></div>
+</div>
+<div class="tc-actions"><button type="submit" class="btn btn--primary">Рассчитать</button><button type="reset" class="tc-reset">Вернуть пример</button></div>
+</fieldset></form>
+<div class="tc-result" role="region" aria-label="Результат расчёта" aria-live="polite" aria-atomic="true" tabindex="-1">
+<h3 class="tc-result-label">Чистая экономия за сезон</h3><p class="tc-number"><strong>28 858 535</strong><span class="tc-main-unit">₽</span></p>
+<dl class="tc-metrics"><div><dt>Простой срок окупаемости</dt><dd>0,28 года</dd></div><div><dt>Экономия покупной воды за сезон</dt><dd>428 457,1 м³</dd></div><div><dt>Подпитка градирни</dt><dd>0,82 м³/ч</dd></div><div><dt>В том числе испарение</dt><dd>0,547 м³/ч</dd></div><div><dt>Продувка</dt><dd>0,263 м³/ч</dd></div><div><dt>Капельный унос</dt><dd>0,01 м³/ч</dd></div><div><dt>Время работы за сезон</dt><dd>4 320 ч</dd></div></dl>
+<p class="tc-notice">Принят один одинаковый сезон в год. Простой срок рассчитан при постоянных тарифах и без дисконтирования.</p>
+</div>
+</div>
+<div class="tc-breakdown"><table class="tc-result-table"><caption>Сравнение за один сезон</caption><thead><tr><th scope="col">Показатель</th><th scope="col">Прямоток</th><th scope="col">Градирня</th></tr></thead><tbody><tr><th scope="row">Покупная вода, м³</th><td>432 000</td><td>3 542,9</td></tr><tr><th scope="row">Платный сброс, м³</th><td>432 000</td><td>1 137,8</td></tr><tr><th scope="row">Электроэнергия, кВт·ч</th><td>0</td><td>129 600</td></tr><tr><th scope="row">Водоснабжение, ₽</th><td>30 672 000</td><td>251 545,5</td></tr><tr><th scope="row">Водоотведение, ₽</th><td>0</td><td>0</td></tr><tr><th scope="row">Электроэнергия, ₽</th><td>0</td><td>1 321 920</td></tr><tr><th scope="row">Дополнительные обслуживание и реагенты, ₽</th><td>0</td><td>240 000</td></tr><tr><th scope="row">Всего, ₽</th><td>30 672 000</td><td>1 813 465,5</td></tr></tbody></table></div>
+<details class="tc-disclosure tc-method"><summary>Как считается</summary>
+<p class="tc-expression">Подпитка = испарение + унос + продувка. Экономия = затраты прямотока − затраты ВОЦ. Срок = вложения / годовая экономия.</p>
+<p>Испарение определяется из теплового баланса. Унос вычитается из требуемого жидкого сброса при расчёте продувки. За год принят один сезон с введённым числом рабочих суток. Мощности вводятся как средние значения за часы работы. Все цены должны быть на одной базе по НДС.</p>
+<p><a href="https://www.energy.gov/cmei/femp/best-management-practice-10-cooling-tower-management">U.S. DOE, водный баланс градирен</a></p>
+</details>
+<nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#podpitka-gradirni">Испарение, продувка и подпитка</a><a href="#zatraty-na-resursy">Затраты на воду и электроэнергию</a></nav>
+</article>
+<article class="tc-tool" id="toki-elektrodvigatelya" aria-labelledby="toki-elektrodvigatelya-title">
+<h2 id="toki-elektrodvigatelya-title" tabindex="-1">Номинальный, рабочий и пусковой ток двигателя</h2>
+<p class="tc-tool-intro">Сравните токи трёхфазного асинхронного двигателя при разной нагрузке и способах пуска. В примере — WEG W22 IE3, 30 кВт, 400 В, 50 Гц, 4 полюса.</p>
+<div class="tc-body">
+<form class="tc-form" aria-label="Номинальный, рабочий и пусковой ток двигателя" novalidate><fieldset disabled><legend class="sr-only">Исходные данные</legend>
+<div class="tc-fields">
+<div class="tc-field tc-field--wide"><label for="toki-elektrodvigatelya-motor">Двигатель</label><span class="tc-select-box"><select id="toki-elektrodvigatelya-motor" name="motor" required><option value="weg" selected>WEG W22 · 30 кВт · 400 В</option><option value="custom">Другой двигатель — свои данные</option></select></span></div>
+<div class="tc-field" data-show-when="motor=custom" hidden><label for="toki-elektrodvigatelya-power">Номинальная мощность на валу</label><span class="tc-input"><input type="text" inputmode="decimal" id="toki-elektrodvigatelya-power" name="power" required aria-describedby="toki-elektrodvigatelya-power-unit" disabled value="30" maxlength="32" autocomplete="off" data-gt="0"><span id="toki-elektrodvigatelya-power-unit">кВт</span></span></div>
+<div class="tc-field" data-show-when="motor=custom" hidden><label for="toki-elektrodvigatelya-voltage">Линейное напряжение сети</label><span class="tc-input"><input type="text" inputmode="decimal" id="toki-elektrodvigatelya-voltage" name="voltage" required aria-describedby="toki-elektrodvigatelya-voltage-unit" disabled value="400" maxlength="32" autocomplete="off" data-gt="0"><span id="toki-elektrodvigatelya-voltage-unit">В</span></span></div>
+<div class="tc-field" data-show-when="motor=custom" hidden><label for="toki-elektrodvigatelya-efficiency">КПД при номинале</label><span class="tc-input"><input type="text" inputmode="decimal" id="toki-elektrodvigatelya-efficiency" name="efficiency" required aria-describedby="toki-elektrodvigatelya-efficiency-unit" disabled value="93,7" maxlength="32" autocomplete="off" data-gt="0" data-max="100"><span id="toki-elektrodvigatelya-efficiency-unit">%</span></span></div>
+<div class="tc-field" data-show-when="motor=custom" hidden><label for="toki-elektrodvigatelya-factor">cos φ при номинале</label><span class="tc-input"><input type="text" inputmode="decimal" id="toki-elektrodvigatelya-factor" name="factor" required disabled value="0,81" maxlength="32" autocomplete="off" data-gt="0" data-max="1"></span></div>
+<div class="tc-field" data-show-when="motor=custom" hidden><label for="toki-elektrodvigatelya-plate">Номинальный ток по шильдику</label><span class="tc-input"><input type="text" inputmode="decimal" id="toki-elektrodvigatelya-plate" name="plate" required aria-describedby="toki-elektrodvigatelya-plate-unit toki-elektrodvigatelya-plate-hint" disabled value="0" maxlength="32" autocomplete="off" data-min="0"><span id="toki-elektrodvigatelya-plate-unit">А</span></span><span class="tc-hint" id="toki-elektrodvigatelya-plate-hint">0 — вычислить по мощности, напряжению, КПД и cos φ.</span></div>
+<div class="tc-field" data-show-when="motor=custom;start=direct|star" hidden><label for="toki-elektrodvigatelya-multiple">Кратность прямого пуска</label><span class="tc-input"><input type="text" inputmode="decimal" id="toki-elektrodvigatelya-multiple" name="multiple" required aria-describedby="toki-elektrodvigatelya-multiple-unit toki-elektrodvigatelya-multiple-hint" disabled value="7,5" maxlength="32" autocomplete="off" data-gt="0"><span id="toki-elektrodvigatelya-multiple-unit">× Iном</span></span><span class="tc-hint" id="toki-elektrodvigatelya-multiple-hint">Отношение тока неподвижного ротора к номинальному по паспорту.</span></div>
+<div class="tc-field" data-show-when="motor=weg"><label for="toki-elektrodvigatelya-wegLoad">Нагрузка на валу</label><span class="tc-select-box"><select id="toki-elektrodvigatelya-wegLoad" name="wegLoad" required><option value="100">100 % · номинальная</option><option value="75" selected>75 %</option><option value="50">50 %</option><option value="0">Холостой ход</option></select></span></div>
+<div class="tc-field" data-show-when="motor=custom" hidden><label for="toki-elektrodvigatelya-customLoad">Рабочий режим</label><span class="tc-select-box"><select id="toki-elektrodvigatelya-customLoad" name="customLoad" required disabled><option value="100" selected>Номинальная нагрузка</option><option value="partial">Частичная нагрузка</option><option value="0">Холостой ход</option></select></span></div>
+<div class="tc-field" data-show-when="motor=custom;customLoad=partial" hidden><label for="toki-elektrodvigatelya-load">Доля мощности на валу</label><span class="tc-input"><input type="text" inputmode="decimal" id="toki-elektrodvigatelya-load" name="load" required aria-describedby="toki-elektrodvigatelya-load-unit" disabled value="75" maxlength="32" autocomplete="off" data-gt="0" data-max="99.99"><span id="toki-elektrodvigatelya-load-unit">%</span></span></div>
+<div class="tc-field" data-show-when="motor=custom;customLoad=partial" hidden><label for="toki-elektrodvigatelya-workEfficiency">КПД при этой нагрузке</label><span class="tc-input"><input type="text" inputmode="decimal" id="toki-elektrodvigatelya-workEfficiency" name="workEfficiency" required aria-describedby="toki-elektrodvigatelya-workEfficiency-unit" disabled value="93,6" maxlength="32" autocomplete="off" data-gt="0" data-max="100"><span id="toki-elektrodvigatelya-workEfficiency-unit">%</span></span></div>
+<div class="tc-field" data-show-when="motor=custom;customLoad=partial" hidden><label for="toki-elektrodvigatelya-workFactor">cos φ при этой нагрузке</label><span class="tc-input"><input type="text" inputmode="decimal" id="toki-elektrodvigatelya-workFactor" name="workFactor" required disabled value="0,75" maxlength="32" autocomplete="off" data-gt="0" data-max="1"></span></div>
+<div class="tc-field" data-show-when="motor=custom;customLoad=0" hidden><label for="toki-elektrodvigatelya-idle">Ток холостого хода по паспорту или замеру</label><span class="tc-input"><input type="text" inputmode="decimal" id="toki-elektrodvigatelya-idle" name="idle" required aria-describedby="toki-elektrodvigatelya-idle-unit" disabled value="27" maxlength="32" autocomplete="off" data-min="0"><span id="toki-elektrodvigatelya-idle-unit">А</span></span></div>
+<div class="tc-field tc-field--wide"><label for="toki-elektrodvigatelya-start">Способ пуска</label><span class="tc-select-box"><select id="toki-elektrodvigatelya-start" name="start" required><option value="direct" selected>Прямой пуск</option><option value="star">Звезда → треугольник</option><option value="soft">Устройство плавного пуска (УПП)</option><option value="vfd">Преобразователь частоты (ПЧ)</option></select></span></div>
+<div class="tc-field" data-show-when="start=soft" hidden><label for="toki-elektrodvigatelya-softLimit">Уставка ограничения тока УПП</label><span class="tc-input"><input type="text" inputmode="decimal" id="toki-elektrodvigatelya-softLimit" name="softLimit" required aria-describedby="toki-elektrodvigatelya-softLimit-unit toki-elektrodvigatelya-softLimit-hint" disabled value="3" maxlength="32" autocomplete="off" data-gt="0"><span id="toki-elektrodvigatelya-softLimit-unit">× Iном</span></span><span class="tc-hint" id="toki-elektrodvigatelya-softLimit-hint">Задайте уставку относительно номинального тока двигателя.</span></div>
+<div class="tc-field" data-show-when="start=vfd" hidden><label for="toki-elektrodvigatelya-driveLimit">Предел выходного тока ПЧ</label><span class="tc-input"><input type="text" inputmode="decimal" id="toki-elektrodvigatelya-driveLimit" name="driveLimit" required aria-describedby="toki-elektrodvigatelya-driveLimit-unit toki-elektrodvigatelya-driveLimit-hint" disabled value="120" maxlength="32" autocomplete="off" data-gt="0"><span id="toki-elektrodvigatelya-driveLimit-unit">% Iном</span></span><span class="tc-hint" id="toki-elektrodvigatelya-driveLimit-hint">Укажите процент от номинального тока двигателя по настройке привода.</span></div>
+</div>
+<div class="tc-actions"><button type="submit" class="btn btn--primary">Рассчитать</button><button type="reset" class="tc-reset">Вернуть пример</button></div>
+</fieldset></form>
+<div class="tc-result" role="region" aria-label="Результат расчёта" aria-live="polite" aria-atomic="true" tabindex="-1">
+<h3 class="tc-result-label">Номинальный линейный ток</h3><p class="tc-number"><strong>57,1</strong><span class="tc-main-unit">А</span></p>
+<dl class="tc-metrics"><div><dt>Рабочий ток при 75 % нагрузки</dt><dd>46,3 А</dd></div><div><dt>Пусковой ток при прямом включении</dt><dd>428 А</dd></div><div><dt>Мощность на валу при этой нагрузке</dt><dd>22,5 кВт</dd></div><div><dt>Активная мощность при номинале</dt><dd>32,02 кВт</dd></div><div><dt>Расчётный номинальный ток по КПД и cos φ</dt><dd>57,1 А</dd></div></dl>
+<p class="tc-notice">Пусковой ток дан как действующее значение при неподвижном роторе. Краткий пик первого полупериода может быть выше.</p>
+</div>
+</div>
+
+<details class="tc-disclosure tc-method"><summary>Как считается</summary>
+<p class="tc-expression">Iном = 1000 P₂ / (√3 U η cos φ). Iпрям = kп × Iном. Iзвезда ≈ Iпрям / 3.</p>
+<p>P₂ — мощность на валу в кВт, U — межфазное напряжение, η — доля единицы. Для рабочей точки берутся КПД и cos φ именно при этой нагрузке. Паспортный ток имеет приоритет, если задан. У WEG W22 200L при 400 В Δ паспортные Iном = 57,1 А, I₀ = 27 А и kп = 7,5. Пуск Y/Δ применим при рабочем соединении Δ на напряжении сети.</p>
+<p><a href="https://inverterdrive.com/file/WEG-W22-200L-4P-IE3-Data-Sheet">WEG W22 200L, паспорт конкретного двигателя</a> · <a href="https://library.e.abb.com/public/6b4e1a3530814df0c12579bb0030e58b/1SFC132060M0201.pdf">ABB, способы пуска</a> · <a href="https://www.electrical-installation.org/enwiki/Induction_motors">Schneider Electric, расчёт токов</a></p>
+</details>
+<nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#napor-i-moshchnost-nasosa">Напор и мощность насоса</a><a href="#zatraty-na-resursy">Затраты на воду и электроэнергию</a></nav>
 </article>
 <div class="tc-existing"><a href="/selection.html#selectForm">Расчёт тепловой мощности теплообменника</a><p>Расчёт по параметрам рабочей среды и опросный лист.</p></div>
 </div></div></div>
