@@ -1,3 +1,5 @@
+import { liquidProperties } from './thermal-fluids.js?v=20261126b';
+
 // SI units inside formulas: kW, kJ, kg, m and s. The inputs use the units printed in each form.
 const waterDensity = 1000;
 const waterHeatCapacity = 4.186;
@@ -16,6 +18,16 @@ function invalid(field, message) {
 
 function heatLoad(flow, deltaT, density, heatCapacity) {
   return density * heatCapacity * flow * deltaT / 3600;
+}
+
+function liquidMetrics(liquid) {
+  const temperature = liquid.temperature.toLocaleString('ru-RU', { maximumFractionDigits: 2 }) + ' °C';
+  const rows = [
+    metric('Плотность при ' + temperature, liquid.density, 'кг/м³', 1),
+    metric('Теплоёмкость при ' + temperature, liquid.cp, 'кДж/(кг·К)', 3)
+  ];
+  if (liquid.freezing !== undefined) rows.push(metric('Начало кристаллизации', liquid.freezing, '°C', 1));
+  return rows;
 }
 
 function velocity(flow, diameterMm) {
@@ -78,26 +90,34 @@ const powerUnits = {
 };
 
 export const calculators = {
-  'teplovaya-moshchnost'({ flow, inlet, outlet, density, cp }) {
+  'teplovaya-moshchnost'(values) {
+    const liquid = liquidProperties(values, 'inlet', 'outlet');
+    if (liquid.error) return liquid;
+    const { flow, inlet, outlet } = values;
     const difference = Math.abs(inlet - outlet);
-    const power = heatLoad(flow, difference, density, cp);
+    const power = heatLoad(flow, difference, liquid.density, liquid.cp);
     return { rows: [
       metric('Тепловая мощность', power, 'кВт', 1),
       metric('Перепад температур', difference, '°C'),
       metric('Мощность в Гкал/ч', power / kWPerGcalHour, 'Гкал/ч', 3),
-      metric('Массовый расход', flow * density / 3600, 'кг/с')
+      metric('Массовый расход', flow * liquid.density / 3600, 'кг/с'),
+      ...liquidMetrics(liquid)
     ] };
   },
 
-  'rashod-teplonositelya'({ power, supply, returnTemp, density, cp }) {
+  'rashod-teplonositelya'(values) {
+    const liquid = liquidProperties(values, 'supply', 'returnTemp');
+    if (liquid.error) return liquid;
+    const { power, supply, returnTemp } = values;
     const difference = Math.abs(supply - returnTemp);
     if (difference === 0) return invalid('returnTemp', 'Для расчёта расхода задайте разные температуры подачи и обратной линии.');
-    const flow = power * 3600 / (density * cp * difference);
+    const flow = power * 3600 / (liquid.density * liquid.cp * difference);
     return { rows: [
       metric('Объёмный расход', flow, 'м³/ч'),
       metric('Расход в литрах в секунду', flow / 3.6, 'л/с'),
-      metric('Массовый расход', flow * density / 3600, 'кг/с'),
-      metric('Перепад температур', difference, '°C')
+      metric('Массовый расход', flow * liquid.density / 3600, 'кг/с'),
+      metric('Перепад температур', difference, '°C'),
+      ...liquidMetrics(liquid)
     ] };
   },
 
@@ -129,17 +149,6 @@ export const calculators = {
       metric('Температура мокрого термометра', wet, '°C', 1),
       metric('Разность сухого и мокрого термометров', dry - wet, '°C', 1),
       metric('Влагосодержание воздуха', humidity * 1000, 'г/кг сух. воздуха', 1)
-    ] };
-  },
-
-  'rezhim-gradirni'({ hot, cold, wet }) {
-    if (hot <= cold) return invalid('hot', 'При охлаждении входящая в градирню вода должна быть теплее выходящей.');
-    if (cold <= wet) return invalid('cold', 'Для конечной испарительной градирни температура воды на выходе должна быть выше температуры мокрого термометра.');
-    const range = hot - cold;
-    return { rows: [
-      metric('Приближение к мокрому термометру', cold - wet, '°C', 1),
-      metric('Перепад воды в градирне', range, '°C', 1),
-      metric('Температурная эффективность', 100 * range / (hot - wet), '%', 1)
     ] };
   },
 

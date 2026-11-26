@@ -6,11 +6,11 @@
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Калькуляторы для градирен, воды и теплоэнергетики | Cooling Consult</title>
-<meta name="description" content="14 онлайн-калькуляторов для тепловых и водооборотных систем. Рассчитайте тепловую мощность, расход воды, подпитку градирни, напор насоса и энергозатраты.">
+<meta name="description" content="13 онлайн-калькуляторов для тепловых и водооборотных систем. Рассчитайте тепловую мощность, расход воды, подпитку градирни, напор насоса и энергозатраты.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.cooling-consalt.ru/kalkulyatory.html">
 <meta property="og:title" content="Калькуляторы для градирен, воды и теплоэнергетики | Cooling Consult">
-<meta property="og:description" content="14 онлайн-калькуляторов для тепловых и водооборотных систем. Рассчитайте тепловую мощность, расход воды, подпитку градирни, напор насоса и энергозатраты.">
+<meta property="og:description" content="13 онлайн-калькуляторов для тепловых и водооборотных систем. Рассчитайте тепловую мощность, расход воды, подпитку градирни, напор насоса и энергозатраты.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.cooling-consalt.ru/kalkulyatory.html">
 <meta property="og:image" content="https://www.cooling-consalt.ru/assets/img/cooling-consult-cover-20261116.jpg">
@@ -25,8 +25,8 @@
 
 <link rel="stylesheet" href="/assets/css/engineering.css?v=20261126">
 <script defer src="/assets/js/engineering.js?v=20261126"></script>
-<link rel="stylesheet" href="/assets/css/thermal-calculators.css?v=20261126a">
-<script type="module" src="/assets/js/thermal-calculators.js?v=20261126a"></script>
+<link rel="stylesheet" href="/assets/css/thermal-calculators.css?v=20261126b">
+<script type="module" src="/assets/js/thermal-calculators.js?v=20261126b"></script>
 </head>
 <body>
 <a class="skip" href="#main">Перейти к содержанию</a>
@@ -115,7 +115,6 @@
 </ul></details>
 <details name="tc-group"><summary>Градирни</summary><ul>
 <li><a href="#mokryy-termometr">Температура мокрого термометра</a></li>
-<li><a href="#rezhim-gradirni">Температурный режим градирни</a></li>
 <li><a href="#podpitka-gradirni">Испарение, продувка и подпитка</a></li>
 </ul></details>
 <details name="tc-group"><summary>Трубы и насосы</summary><ul>
@@ -132,7 +131,7 @@
 </nav>
 <div class="tc-picker"><label for="tc-picker">Выберите калькулятор</label><span><select id="tc-picker">
 <optgroup label="Тепло и вода"><option value="teplovaya-moshchnost">Тепловая мощность</option><option value="rashod-teplonositelya">Расход теплоносителя</option><option value="vremya-nagreva">Время нагрева или охлаждения бака</option><option value="smeshenie-vody">Смешение потоков воды</option></optgroup>
-<optgroup label="Градирни"><option value="mokryy-termometr">Температура мокрого термометра</option><option value="rezhim-gradirni">Температурный режим градирни</option><option value="podpitka-gradirni">Испарение, продувка и подпитка</option></optgroup>
+<optgroup label="Градирни"><option value="mokryy-termometr">Температура мокрого термометра</option><option value="podpitka-gradirni">Испарение, продувка и подпитка</option></optgroup>
 <optgroup label="Трубы и насосы"><option value="diametr-truby">Внутренний диаметр трубы</option><option value="skorost-v-trube">Скорость воды в трубе</option><option value="poteri-davleniya">Потери давления в трубопроводе</option><option value="napor-i-moshchnost-nasosa">Напор и мощность насоса</option></optgroup>
 <optgroup label="Энергия и затраты"><option value="chiller-i-kondensator">Чиллер и нагрузка на конденсатор</option><option value="zatraty-na-resursy">Затраты на воду и электроэнергию</option><option value="perevod-moshchnosti">Перевод единиц мощности</option></optgroup>
 </select></span></div>
@@ -140,50 +139,86 @@
 <noscript><p class="tc-noscript">Ниже приведены примеры с исходными данными и формулами. Включите JavaScript, чтобы пересчитать их для своего объекта.</p></noscript>
 <article class="tc-tool" id="teplovaya-moshchnost" aria-labelledby="teplovaya-moshchnost-title">
 <h2 id="teplovaya-moshchnost-title" tabindex="-1">Тепловая мощность</h2>
-<p class="tc-tool-intro">Сколько тепла контур отдаёт или получает при заданном расходе и температурах воды.</p>
+<p class="tc-tool-intro">Сколько тепла контур отдаёт или получает при заданном расходе и температурах выбранной жидкости.</p>
 <div class="tc-body">
 <form class="tc-form" aria-label="Тепловая мощность" novalidate><fieldset disabled><legend class="sr-only">Исходные данные</legend>
+<div class="tc-fields tc-medium-fields">
+<div class="tc-field"><label for="teplovaya-moshchnost-medium">Рабочая среда</label><span class="tc-select-box"><select id="teplovaya-moshchnost-medium" name="medium" required>
+<optgroup label="Вода"><option value="water" data-family="water" selected>Вода</option><option value="distillate" data-family="water">Дистиллированная вода</option></optgroup>
+<optgroup label="Водные растворы гликолей"><option value="eg" data-family="glycol">Этиленгликоль (ЭГ)</option><option value="pg" data-family="glycol">Пропиленгликоль (ПГ)</option></optgroup>
+<optgroup label="Масла"><option value="turbine" data-family="petroleum">Турбинное масло Тп-22С</option><option value="hydraulic" data-family="petroleum">Гидравлическое масло ISO VG 46</option><option value="therminol" data-family="therminol">Термомасло Therminol 66</option></optgroup>
+<optgroup label="Топливо"><option value="gasoline" data-family="petroleum">Бензин</option><option value="diesel" data-family="petroleum">Дизельное топливо</option><option value="kerosene" data-family="petroleum">Керосин</option></optgroup>
+<option value="custom" data-family="custom">Свои свойства (по паспорту)</option></select></span></div>
+<div class="tc-field" data-medium-for="glycol" hidden><label for="teplovaya-moshchnost-strength">Массовая доля гликоля</label><span class="tc-select-box"><select id="teplovaya-moshchnost-strength" name="strength" disabled required><option value="0">0 %</option><option value="5">5 %</option><option value="10">10 %</option><option value="15">15 %</option><option value="20">20 %</option><option value="25">25 %</option><option value="30" selected>30 %</option><option value="35">35 %</option><option value="40">40 %</option><option value="45">45 %</option><option value="50">50 %</option><option value="55">55 %</option><option value="60">60 %</option><option value="other">Другая концентрация</option></select></span></div>
+<div class="tc-field tc-field--wide" data-medium-for="custom-strength" hidden><label for="teplovaya-moshchnost-concentration">Своя концентрация по массе</label><span class="tc-input"><input type="text" inputmode="decimal" id="teplovaya-moshchnost-concentration" name="concentration" value="37,5" autocomplete="off" maxlength="12" data-min="0" data-max="60" aria-describedby="teplovaya-moshchnost-concentration-unit teplovaya-moshchnost-concentration-hint" required disabled><span id="teplovaya-moshchnost-concentration-unit">%</span></span><span class="tc-hint" id="teplovaya-moshchnost-concentration-hint">От 0 до 60 %.</span></div>
+</div>
 <div class="tc-fields">
 <div class="tc-field tc-field--wide"><label for="teplovaya-moshchnost-flow">Объёмный расход</label><span class="tc-input"><input type="text" inputmode="decimal" id="teplovaya-moshchnost-flow" name="flow" aria-describedby="teplovaya-moshchnost-flow-unit" required value="100" autocomplete="off" maxlength="32" data-min="0"><span id="teplovaya-moshchnost-flow-unit">м³/ч</span></span></div>
 <div class="tc-field"><label for="teplovaya-moshchnost-inlet">Температура на входе</label><span class="tc-input"><input type="text" inputmode="decimal" id="teplovaya-moshchnost-inlet" name="inlet" aria-describedby="teplovaya-moshchnost-inlet-unit" required value="32" autocomplete="off" maxlength="32" data-gt="-273.15"><span id="teplovaya-moshchnost-inlet-unit">°C</span></span></div>
 <div class="tc-field"><label for="teplovaya-moshchnost-outlet">Температура на выходе</label><span class="tc-input"><input type="text" inputmode="decimal" id="teplovaya-moshchnost-outlet" name="outlet" aria-describedby="teplovaya-moshchnost-outlet-unit" required value="28" autocomplete="off" maxlength="32" data-gt="-273.15"><span id="teplovaya-moshchnost-outlet-unit">°C</span></span></div>
 </div>
-<details class="tc-disclosure"><summary>Свойства теплоносителя</summary><p class="tc-help">Для воды подставлены справочные значения. Для другой жидкости введите свойства при средней рабочей температуре.</p><div class="tc-fields">
-<div class="tc-field"><label for="teplovaya-moshchnost-density">Плотность</label><span class="tc-input"><input type="text" inputmode="decimal" id="teplovaya-moshchnost-density" name="density" aria-describedby="teplovaya-moshchnost-density-unit" required value="1000" autocomplete="off" maxlength="32" data-gt="0"><span id="teplovaya-moshchnost-density-unit">кг/м³</span></span></div>
-<div class="tc-field"><label for="teplovaya-moshchnost-cp">Удельная теплоёмкость</label><span class="tc-input"><input type="text" inputmode="decimal" id="teplovaya-moshchnost-cp" name="cp" aria-describedby="teplovaya-moshchnost-cp-unit" required value="4,186" autocomplete="off" maxlength="32" data-gt="0"><span id="teplovaya-moshchnost-cp-unit">кДж/(кг·К)</span></span></div>
-</div></details>
+<div class="tc-manual" data-medium-for="custom" hidden><p class="tc-help">Введите свойства жидкости при средней температуре по данным поставщика.</p><div class="tc-fields">
+<div class="tc-field"><label for="teplovaya-moshchnost-density">Плотность</label><span class="tc-input"><input type="text" inputmode="decimal" id="teplovaya-moshchnost-density" name="density" aria-describedby="teplovaya-moshchnost-density-unit" required disabled value="" placeholder="Напр. 870" autocomplete="off" maxlength="32" data-gt="0"><span id="teplovaya-moshchnost-density-unit">кг/м³</span></span></div>
+<div class="tc-field"><label for="teplovaya-moshchnost-cp">Удельная теплоёмкость</label><span class="tc-input"><input type="text" inputmode="decimal" id="teplovaya-moshchnost-cp" name="cp" aria-describedby="teplovaya-moshchnost-cp-unit" required disabled value="" placeholder="Напр. 1,95" autocomplete="off" maxlength="32" data-gt="0"><span id="teplovaya-moshchnost-cp-unit">кДж/(кг·К)</span></span></div>
+</div></div>
 <div class="tc-actions"><button type="submit" class="btn btn--primary">Рассчитать</button><button type="reset" class="tc-reset">Вернуть пример</button></div>
 </fieldset></form>
 <div class="tc-result" role="region" aria-label="Результат расчёта" aria-live="polite" aria-atomic="true" tabindex="-1">
-<h3 class="tc-result-label">Тепловая мощность</h3><p class="tc-number"><strong>465,1</strong><span class="tc-main-unit">кВт</span></p>
-<dl class="tc-metrics"><div><dt>Перепад температур</dt><dd>4 °C</dd></div><div><dt>Мощность в Гкал/ч</dt><dd>0,4 Гкал/ч</dd></div><div><dt>Массовый расход</dt><dd>27,78 кг/с</dd></div></dl></div>
+<h3 class="tc-result-label">Тепловая мощность</h3><p class="tc-number"><strong>462,4</strong><span class="tc-main-unit">кВт</span></p>
+<dl class="tc-metrics"><div><dt>Перепад температур</dt><dd>4 °C</dd></div><div><dt>Мощность в Гкал/ч</dt><dd>0,398 Гкал/ч</dd></div><div><dt>Массовый расход</dt><dd>27,66 кг/с</dd></div><div><dt>Плотность при 30 °C</dt><dd>995,6 кг/м³</dd></div><div><dt>Теплоёмкость при 30 °C</dt><dd>4,18 кДж/(кг·К)</dd></div></dl></div>
 </div>
 <details class="tc-disclosure tc-method"><summary>Как считается</summary>
-<p class="tc-expression">Q = ρ · cₚ · G · |T₁ − T₂| / 3600</p><p>G — объёмный расход в м³/ч, ρ — плотность в кг/м³, cₚ — теплоёмкость в кДж/(кг·К). Результат показывает величину передаваемой мощности в кВт. Свойства однофазной жидкости считаются постоянными.</p></details>
-<nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#rashod-teplonositelya">Расход теплоносителя</a><a href="#rezhim-gradirni">Температурный режим градирни</a></nav>
+<p class="tc-expression">Q = ρ · cₚ · G · |T₁ − T₂| / 3600</p><p>G — объёмный расход в м³/ч, ρ — плотность в кг/м³, cₚ — удельная теплоёмкость в кДж/(кг·К). Результат показывает величину передаваемой тепловой мощности в кВт. Объёмный расход и свойства жидкости отнесены к средней температуре контура.</p>
+<p data-medium-for="water">Для воды и дистиллята приняты свойства чистой жидкой воды. Плотность и теплоёмкость определяются по температуре в диапазоне 0–100 °C. <a href="https://iapws.org/technical-guidance/release/LiquidWater">Данные IAPWS</a>.</p>
+<p data-medium-for="glycol" hidden>Концентрация 30 % по массе соответствует 30 кг гликоля и 70 кг воды на 100 кг раствора. Модель охватывает растворы от 0 до 60 % по массе, от температуры начала кристаллизации до 100 °C. <a href="https://coolprop.org/fluid_properties/Incompressibles.html">Свойства растворов по Мелиндеру в CoolProp</a>.</p>
+<p data-medium-for="petroleum" hidden>Для топлива и минеральных масел подставлены типовые свойства жидкой фазы при 0–70 °C. Плотность пересчитывается от опорной температуры, теплоёмкость оценивается по корреляции Краго. Для конкретной партии можно выбрать «Свои свойства (по паспорту)». <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/MP/nbsmiscellaneouspub97.pdf">Корреляция теплоёмкости NBS</a> · <a href="https://docs.veeder.com/gold/download.cfm?doc_id=8497">Температурные поправки Veeder-Root</a>.</p>
+<p data-medium-for="therminol" hidden>Для Therminol 66 свойства жидкой фазы берутся из таблицы изготовителя с интерполяцией по температуре. Диапазон расчёта от −3 до 345 °C. <a href="https://www.therminol.com/sites/therminol/files/documents/TF-8695_Therminol-66_Technical_Bulletin.pdf">Технические данные Eastman</a>.</p>
+<p data-medium-for="turbine" hidden>Для Тп-22С в качестве примера принята плотность 870 кг/м³ при 20 °C. <a href="https://lubriteam.ru/upload/iblock/bfe/q0rn5320tdk0tdfpbm61n20a0j4l6t5c.pdf">Паспорт ЛУКОЙЛ Тп-22С, марка 2</a>.</p>
+<p data-medium-for="hydraulic" hidden>Для класса вязкости ISO VG 46 в качестве примера принята плотность 866,7 кг/м³ при 15,6 °C. <a href="https://www.mobil.eu/en-gb/lubricants/product-series/mobil-dte-20-ultra-series">Данные Mobil DTE 25 Ultra</a>.</p>
+<p data-medium-for="custom" hidden>Паспортные значения плотности и удельной теплоёмкости относятся к выбранной однофазной жидкости при средней рабочей температуре.</p>
+</details>
+<nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#rashod-teplonositelya">Расход теплоносителя</a></nav>
 </article>
 <article class="tc-tool" id="rashod-teplonositelya" aria-labelledby="rashod-teplonositelya-title">
 <h2 id="rashod-teplonositelya-title" tabindex="-1">Расход теплоносителя</h2>
 <p class="tc-tool-intro">Какой расход нужен для передачи заданной мощности между подающей и обратной линиями.</p>
 <div class="tc-body">
 <form class="tc-form" aria-label="Расход теплоносителя" novalidate><fieldset disabled><legend class="sr-only">Исходные данные</legend>
+<div class="tc-fields tc-medium-fields">
+<div class="tc-field"><label for="rashod-teplonositelya-medium">Рабочая среда</label><span class="tc-select-box"><select id="rashod-teplonositelya-medium" name="medium" required>
+<optgroup label="Вода"><option value="water" data-family="water" selected>Вода</option><option value="distillate" data-family="water">Дистиллированная вода</option></optgroup>
+<optgroup label="Водные растворы гликолей"><option value="eg" data-family="glycol">Этиленгликоль (ЭГ)</option><option value="pg" data-family="glycol">Пропиленгликоль (ПГ)</option></optgroup>
+<optgroup label="Масла"><option value="turbine" data-family="petroleum">Турбинное масло Тп-22С</option><option value="hydraulic" data-family="petroleum">Гидравлическое масло ISO VG 46</option><option value="therminol" data-family="therminol">Термомасло Therminol 66</option></optgroup>
+<optgroup label="Топливо"><option value="gasoline" data-family="petroleum">Бензин</option><option value="diesel" data-family="petroleum">Дизельное топливо</option><option value="kerosene" data-family="petroleum">Керосин</option></optgroup>
+<option value="custom" data-family="custom">Свои свойства (по паспорту)</option></select></span></div>
+<div class="tc-field" data-medium-for="glycol" hidden><label for="rashod-teplonositelya-strength">Массовая доля гликоля</label><span class="tc-select-box"><select id="rashod-teplonositelya-strength" name="strength" disabled required><option value="0">0 %</option><option value="5">5 %</option><option value="10">10 %</option><option value="15">15 %</option><option value="20">20 %</option><option value="25">25 %</option><option value="30" selected>30 %</option><option value="35">35 %</option><option value="40">40 %</option><option value="45">45 %</option><option value="50">50 %</option><option value="55">55 %</option><option value="60">60 %</option><option value="other">Другая концентрация</option></select></span></div>
+<div class="tc-field tc-field--wide" data-medium-for="custom-strength" hidden><label for="rashod-teplonositelya-concentration">Своя концентрация по массе</label><span class="tc-input"><input type="text" inputmode="decimal" id="rashod-teplonositelya-concentration" name="concentration" value="37,5" autocomplete="off" maxlength="12" data-min="0" data-max="60" aria-describedby="rashod-teplonositelya-concentration-unit rashod-teplonositelya-concentration-hint" required disabled><span id="rashod-teplonositelya-concentration-unit">%</span></span><span class="tc-hint" id="rashod-teplonositelya-concentration-hint">От 0 до 60 %.</span></div>
+</div>
 <div class="tc-fields">
 <div class="tc-field tc-field--wide"><label for="rashod-teplonositelya-power">Тепловая мощность</label><span class="tc-input"><input type="text" inputmode="decimal" id="rashod-teplonositelya-power" name="power" aria-describedby="rashod-teplonositelya-power-unit" required value="500" autocomplete="off" maxlength="32" data-min="0"><span id="rashod-teplonositelya-power-unit">кВт</span></span></div>
 <div class="tc-field"><label for="rashod-teplonositelya-supply">Температура подачи</label><span class="tc-input"><input type="text" inputmode="decimal" id="rashod-teplonositelya-supply" name="supply" aria-describedby="rashod-teplonositelya-supply-unit" required value="7" autocomplete="off" maxlength="32" data-gt="-273.15"><span id="rashod-teplonositelya-supply-unit">°C</span></span></div>
 <div class="tc-field"><label for="rashod-teplonositelya-returnTemp">Температура обратной линии</label><span class="tc-input"><input type="text" inputmode="decimal" id="rashod-teplonositelya-returnTemp" name="returnTemp" aria-describedby="rashod-teplonositelya-returnTemp-unit" required value="12" autocomplete="off" maxlength="32" data-gt="-273.15"><span id="rashod-teplonositelya-returnTemp-unit">°C</span></span></div>
 </div>
-<details class="tc-disclosure"><summary>Свойства теплоносителя</summary><p class="tc-help">Для воды подставлены справочные значения. Для другой жидкости введите свойства при средней рабочей температуре.</p><div class="tc-fields">
-<div class="tc-field"><label for="rashod-teplonositelya-density">Плотность</label><span class="tc-input"><input type="text" inputmode="decimal" id="rashod-teplonositelya-density" name="density" aria-describedby="rashod-teplonositelya-density-unit" required value="1000" autocomplete="off" maxlength="32" data-gt="0"><span id="rashod-teplonositelya-density-unit">кг/м³</span></span></div>
-<div class="tc-field"><label for="rashod-teplonositelya-cp">Удельная теплоёмкость</label><span class="tc-input"><input type="text" inputmode="decimal" id="rashod-teplonositelya-cp" name="cp" aria-describedby="rashod-teplonositelya-cp-unit" required value="4,186" autocomplete="off" maxlength="32" data-gt="0"><span id="rashod-teplonositelya-cp-unit">кДж/(кг·К)</span></span></div>
-</div></details>
+<div class="tc-manual" data-medium-for="custom" hidden><p class="tc-help">Введите свойства жидкости при средней температуре по данным поставщика.</p><div class="tc-fields">
+<div class="tc-field"><label for="rashod-teplonositelya-density">Плотность</label><span class="tc-input"><input type="text" inputmode="decimal" id="rashod-teplonositelya-density" name="density" aria-describedby="rashod-teplonositelya-density-unit" required disabled value="" placeholder="Напр. 870" autocomplete="off" maxlength="32" data-gt="0"><span id="rashod-teplonositelya-density-unit">кг/м³</span></span></div>
+<div class="tc-field"><label for="rashod-teplonositelya-cp">Удельная теплоёмкость</label><span class="tc-input"><input type="text" inputmode="decimal" id="rashod-teplonositelya-cp" name="cp" aria-describedby="rashod-teplonositelya-cp-unit" required disabled value="" placeholder="Напр. 1,95" autocomplete="off" maxlength="32" data-gt="0"><span id="rashod-teplonositelya-cp-unit">кДж/(кг·К)</span></span></div>
+</div></div>
 <div class="tc-actions"><button type="submit" class="btn btn--primary">Рассчитать</button><button type="reset" class="tc-reset">Вернуть пример</button></div>
 </fieldset></form>
 <div class="tc-result" role="region" aria-label="Результат расчёта" aria-live="polite" aria-atomic="true" tabindex="-1">
-<h3 class="tc-result-label">Объёмный расход</h3><p class="tc-number"><strong>86</strong><span class="tc-main-unit">м³/ч</span></p>
-<dl class="tc-metrics"><div><dt>Расход в литрах в секунду</dt><dd>23,89 л/с</dd></div><div><dt>Массовый расход</dt><dd>23,89 кг/с</dd></div><div><dt>Перепад температур</dt><dd>5 °C</dd></div></dl></div>
+<h3 class="tc-result-label">Объёмный расход</h3><p class="tc-number"><strong>85,82</strong><span class="tc-main-unit">м³/ч</span></p>
+<dl class="tc-metrics"><div><dt>Расход в литрах в секунду</dt><dd>23,84 л/с</dd></div><div><dt>Массовый расход</dt><dd>23,83 кг/с</dd></div><div><dt>Перепад температур</dt><dd>5 °C</dd></div><div><dt>Плотность при 9,5 °C</dt><dd>999,7 кг/м³</dd></div><div><dt>Теплоёмкость при 9,5 °C</dt><dd>4,196 кДж/(кг·К)</dd></div></dl></div>
 </div>
 <details class="tc-disclosure tc-method"><summary>Как считается</summary>
-<p class="tc-expression">G = 3600 · Q / (ρ · cₚ · |Tп − Tо|)</p><p>Q — мощность в кВт. Чем меньше перепад температур, тем больше расход. Для раствора гликоля задайте плотность и теплоёмкость своей смеси.</p></details>
+<p class="tc-expression">G = 3600 · Q / (ρ · cₚ · |Tп − Tо|)</p><p>Q — тепловая мощность в кВт, ρ — плотность в кг/м³, cₚ — удельная теплоёмкость в кДж/(кг·К). Чем меньше перепад температур, тем больше необходимый расход. Объёмный расход и свойства жидкости отнесены к средней температуре контура.</p>
+<p data-medium-for="water">Для воды и дистиллята приняты свойства чистой жидкой воды. Плотность и теплоёмкость определяются по температуре в диапазоне 0–100 °C. <a href="https://iapws.org/technical-guidance/release/LiquidWater">Данные IAPWS</a>.</p>
+<p data-medium-for="glycol" hidden>Концентрация 30 % по массе соответствует 30 кг гликоля и 70 кг воды на 100 кг раствора. Модель охватывает растворы от 0 до 60 % по массе, от температуры начала кристаллизации до 100 °C. <a href="https://coolprop.org/fluid_properties/Incompressibles.html">Свойства растворов по Мелиндеру в CoolProp</a>.</p>
+<p data-medium-for="petroleum" hidden>Для топлива и минеральных масел подставлены типовые свойства жидкой фазы при 0–70 °C. Плотность пересчитывается от опорной температуры, теплоёмкость оценивается по корреляции Краго. Для конкретной партии можно выбрать «Свои свойства (по паспорту)». <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/MP/nbsmiscellaneouspub97.pdf">Корреляция теплоёмкости NBS</a> · <a href="https://docs.veeder.com/gold/download.cfm?doc_id=8497">Температурные поправки Veeder-Root</a>.</p>
+<p data-medium-for="therminol" hidden>Для Therminol 66 свойства жидкой фазы берутся из таблицы изготовителя с интерполяцией по температуре. Диапазон расчёта от −3 до 345 °C. <a href="https://www.therminol.com/sites/therminol/files/documents/TF-8695_Therminol-66_Technical_Bulletin.pdf">Технические данные Eastman</a>.</p>
+<p data-medium-for="turbine" hidden>Для Тп-22С в качестве примера принята плотность 870 кг/м³ при 20 °C. <a href="https://lubriteam.ru/upload/iblock/bfe/q0rn5320tdk0tdfpbm61n20a0j4l6t5c.pdf">Паспорт ЛУКОЙЛ Тп-22С, марка 2</a>.</p>
+<p data-medium-for="hydraulic" hidden>Для класса вязкости ISO VG 46 в качестве примера принята плотность 866,7 кг/м³ при 15,6 °C. <a href="https://www.mobil.eu/en-gb/lubricants/product-series/mobil-dte-20-ultra-series">Данные Mobil DTE 25 Ultra</a>.</p>
+<p data-medium-for="custom" hidden>Паспортные значения плотности и удельной теплоёмкости относятся к выбранной однофазной жидкости при средней рабочей температуре.</p>
+</details>
 <nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#teplovaya-moshchnost">Тепловая мощность</a><a href="#diametr-truby">Внутренний диаметр трубы</a></nav>
 </article>
 <article class="tc-tool" id="vremya-nagreva" aria-labelledby="vremya-nagreva-title">
@@ -249,28 +284,7 @@
 <details class="tc-disclosure tc-method"><summary>Как считается</summary>
 <p class="tc-expression">pᵥ = φ · pнас(T)     W = 0,621945 · pᵥ / (p − pᵥ)</p><p>Относительная влажность φ берётся в долях единицы. По давлению пара и влагосодержанию W решается тепловой баланс адиабатического насыщения. Давление насыщения учитывает фазу воды. Расчёт для температуры воздуха от −20 до +50 °C и давления от 60 до 110 кПа.</p>
 <p><a href="https://handbook.ashrae.org/Handbooks/F25/SI/F25_Ch01/F25_Ch01_si.aspx">Психрометрические зависимости ASHRAE</a></p></details>
-<nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#rezhim-gradirni">Температурный режим градирни</a><a href="#podpitka-gradirni">Испарение, продувка и подпитка</a></nav>
-</article>
-<article class="tc-tool" id="rezhim-gradirni" aria-labelledby="rezhim-gradirni-title">
-<h2 id="rezhim-gradirni-title" tabindex="-1">Температурный режим градирни</h2>
-<p class="tc-tool-intro">Оцените, насколько охладилась вода и насколько температура на выходе близка к мокрому термометру входящего воздуха.</p>
-<div class="tc-body">
-<form class="tc-form" aria-label="Температурный режим градирни" novalidate><fieldset disabled><legend class="sr-only">Исходные данные</legend>
-<div class="tc-fields">
-<div class="tc-field"><label for="rezhim-gradirni-hot">Вода на входе</label><span class="tc-input"><input type="text" inputmode="decimal" id="rezhim-gradirni-hot" name="hot" aria-describedby="rezhim-gradirni-hot-unit" required value="32" autocomplete="off" maxlength="32" data-min="0" data-max="100"><span id="rezhim-gradirni-hot-unit">°C</span></span></div>
-<div class="tc-field"><label for="rezhim-gradirni-cold">Вода на выходе</label><span class="tc-input"><input type="text" inputmode="decimal" id="rezhim-gradirni-cold" name="cold" aria-describedby="rezhim-gradirni-cold-unit" required value="28" autocomplete="off" maxlength="32" data-min="0" data-max="100"><span id="rezhim-gradirni-cold-unit">°C</span></span></div>
-<div class="tc-field tc-field--wide"><label for="rezhim-gradirni-wet">Температура мокрого термометра</label><span class="tc-input"><input type="text" inputmode="decimal" id="rezhim-gradirni-wet" name="wet" aria-describedby="rezhim-gradirni-wet-unit" required value="24" autocomplete="off" maxlength="32" data-min="-50" data-max="60"><span id="rezhim-gradirni-wet-unit">°C</span></span></div>
-</div>
-<div class="tc-actions"><button type="submit" class="btn btn--primary">Рассчитать</button><button type="reset" class="tc-reset">Вернуть пример</button></div>
-</fieldset></form>
-<div class="tc-result" role="region" aria-label="Результат расчёта" aria-live="polite" aria-atomic="true" tabindex="-1">
-<h3 class="tc-result-label">Приближение к мокрому термометру</h3><p class="tc-number"><strong>4</strong><span class="tc-main-unit">°C</span></p>
-<dl class="tc-metrics"><div><dt>Перепад воды в градирне</dt><dd>4 °C</dd></div><div><dt>Температурная эффективность</dt><dd>50 %</dd></div></dl></div>
-</div>
-<details class="tc-disclosure tc-method"><summary>Как считается</summary>
-<p class="tc-expression">R = Tвх − Tвых     A = Tвых − Tмт     ε = R / (R + A)</p><p>R — перепад воды, A — приближение к мокрому термометру. Температурная эффективность ε выводится в процентах. Эти показатели характеризуют заданную рабочую точку. Подбор типоразмера требует характеристики градирни.</p>
-<p><a href="https://spxcooling.com/wp-content/uploads/TR-016.pdf">SPX Cooling Technologies о приближении к мокрому термометру</a></p></details>
-<nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#mokryy-termometr">Температура мокрого термометра</a><a href="#teplovaya-moshchnost">Тепловая мощность</a></nav>
+<nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#podpitka-gradirni">Испарение, продувка и подпитка</a></nav>
 </article>
 <article class="tc-tool" id="podpitka-gradirni" aria-labelledby="podpitka-gradirni-title">
 <h2 id="podpitka-gradirni-title" tabindex="-1">Испарение, продувка и подпитка</h2>
@@ -296,7 +310,7 @@
 <details class="tc-disclosure tc-method"><summary>Как считается</summary>
 <p class="tc-expression">E = Q · 3600 · f / (ρ · r)     B = max(0, E / (K − 1) − D)     M = E + B + D</p><p>E — испарение, B — продувка, D — капельный унос, M — подпитка в м³/ч. Q — отводимое тепло в кВт, f — доля тепла на испарение, r ≈ 2450 кДж/кг, ρ ≈ 1000 кг/м³. K — отношение концентрации солей в оборотной воде к концентрации в подпитке. Баланс рассчитан для установившегося режима без утечек и переливов.</p>
 <p><a href="https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P100TFYV.TXT">Баланс воды градирни по руководству EPA</a></p></details>
-<nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#rezhim-gradirni">Температурный режим градирни</a><a href="#zatraty-na-resursy">Затраты на воду и электроэнергию</a></nav>
+<nav class="tc-related" aria-label="Связанные расчёты"><span>Связанные расчёты</span><a href="#zatraty-na-resursy">Затраты на воду и электроэнергию</a></nav>
 </article>
 <article class="tc-tool" id="diametr-truby" aria-labelledby="diametr-truby-title">
 <h2 id="diametr-truby-title" tabindex="-1">Внутренний диаметр трубы</h2>

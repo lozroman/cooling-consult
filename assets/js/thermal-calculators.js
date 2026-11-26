@@ -1,4 +1,4 @@
-import { calculators } from './thermal-models.js?v=20261126a';
+import { calculators } from './thermal-models.js?v=20261126b';
 
 const app = document.querySelector('.tc-app');
 const menu = app.querySelector('.tc-index');
@@ -91,13 +91,28 @@ function parseEntry(field) {
   return { value };
 }
 
+function updateMediumFields(article, form) {
+  const medium = form.elements.namedItem('medium');
+  if (!medium) return;
+  const family = medium.selectedOptions[0].dataset.family;
+  const customStrength = family === 'glycol' && form.elements.namedItem('strength').value === 'other';
+  for (const section of article.querySelectorAll('[data-medium-for]')) {
+    const mode = section.dataset.mediumFor;
+    const visible = mode === family || mode === medium.value || (mode === 'custom-strength' && customStrength);
+    section.hidden = !visible;
+    for (const field of section.querySelectorAll('[name]')) field.disabled = !visible;
+  }
+}
+
 function recalculate(article) {
   const form = article.querySelector('form');
   const area = article.querySelector('.tc-result');
+  updateMediumFields(article, form);
   const values = {};
   let issue;
   for (const field of form.querySelectorAll('[name]')) {
     field.removeAttribute('aria-invalid');
+    if (field.disabled) continue;
     const parsed = parseEntry(field);
     if (parsed.error) {
       field.setAttribute('aria-invalid', 'true');
@@ -142,7 +157,7 @@ function visit(id, focusTitle) {
 function restoreLocation() {
   const id = location.hash.slice(1);
   if (articles.has(id)) activate(id);
-  else if (!id) activate(defaultId);
+  else if (!id || !document.getElementById(id)) activate(defaultId);
 }
 
 app.addEventListener('click', event => {

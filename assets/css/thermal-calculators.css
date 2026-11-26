@@ -121,6 +121,7 @@
   margin: 0 0 2.3rem;
 }
 .tc-tool[hidden] { display: none; }
+.tc-app [data-medium-for][hidden] { display: none; }
 .tc-tool:last-of-type, .tc-ready .tc-tool { margin-bottom: 0; }
 .tc-tool h2 {
   color: var(--ink);
@@ -156,6 +157,16 @@
   min-width: 0;
 }
 .tc-field--wide { grid-column: 1 / -1; }
+.tc-fields.tc-medium-fields {
+  grid-template-columns: minmax(0, 1fr);
+  margin-bottom: .95rem;
+}
+.tc-manual { margin-top: .95rem; }
+@container (min-width: 52rem) {
+  .tc-medium-fields:has([data-medium-for="glycol"]:not([hidden])) {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  }
+}
 .tc-field label {
   display: block;
   overflow-wrap: anywhere;
