@@ -1,105 +1,136 @@
-/* Typical cooling schematics */
-.scheme-jumps {
+/* Engineering sheets and component schedules, scoped to the typical schemes page. */
+.scheme-jumps, .scheme-key ul {
   display: flex;
   flex-wrap: wrap;
-  gap: .6rem 1.5rem;
-  margin-top: 1.1rem;
-}
-.scheme-jumps a {
-  color: var(--blueprint);
-  font-weight: 600;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: .22em;
-}
-.scheme-jumps a:hover { color: var(--ink); }
-
-.scheme-key {
-  padding: 1rem 1.25rem;
-  border: 1px solid var(--line);
-  background: var(--paper);
-}
-.scheme-key ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .55rem 1.65rem;
-}
-.scheme-key li {
-  display: inline-flex;
   align-items: center;
-  gap: .5rem;
-  font-weight: 550;
+  gap: .55rem 1.5rem;
 }
-.scheme-key svg { flex: none; }
-.scheme-key p {
-  margin: .6rem 0 0;
-  color: var(--ink-2);
-  max-width: 76ch;
+.scheme-jumps { margin-top: 1rem; }
+.scheme-jumps a { color: var(--blueprint); text-decoration: underline; text-underline-offset: .22em; font-weight: 600; }
+.scheme-key { background: var(--paper); border: 1px solid var(--line); padding: 1rem 1.25rem; }
+.scheme-key li { display: inline-flex; align-items: center; gap: .45rem; font-weight: 600; }
+.scheme-key p { margin-top: .7rem; color: var(--ink-2); }
+.scheme-family { margin-top: clamp(2rem, 4vw, 3.5rem); }
+.scheme-family > h2 { font-size: var(--fs-display-l); letter-spacing: -.035em; }
+.scheme-gallery { display: grid; gap: clamp(1.75rem, 3.2vw, 3rem); }
+.scheme-card { min-width: 0; border-top: 2px solid var(--ink); padding-top: 1rem; }
+.scheme-card figure { margin: .75rem 0 0; }
+.scheme-card figcaption { color: var(--ink-2); line-height: 1.55; margin: .8rem 0 0; }
+.scheme-spec summary {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  list-style: none; gap: .45rem 1rem; cursor: pointer; padding: .15rem 0 .55rem;
 }
-
-.scheme-family { margin-top: clamp(2rem, 4vw, 3.75rem); }
-.scheme-family > h2 {
-  margin-bottom: .8em;
-  font-size: var(--fs-display-l);
-  letter-spacing: -.025em;
+.scheme-spec summary::-webkit-details-marker { display: none; }
+.scheme-spec summary h2, .scheme-spec summary h3 {
+  margin: 0; font-size: clamp(1.25rem, 2.1vw, 1.75rem); line-height: 1.2; letter-spacing: -.025em;
 }
-.scheme-gallery {
-  align-items: start;
-  row-gap: clamp(1.7rem, 3.5vw, 3rem);
-}
-.scheme-card { min-width: 0; }
-.scheme-card h3 {
-  margin: 0 0 .55rem;
-  font-size: clamp(1.15rem, 1.7vw, 1.4rem);
-  line-height: 1.27;
-  letter-spacing: -.018em;
-}
+.scheme-spec summary:hover h2, .scheme-spec summary:hover h3 { color: var(--blueprint); }
+.spec-action { color: var(--blueprint); font-size: .94rem; font-weight: 600; white-space: nowrap; }
+.spec-action span { margin-left: .2rem; }
 .scheme-plate {
-  position: relative;
-  display: block;
-  padding: .75rem 0 .35rem;
-  cursor: zoom-in;
+  position: relative; display: block; cursor: zoom-in; background: white;
+  border: 1px solid var(--line); padding: 1.9rem .35rem .45rem;
 }
-.scheme-plate img {
-  display: block;
-  width: 100%;
-  max-width: 28rem;
-  height: auto;
-  margin-inline: auto;
+.scheme-plate img { display: block; width: 100%; height: auto; margin: 0 auto; }
+.plate-view {
+  position: absolute; right: .6rem; top: .35rem; display: inline-flex; gap: .3rem;
+  align-items: center; font-size: .82rem; color: var(--muted); font-weight: 550;
 }
-.scheme-enlarge {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: grid;
-  width: 1.8rem;
-  height: 1.8rem;
-  place-items: center;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  color: var(--ink-2);
+.scheme-plate:hover .plate-view, .scheme-plate:focus-visible .plate-view { color: var(--blueprint); }
+.buffer-choice {
+  margin: .65rem 0 1rem; padding: 0; border: 0;
+  display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .6rem;
 }
-.scheme-plate:hover .scheme-enlarge, .scheme-plate:focus-visible .scheme-enlarge {
-  color: var(--blueprint);
-  border-color: var(--blueprint);
+.buffer-choice legend {
+  float: none; margin: 0 0 .45rem; padding: 0;
+  font-weight: 600; font-size: .9rem; color: var(--ink-2);
 }
-.scheme-card figcaption {
-  max-width: 62ch;
-  margin-top: .65rem;
-  color: var(--ink-2);
-  line-height: 1.55;
+.buffer-choice label {
+  display: inline-flex; gap: .45rem; align-items: center; cursor: pointer; border: 1px solid var(--line-strong);
+  padding: .35rem .65rem; min-height: 2.5rem; font-size: .94rem;
 }
-.scheme-extra {
-  margin-top: clamp(2rem, 4vw, 3.75rem);
-  border-top: 1px solid var(--line-strong);
-  padding-top: 1rem;
+.buffer-choice label:has(input:checked) { color: var(--blueprint); border-color: var(--blueprint); }
+.buffer-choice input { accent-color: var(--blueprint); }
+.scheme-buffer[data-enhanced] { display: grid; }
+.scheme-buffer[data-enhanced] .buffer-pane:not([hidden]) { display: contents; }
+.scheme-buffer[data-enhanced] .buffer-fallback { display: none; }
+.scheme-buffer[data-enhanced] .scheme-spec { grid-row: 1; }
+.scheme-buffer[data-enhanced] .buffer-choice { grid-row: 2; }
+.scheme-buffer[data-enhanced] figure { grid-row: 3; }
+.buffer-fallback { color: var(--ink-2); font-weight: 600; }
+.buffer-pane + .buffer-pane { margin-top: 1.5rem; }
+.scheme-card [hidden], .scheme-dialog [hidden] { display: none !important; }
+
+.scheme-dialog:not([open]) { display: none; }
+.scheme-dialog {
+  color: var(--ink); border: 1px solid var(--line-strong); padding: 0; margin: auto;
+  width: min(62rem, calc(100% - 2rem)); max-width: none;
+  max-height: min(90dvh, 62rem); overflow: hidden; background: var(--surface);
 }
-.scheme-extra figure { max-width: 36rem; margin: 1rem 0 0; }
-@media (max-width: 767px) {
-  .scheme-key { padding: .85rem 1rem; }
-  .scheme-key ul { gap: .5rem 1rem; }
+.scheme-dialog[open] { display: flex; flex-direction: column; }
+.scheme-dialog::backdrop { background: rgb(13 24 37 / 62%); }
+html:has(.scheme-dialog[open]) { overflow: hidden; }
+.dialog-head {
+  display: flex; align-items: flex-start; gap: .75rem; justify-content: space-between;
+  padding: 1rem 1.35rem; border-bottom: 1px solid var(--line-strong); flex-shrink: 0;
+}
+.dialog-context { color: var(--muted); font-size: .875rem; margin: 0 0 .28rem; font-weight: 600; }
+.scheme-dialog .dialog-head h2 { margin: 0; font-size: clamp(1.15rem, 2.2vw, 1.6rem); }
+.dialog-close, .diagram-toggle {
+  background: var(--surface); border: 1px solid var(--line-strong); color: var(--ink);
+  padding: .4rem .68rem; min-height: 2.45rem; flex: none; font-size: .9rem;
+}
+.dialog-close:hover, .diagram-toggle:hover { border-color: var(--blueprint); color: var(--blueprint); }
+.dialog-content { overflow: auto; overscroll-behavior: contain; min-height: 0; padding: 0 1.35rem 1.2rem; }
+.spec-table { border-collapse: collapse; width: 100%; margin: .85rem 0 0; table-layout: fixed; }
+.spec-table th, .spec-table td { text-align: left; vertical-align: top; padding: .45rem .65rem; border-bottom: 1px solid var(--line); }
+.spec-table thead th { background: var(--paper); color: var(--ink-2); font-size: .9rem; }
+.spec-table thead th:first-child { width: 24%; }
+.spec-table thead th:last-child { width: 6.4rem; }
+.spec-zone th { color: var(--blueprint); background: #f2f5fb; font-size: .96rem; }
+.spec-table .spec-qty { white-space: nowrap; }
+.spec-positions, .spec-qty { font-variant-numeric: tabular-nums; }
+.spec-positions { font-size: .88rem; }
+.spec-positions span { white-space: nowrap; }
+.spec-body strong, .spec-body small { display: block; }
+.spec-body strong { font-size: 1rem; font-weight: 580; }
+.spec-body small { margin-top: .12rem; font-size: .86rem; color: var(--ink-2); line-height: 1.45; }
+.spec-notes { border-left: 2px solid var(--line-strong); padding-left: .85rem; margin-top: 1.1rem; }
+.spec-notes p { color: var(--ink-2); margin: .4rem 0; font-size: .91rem; }
+.scheme-dialog.is-drawing { width: min(74rem,calc(100% - 1.5rem)); }
+.scheme-dialog.is-drawing .dialog-content { padding: 0; height: min(75dvh,52rem); }
+.scheme-dialog.is-drawing .dialog-content img { display: block; width: max(100%, 58rem); max-width: none; height: auto; }
+.scheme-dialog.is-drawing.is-fit .dialog-content img { width: 100%; height: 100%; object-fit: contain; }
+.dialog-tools { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .4rem; }
+
+@media (min-width: 860px) {
+  .scheme-card:not(.scheme-buffer), .scheme-buffer[data-enhanced] {
+    display: grid; align-items: start; grid-template-columns: minmax(13rem, .42fr) minmax(0, 1fr);
+    grid-template-rows: auto auto 1fr; gap: .55rem clamp(1rem, 3vw, 3rem);
+  }
+  .scheme-card:not(.scheme-buffer) figure, .scheme-buffer[data-enhanced] figure { display: contents; }
+  .scheme-spec { grid-area: 1 / 1; }
+  .scheme-spec summary { align-items: flex-start; flex-direction: column; gap: .75rem; }
+  .scheme-buffer[data-enhanced] .buffer-choice { grid-area: 2 / 1; }
+  .scheme-card figcaption { grid-area: 3 / 1; margin-top: .5rem; }
+  .scheme-plate { grid-area: 1 / 2 / 4 / 3; }
+  .scheme-spec[open] { grid-column: 1/-1; }
+  .scheme-card:has(.scheme-spec[open]) .scheme-plate { grid-row: 4; }
+}
+@media (max-width: 550px) {
+  .scheme-key { padding: .85rem; }
+  .scheme-dialog { width: calc(100% - .5rem); max-height: 94dvh; }
+  .dialog-head { padding: .8rem; }
+  .dialog-content { padding: 0 .5rem .8rem; }
+  .spec-table th, .spec-table td { padding: .4rem .23rem; }
+  .spec-table thead th:first-child { width: 21%; }
+  .spec-table thead th:last-child { width: 3.9rem; }
+  .spec-table .spec-qty, .spec-positions { font-size: .79rem; }
+  .spec-body strong { font-size: .93rem; }
+  .dialog-tools { flex-direction: column-reverse; }
 }
 @media print {
-  .scheme-jumps, .scheme-enlarge { display: none; }
+  .scheme-jumps, .spec-action, .plate-view, .dialog-close, .buffer-choice { display: none; }
+  .scheme-plate { border: 0; padding: 0; }
   .scheme-card { break-inside: avoid; }
 }
