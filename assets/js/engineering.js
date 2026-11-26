@@ -26,6 +26,15 @@
     });
   }
   document.querySelectorAll('.eng-menu').forEach(menu => {
+    const panel = menu.querySelector('.eng-menu__panel');
+    const templatesHref = '/shablony-dokumentov.html';
+    if (panel && !panel.querySelector(`a[href="${templatesHref}"]`)) {
+      const templatesLink = document.createElement('a');
+      templatesLink.href = templatesHref;
+      templatesLink.textContent = 'Шаблоны документов';
+      panel.append(templatesLink);
+    }
+
     menu.addEventListener('keydown', event => {
       if (event.key !== 'Escape' || !menu.open) return;
       event.stopPropagation();
